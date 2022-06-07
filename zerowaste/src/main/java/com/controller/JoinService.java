@@ -9,16 +9,29 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/GoMain")
-public class GoMain extends HttpServlet {
+import com.model.UserDAO;
+import com.model.UserVO;
+
+@WebServlet("/JoinService")
+public class JoinService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
 		request.setCharacterEncoding("UTF-8");
-		String nextPage = "main.jsp";
-		RequestDispatcher rd = request.getRequestDispatcher(nextPage);
+		String id = request.getParameter("id");
+		String pw = request.getParameter("pw");
+		String nick = request.getParameter("nick");
+
+		UserVO uvo = new UserVO();
+		uvo.setId(id);
+		uvo.setPw(pw);
+		uvo.setNickname(nick);
+
+		UserDAO dao = new UserDAO();
+		int cnt = dao.join(uvo);
+
+		RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
 		rd.forward(request, response);
 	}
 

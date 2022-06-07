@@ -6,4 +6,8 @@
 	<insert id="join" parameterType="UserVO">
 		insert into userInfo(id, pw, nickname) values (#{id}, #{pw}, #{nickname})
 	</insert>
+	
+	<select id="login" parameterType="UserVO" resultType="UserVO">
+		select * from userInfo where id = #{id} and pw = #{pw}
+	</select>
 </mapper>

@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 <!--
 	Forty by HTML5 UP
@@ -22,8 +24,7 @@
 
 		<!-- Header -->
 		<header id="header" class="alt">
-			<a href="GoMain" class="logo"><strong>Zero Waste</strong> <span>용기를
-					내세요</span></a>
+			<a href="GoMain" class="logo"><strong>Zero Waste</strong> <span>용기</span></a>
 			<nav>
 				<a href="#menu">Menu</a>
 			</nav>
@@ -32,9 +33,9 @@
 		<!-- Menu -->
 		<nav id="menu">
 			<ul class="links">
-				<li><a href="landing.html">내 나무 보러가기</a></li>
-				<li><a href="generic.html">포인트 획득하러 가기</a></li>
-				<li><a href="elements.html">매장 등록</a></li>
+				<li><a href="tree.jsp">내 나무 보러가기</a></li>
+				<li><a href="point.jsp">포인트 획득하기</a></li>
+				<li><a href="store.jsp">매장등록</a></li>
 			</ul>
 		</nav>
 

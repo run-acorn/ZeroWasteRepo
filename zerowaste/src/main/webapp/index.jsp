@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 <!--
 	Forty by HTML5 UP
@@ -7,7 +9,7 @@
 <html>
 <head>
 <title>Forty by HTML5 UP</title>
-<meta charset="utf-8" />
+<meta charset="UTF-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
@@ -29,17 +31,18 @@
 				<div class="content">
 					<p>당신의 용기를 응원합니다!</p>
 					<ul class="actions">
-						<li><a href="#menu" class="button next scrolly">로그인</a></li>
-						<li><a href="#menu" class="button next scrolly">회원가입</a></li>
+						<li><a href="#menu" class="button next scrolly">로그인/회원가입</a></li>
 					</ul>
 				</div>
 				<!-- Menu -->
 				<nav id="menu">
 					<ul class="links">
 						<li><h5>로그인</h5></li>
-						<form>
-							<li><input name="loginid" type="text" placeholder="ID를 입력하세요"></li>
-							<li><input name="loginpw" type="password" placeholder="비밀번호를 입력하세요"></li>
+						<form action="LoginService" method="post">
+							<li><input name="loginid" type="text"
+								placeholder="ID를 입력하세요"></li>
+							<li><input name="loginpw" type="password"
+								placeholder="비밀번호를 입력하세요"></li>
 							<li><input type="submit" value="로그인" class="button fit"></li>
 						</form>
 					</ul>
@@ -47,7 +50,8 @@
 						<li><h5>회원가입</h5></li>
 						<form action="JoinService" method="post">
 							<li><input type="text" name="id" placeholder="ID를 입력하세요"></li>
-							<li><input type="password" name="pw" placeholder="비밀번호를 입력하세요"></li>
+							<li><input type="password" name="pw"
+								placeholder="비밀번호를 입력하세요"></li>
 							<li><input type="text" name="nick" placeholder="닉네임을 입력하세요"></li>
 							<li><input type="submit" value="회원가입" class="button fit"></li>
 						</form>

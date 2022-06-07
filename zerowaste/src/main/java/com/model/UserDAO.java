@@ -15,12 +15,19 @@ public class UserDAO {
 		public int join(UserVO uvo) {
 			try {
 				session = sql.openSession(true);
-				cnt = session.insert("insert", uvo);
+				cnt = session.insert("join", uvo);
 			} catch (Exception e) {
 				e.printStackTrace();
 			} finally {
 				session.close();
 			}
 			return cnt;
+		}
+		
+		public UserVO login(UserVO uvo) {
+			session = sql.openSession(true);
+			UserVO vo = session.selectOne("login", uvo);
+			session.close();
+			return vo;
 		}
 }
