@@ -95,11 +95,11 @@
 			<li class="t-center m-b-13"><a href="GoMap" class="txt19">Map</a>
 			</li>
 
-			<li class="t-center m-b-13"><a href="GoTree" class="txt19">My Tree</a>
-			</li>
+			<li class="t-center m-b-13"><a href="GoTree" class="txt19">My
+					Tree</a></li>
 
-			<li class="t-center m-b-13"><a href="blog.html" class="txt19">Review & Point</a>
-			</li>
+			<li class="t-center m-b-13"><a href="blog.html" class="txt19">Review
+					& Point</a></li>
 
 			<li class="t-center m-b-33"><a href="contact.html" class="txt19">Registration</a>
 			</li>
@@ -129,7 +129,8 @@
 								<tr>
 									<td><a href="GoLogin"
 										class="btn1 flex-c-m size1 txt3 trans-0-4"> Sign In </a></td>
-									<td>ㅤㅤ<td>
+									<td>ㅤㅤ
+									<td>
 									<td><a href="GoJoin"
 										class="btn1 flex-c-m size1 txt3 trans-0-4"> Sign Up </a></td>
 								</tr>
@@ -157,7 +158,8 @@
 								<tr>
 									<td><a href="GoLogin"
 										class="btn1 flex-c-m size1 txt3 trans-0-4"> Sign In </a></td>
-									<td>ㅤㅤ<td>
+									<td>ㅤㅤ
+									<td>
 									<td><a href="GoJoin"
 										class="btn1 flex-c-m size1 txt3 trans-0-4"> Sign Up </a></td>
 								</tr>
