@@ -3,9 +3,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Home</title>
+<title>Menu</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+	rel="stylesheet">
 <!--===============================================================================================-->
 <link rel="icon" type="image/png" href="images/icons/favicon.png" />
 <!--===============================================================================================-->
@@ -62,13 +65,17 @@
 							<ul class="main_menu">
 								<li><a href="GoMain">Home</a></li>
 
-								<li><a href="map.jsp">Map</a></li>
+								<li><a href="menu.jsp">Menu</a></li>
 
-								<li><a href="about.jsp">My Tree</a></li>
+								<li><a href="reservation.jsp">Reservation</a></li>
 
-								<li><a href="blog.jsp">Review & Point</a></li>
+								<li><a href="gallery.jsp">Gallery</a></li>
 
-								<li><a href="contact.jsp">Registration</a></li>
+								<li><a href="about.jsp">About</a></li>
+
+								<li><a href="blog.jsp">Blog</a></li>
+
+								<li><a href="contact.jsp">Contact</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -92,113 +99,68 @@
 			<li class="t-center m-b-13"><a href="GoMain" class="txt19">Home</a>
 			</li>
 
-			<li class="t-center m-b-13"><a href="menu.html" class="txt19">Map</a>
+			<li class="t-center m-b-13"><a href="menu.jsp" class="txt19">Menu</a>
 			</li>
 
-			<li class="t-center m-b-13"><a href="about.html" class="txt19">My Tree</a>
+			<li class="t-center m-b-13"><a href="gallery.jsp" class="txt19">Gallery</a>
 			</li>
 
-			<li class="t-center m-b-13"><a href="blog.html" class="txt19">Review & Point</a>
+			<li class="t-center m-b-13"><a href="about.jsp" class="txt19">About</a>
 			</li>
 
-			<li class="t-center m-b-33"><a href="contact.html" class="txt19">Registration</a>
+			<li class="t-center m-b-13"><a href="blog.jsp" class="txt19">Blog</a>
+			</li>
+
+			<li class="t-center m-b-33"><a href="contact.jsp" class="txt19">Contact</a>
 			</li>
 		</ul>
 	</aside>
 
-	<!-- Slide1 -->
-	<section class="section-slide">
-		<div class="wrap-slick1">
-			<div class="slick1">
-				<div class="item-slick1 item1-slick1"
-					style="background-image: url(images/slide1-01.jpg);">
-					<div
-						class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-						<span
-							class="caption1-slide1 txt1 t-center animated visible-false m-b-15"
-							data-appear="fadeInDown"> Welcome to </span>
+	<!-- Title Page -->
+	<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15"
+		style="background-image: url(images/bg-title-page-01.jpg);">
+		<h2 class="tit6 t-center">Pato Menu</h2>
+	</section>
 
-						<h2
-							class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
-							data-appear="fadeInUp">Pato Place</h2>
+	<!-- Main menu -->
+	<section
+		class="section-mainmenu p-t-70 p-b-70 p-l-70 p-r-70 bg1-pattern">
+			<div id="map" style="width: 1780px; height: 1000px;"></div>
+			<script type="text/javascript"
+				src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b9d52b733842f8156d5455f83b6f4277&libraries=services"></script>
 
-						<div class="wrap-btn-slide1 animated visible-false"
-							data-appear="zoomIn">
-							<!-- Button1 -->
-							<table>
-								<tr>
-									<td><a href="GoLogin"
-										class="btn1 flex-c-m size1 txt3 trans-0-4"> Sign In </a></td>
-									<td>" "</td>
-									<td><a href="GoJoin"
-										class="btn1 flex-c-m size1 txt3 trans-0-4"> Sign Up </a></td>
-								</tr>
-							</table>
-						</div>
-					</div>
-				</div>
+			<script>
+				var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+				mapOption = {
+					center : new kakao.maps.LatLng(35.14919736053822,
+							126.92650745620224), // 지도의 중심좌표
+					level : 5
+				// 지도의 확대 레벨
+				};
 
-				<div class="item-slick1 item2-slick1"
-					style="background-image: url(images/master-slides-02.jpg);">
-					<div
-						class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-						<span
-							class="caption1-slide1 txt1 t-center animated visible-false m-b-15"
-							data-appear="rollIn"> Welcome to </span>
+				var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
-						<h2
-							class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
-							data-appear="lightSpeedIn">Pato Place</h2>
+				// 마커가 표시될 위치입니다 
 
-						<div class="wrap-btn-slide1 animated visible-false"
-							data-appear="slideInUp">
-							<!-- Button1 -->
-							<table>
-								<tr>
-									<td><a href="GoLogin"
-										class="btn1 flex-c-m size1 txt3 trans-0-4"> Sign In </a></td>
-									<td>" "</td>
-									<td><a href="GoJoin"
-										class="btn1 flex-c-m size1 txt3 trans-0-4"> Sign Up </a></td>
-								</tr>
-							</table>
-						</div>
-					</div>
-				</div>
+				var markerPosition = new kakao.maps.LatLng(35.148209527873604,
+						126.9266049167843);
 
-				<div class="item-slick1 item3-slick1"
-					style="background-image: url(images/master-slides-01.jpg);">
-					<div
-						class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-						<span
-							class="caption1-slide1 txt1 t-center animated visible-false m-b-15"
-							data-appear="rotateInDownLeft"> Welcome to </span>
+				// 마커를 생성합니다
+				var marker = new kakao.maps.Marker({
+					position : markerPosition
+				});
 
-						<h2
-							class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
-							data-appear="rotateInUpRight">Pato Place</h2>
-
-						<div class="wrap-btn-slide1 animated visible-false"
-							data-appear="rotateIn">
-							<!-- Button1 -->
-							<table>
-								<tr>
-									<td><a href="GoLogin"
-										class="btn1 flex-c-m size1 txt3 trans-0-4"> Sign In </a></td>
-									<td>" "</td>
-									<td><a href="GoJoin"
-										class="btn1 flex-c-m size1 txt3 trans-0-4"> Sign Up </a></td>
-								</tr>
-							</table>
-						</div>
-					</div>
-				</div>
-
-			</div>
-
-			<div class="wrap-slick1-dots"></div>
+				// 마커가 지도 위에 표시되도록 설정합니다
+				marker.setMap(map);
+			</script>
 		</div>
 	</section>
+	<!-- Back to top -->
+	<div class="btn-back-to-top bg0-hov" id="myBtn">
+		<span class="symbol-btn-back-to-top"> <i
+			class="fa fa-angle-double-up" aria-hidden="true"></i>
+		</span>
+	</div>
 
 	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
