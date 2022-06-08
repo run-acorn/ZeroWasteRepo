@@ -33,9 +33,10 @@
 		<!-- Menu -->
 		<nav id="menu">
 			<ul class="links">
-				<li><a href="tree.jsp">내 나무 보러가기</a></li>
-				<li><a href="point.jsp">포인트 획득하기</a></li>
-				<li><a href="store.jsp">매장등록</a></li>
+				<li><a href="GoMain">매장 보러가기</a></li>
+				<li><a href="GoTree">내 나무 보러가기</a></li>
+				<li><a href="GoPoint">포인트 획득하기</a></li>
+				<li><a href="GoStore">매장등록</a></li>
 			</ul>
 		</nav>
 

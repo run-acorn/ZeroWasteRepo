@@ -65,10 +65,15 @@ constraint certiInfo_cnum_pk primary key(cerNum),
 constraint certiInfo_id_fk foreign key(id) references userInfo(id)
 );
 
--- 인즌순번에 쓸 시퀀스
+select * from certiInfo
+
+-- 인증순번에 쓸 시퀀스
 create sequence cer_num_seq
         start with 1
         increment by 1
         maxvalue 999999
         nocycle
         nocache
+        
+alter table certiInfo add fileName varchar2(100);
+alter table certiInfo modify (fileName not null)
