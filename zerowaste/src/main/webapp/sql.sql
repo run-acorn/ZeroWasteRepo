@@ -55,6 +55,8 @@ values ('씨앗',0.0,0.9)
 
 select * from rewardInfo
 
+drop table rewardInfo
+
 -- 인증정보 테이블
 create table certiInfo(
 cerNum number(10),
