@@ -31,8 +31,13 @@ public class JoinService extends HttpServlet {
 		UserDAO dao = new UserDAO();
 		int cnt = dao.join(uvo);
 
-		RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
-		rd.forward(request, response);
+		String nextPage = null;
+		if (cnt > 0) {
+			nextPage = "GoLogin";
+		} else {
+			nextPage = "GoJoin";
+		}
+		response.sendRedirect(nextPage);
 	}
 
 }

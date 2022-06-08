@@ -18,8 +18,8 @@ public class LoginService extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
-		String id = request.getParameter("loginid");
-		String pw = request.getParameter("loginpw");
+		String id = request.getParameter("id");
+		String pw = request.getParameter("pw");
 		
 		UserVO uvo = new UserVO();
 		uvo.setId(id);
@@ -30,12 +30,13 @@ public class LoginService extends HttpServlet {
 		
 		request.setAttribute("sorf", login);
 		
+		String nextPage = null;
 		if (login != null) {
-			response.sendRedirect("GoMain");
+			nextPage = "GoMain";
 		} else {
-			RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
-			rd.forward(request, response);
+			nextPage = "GoLogin";
 		}
+		response.sendRedirect(nextPage);
 	}
 
 }

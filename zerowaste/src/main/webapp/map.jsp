@@ -65,17 +65,13 @@
 							<ul class="main_menu">
 								<li><a href="GoMain">Home</a></li>
 
-								<li><a href="menu.jsp">Menu</a></li>
+								<li><a href="GoMap">Map</a></li>
 
-								<li><a href="reservation.jsp">Reservation</a></li>
+								<li><a href="GoTree">My Tree</a></li>
 
-								<li><a href="gallery.jsp">Gallery</a></li>
+								<li><a href="blog.jsp">Review & Point</a></li>
 
-								<li><a href="about.jsp">About</a></li>
-
-								<li><a href="blog.jsp">Blog</a></li>
-
-								<li><a href="contact.jsp">Contact</a></li>
+								<li><a href="contact.jsp">Registration</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -99,19 +95,16 @@
 			<li class="t-center m-b-13"><a href="GoMain" class="txt19">Home</a>
 			</li>
 
-			<li class="t-center m-b-13"><a href="menu.jsp" class="txt19">Menu</a>
+			<li class="t-center m-b-13"><a href="GoMap" class="txt19">Map</a>
 			</li>
 
-			<li class="t-center m-b-13"><a href="gallery.jsp" class="txt19">Gallery</a>
+			<li class="t-center m-b-13"><a href="GoTree" class="txt19">My Tree</a>
 			</li>
 
-			<li class="t-center m-b-13"><a href="about.jsp" class="txt19">About</a>
+			<li class="t-center m-b-13"><a href="blog.html" class="txt19">Review & Point</a>
 			</li>
 
-			<li class="t-center m-b-13"><a href="blog.jsp" class="txt19">Blog</a>
-			</li>
-
-			<li class="t-center m-b-33"><a href="contact.jsp" class="txt19">Contact</a>
+			<li class="t-center m-b-33"><a href="contact.html" class="txt19">Registration</a>
 			</li>
 		</ul>
 	</aside>
@@ -119,7 +112,7 @@
 	<!-- Title Page -->
 	<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15"
 		style="background-image: url(images/bg-title-page-01.jpg);">
-		<h2 class="tit6 t-center">Pato Menu</h2>
+		<h2 class="tit6 t-center">Zero Waste 매장 안내</h2>
 	</section>
 
 	<!-- Main menu -->

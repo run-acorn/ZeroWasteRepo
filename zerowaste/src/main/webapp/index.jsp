@@ -62,9 +62,9 @@
 							<ul class="main_menu">
 								<li><a href="GoMain">Home</a></li>
 
-								<li><a href="map.jsp">Map</a></li>
+								<li><a href="GoMap">Map</a></li>
 
-								<li><a href="about.jsp">My Tree</a></li>
+								<li><a href="GoTree">My Tree</a></li>
 
 								<li><a href="blog.jsp">Review & Point</a></li>
 
@@ -92,10 +92,10 @@
 			<li class="t-center m-b-13"><a href="GoMain" class="txt19">Home</a>
 			</li>
 
-			<li class="t-center m-b-13"><a href="menu.html" class="txt19">Map</a>
+			<li class="t-center m-b-13"><a href="GoMap" class="txt19">Map</a>
 			</li>
 
-			<li class="t-center m-b-13"><a href="about.html" class="txt19">My Tree</a>
+			<li class="t-center m-b-13"><a href="GoTree" class="txt19">My Tree</a>
 			</li>
 
 			<li class="t-center m-b-13"><a href="blog.html" class="txt19">Review & Point</a>
@@ -120,7 +120,7 @@
 
 						<h2
 							class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
-							data-appear="fadeInUp">Pato Place</h2>
+							data-appear="fadeInUp">Zero Waste World</h2>
 
 						<div class="wrap-btn-slide1 animated visible-false"
 							data-appear="zoomIn">
@@ -129,7 +129,7 @@
 								<tr>
 									<td><a href="GoLogin"
 										class="btn1 flex-c-m size1 txt3 trans-0-4"> Sign In </a></td>
-									<td>" "</td>
+									<td>ㅤㅤ<td>
 									<td><a href="GoJoin"
 										class="btn1 flex-c-m size1 txt3 trans-0-4"> Sign Up </a></td>
 								</tr>
@@ -148,7 +148,7 @@
 
 						<h2
 							class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
-							data-appear="lightSpeedIn">Pato Place</h2>
+							data-appear="lightSpeedIn">Zero Waste World</h2>
 
 						<div class="wrap-btn-slide1 animated visible-false"
 							data-appear="slideInUp">
@@ -157,7 +157,7 @@
 								<tr>
 									<td><a href="GoLogin"
 										class="btn1 flex-c-m size1 txt3 trans-0-4"> Sign In </a></td>
-									<td>" "</td>
+									<td>ㅤㅤ<td>
 									<td><a href="GoJoin"
 										class="btn1 flex-c-m size1 txt3 trans-0-4"> Sign Up </a></td>
 								</tr>
@@ -176,7 +176,7 @@
 
 						<h2
 							class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
-							data-appear="rotateInUpRight">Pato Place</h2>
+							data-appear="rotateInUpRight">Zero Waste World</h2>
 
 						<div class="wrap-btn-slide1 animated visible-false"
 							data-appear="rotateIn">
@@ -185,7 +185,7 @@
 								<tr>
 									<td><a href="GoLogin"
 										class="btn1 flex-c-m size1 txt3 trans-0-4"> Sign In </a></td>
-									<td>" "</td>
+									<td>ㅤㅤ</td>
 									<td><a href="GoJoin"
 										class="btn1 flex-c-m size1 txt3 trans-0-4"> Sign Up </a></td>
 								</tr>
