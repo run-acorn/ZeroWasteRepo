@@ -40,7 +40,7 @@
 	<!-- Header -->
 	<header>
 		<!-- Header desktop -->
-		<div class="wrap-menu-header gradient1 trans-0-4">
+		<div>
 			<div class="container h-full">
 				<div class="wrap_header trans-0-3">
 

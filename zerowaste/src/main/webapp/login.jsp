@@ -49,7 +49,7 @@
 	<!-- Header -->
 	<header>
 		<!-- Header desktop -->
-		<div class="wrap-menu-header gradient1 trans-0-4">
+		<div>
 			<div class="container h-full">
 				<div class="wrap_header trans-0-3"></div>
 			</div>
@@ -73,7 +73,7 @@
 						<h3 class="tit3 t-center m-b-35 m-t-2">Sign table</h3>
 					</div>
 
-					<form class="wrap-form-reservation size22 m-l-r-auto"
+					<form class="wrap-form-reservation m-l-r-auto"
 						action="LoginService" method="post">
 						<div class="row">
 							<div class="col-md-4">
