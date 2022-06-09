@@ -106,6 +106,13 @@
 
 			<li class="t-center m-b-33"><a href="contact.html" class="txt19">Registration</a>
 			</li>
+						
+			<li class="t-center">
+				<!-- Button3 -->
+				<a href="GoLogout" class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto">
+					Sign Out
+				</a>
+			</li>
 		</ul>
 	</aside>
 

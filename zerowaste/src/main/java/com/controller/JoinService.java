@@ -1,8 +1,8 @@
 package com.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.model.UserDAO;
 import com.model.UserVO;
+
 
 @WebServlet("/JoinService")
 public class JoinService extends HttpServlet {
