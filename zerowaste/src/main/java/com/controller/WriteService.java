@@ -13,6 +13,12 @@ public class WriteService extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		// 여기서 인서트 해서 성공하면 board페이지로 가면됨
+		
+		
+		
+		
+		
 		
 	}
 
