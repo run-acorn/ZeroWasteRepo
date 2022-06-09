@@ -29,12 +29,14 @@ constraint store_snum_pk primary key(storeNum)
 
 -- 매장번호에 쓸 시퀀스
 create sequence store_num_seq
-        start with 1
+        start with 137
         increment by 1
         maxvalue 999999
         nocycle
         nocache
         
+drop sequence store_num_seq
+
 insert into storeInfo
 values (store_num_seq.nextval,'동명식빵','광주광역시 동구 동계천로 157','카페','35.14919736053822',' 126.92650745620224','https://pcmap.place.naver.com/restaurant/1451719606/home?from=map&fromPanelNum=2&ts=1654222632165')
 

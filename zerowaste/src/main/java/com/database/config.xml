@@ -21,6 +21,7 @@
   </environments>
   <mappers>
     <mapper resource="com/database/UserMapper.xml"/>
+    <mapper resource="com/database/StoreMapper.xml"/>
     <mapper resource="com/database/WriteMapper.xml"/>
   </mappers>
 </configuration>
