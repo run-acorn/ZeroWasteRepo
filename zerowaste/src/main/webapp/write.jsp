@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Blog Detail</title>
+<title>review write</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -57,7 +57,7 @@
 				<div class="wrap_header trans-0-3">
 					<!-- Logo -->
 					<div class="logo">
-						<a href="index.html"> <img src="images/icons/logo.png"
+						<a href="index.jsp"> <img src="images/icons/logo.png"
 							alt="IMG-LOGO" data-logofixed="images/icons/logo2.png">
 						</a>
 					</div>
@@ -72,9 +72,9 @@
 
 								<li><a href="GoTree">My Tree</a></li>
 
-								<li><a href="blog.jsp">Review & Point</a></li>
+								<li><a href="GoBoard">Review & Point</a></li>
 
-								<li><a href="contact.jsp">Registration</a></li>
+								<li><a href="GoRegi">Registration</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -104,10 +104,10 @@
 			<li class="t-center m-b-13"><a href="GoTree" class="txt19">My
 					Tree</a></li>
 
-			<li class="t-center m-b-13"><a href="blog.html" class="txt19">Review
+			<li class="t-center m-b-13"><a href="GoBoard" class="txt19">Review
 					& Point</a></li>
 
-			<li class="t-center m-b-33"><a href="contact.html" class="txt19">Registration</a>
+			<li class="t-center m-b-33"><a href="GoRegi" class="txt19">Registration</a>
 			</li>
 		</ul>
 	</aside>

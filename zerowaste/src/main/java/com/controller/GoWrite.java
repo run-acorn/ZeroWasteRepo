@@ -18,7 +18,7 @@ public class GoWrite extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		request.setCharacterEncoding("UTF-8");
-		String nextPage = "blog-detail.jsp";
+		String nextPage = "write.jsp";
 		RequestDispatcher rd = request.getRequestDispatcher(nextPage);
 		rd.forward(request, response);
 		

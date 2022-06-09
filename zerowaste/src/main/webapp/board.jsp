@@ -60,9 +60,9 @@
 
 								<li><a href="GoTree">My Tree</a></li>
 
-								<li><a href="blog.jsp">Review & Point</a></li>
+								<li><a href="GoBoard">Review & Point</a></li>
 
-								<li><a href="contact.jsp">Registration</a></li>
+								<li><a href="GoRegi">Registration</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -92,10 +92,10 @@
 			<li class="t-center m-b-13"><a href="GoTree" class="txt19">My
 					Tree</a></li>
 
-			<li class="t-center m-b-13"><a href="blog.html" class="txt19">Review
+			<li class="t-center m-b-13"><a href="GoBoard" class="txt19">Review
 					& Point</a></li>
 
-			<li class="t-center m-b-33"><a href="contact.html" class="txt19">Registration</a>
+			<li class="t-center m-b-33"><a href="GoRegi" class="txt19">Registration</a>
 			</li>
 		</ul>
 	</aside>
