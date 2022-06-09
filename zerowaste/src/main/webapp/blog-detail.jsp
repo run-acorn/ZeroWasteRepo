@@ -1,3 +1,4 @@
+<%@page import="com.model.UserVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -45,7 +46,9 @@
 <!--===============================================================================================-->
 </head>
 <body class="animsition">
-
+	<%
+	UserVO login = (UserVO) session.getAttribute("login");
+	%>
 	<!-- Header -->
 	<header>
 		<!-- Header desktop -->
@@ -136,24 +139,39 @@
 						<!-- Block4 -->
 						<div class="blo4 p-b-63">
 							<!-- - -->
-							<div class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">
-								<a href="blog-detail.html"> <img src="images/blog-05.jpg"
-									alt="IMG-BLOG">
-								</a>
+							<div id="image_container" class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">								
 
-
-							</div>					
+							</div>
 						</div>
 
 						<!-- Leave a comment -->
-						<form class="leave-comment p-t-10 p-b-30" action="WriteService" method="post" enctype="multipart/form-data">
+						<form class="leave-comment p-t-10 p-b-30" action="WriteService"
+							method="post" enctype="multipart/form-data">
 							<h4 class="txt33 p-b-14">리뷰작성</h4>
 
 							<p>영수증을 꼭 넣어주세요~</p>
 
 							<div>
-								<input class="sizefull txt10 p-t-20" type="file"
-									name="fileName" placeholder="파일첨부">
+								<input class="sizefull txt10 p-t-20" type="file" name="fileName"
+									onchange="setThumbnail(event);">
+									
+								<script>
+									function setThumbnail(event) {
+										var reader = new FileReader();
+
+										reader.onload = function(event) {
+											var img = document.createElement("img");
+											img.setAttribute("src",event.target.result);
+											document.querySelector("div#image_container").appendChild(img);
+										};
+
+										reader.readAsDataURL(event.target.files[0]);
+									}
+								</script>
+								
+
+
+
 							</div>
 
 							<textarea
@@ -162,7 +180,7 @@
 
 							<div class="size30 bo2 bo-rad-10 m-t-3 m-b-20">
 								<input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
-									name="id" placeholder="id를 입력세주세요">
+									name="id" value="<%=login.getId()%>" readonly>
 							</div>
 
 							<div class="size30 bo2 bo-rad-10 m-t-3 m-b-20">
