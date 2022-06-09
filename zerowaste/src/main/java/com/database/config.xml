@@ -5,8 +5,8 @@
 <configuration>
 <typeAliases>
 	<typeAlias type="com.model.UserVO" alias="UserVO"/>
+	<typeAlias type="com.model.StoreVO" alias="StoreVO"/>
 	<typeAlias type="com.model.CertiVO" alias="CertiVO"/>
-	
 </typeAliases>
   <environments default="development">
     <environment id="development">

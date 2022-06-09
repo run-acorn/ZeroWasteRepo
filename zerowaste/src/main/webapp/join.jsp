@@ -111,7 +111,7 @@
 
 						<div class="wrap-btn-booking flex-c-m m-t-6">
 							<!-- Button3 -->
-							<button type="submit" class="btn3 flex-c-m size13 txt11 trans-0-4">
+							<button type="button" class="btn3 flex-c-m size13 txt11 trans-0-4" onClick="join();">
 								Sign Up
 							</button>
 						</div>
@@ -147,6 +147,40 @@
 	<script type="text/javascript" src="vendor/lightbox2/js/lightbox.min.js"></script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
+	<script type="text/javascript">
+		function join(){
+			// ajax 사용
+			// input태그 값들을 controller에게 전달
+			$.ajax({
+				// 요청할 서버의 url
+				url : '',
+				type : '',
+				data : {
+					// javascript객체 형태로 데이터 전달
+				},
+				//dataType : 'json',
+				success : function(res) {
+					// res --> 서버페이지에서 받아온 결과값
+					// 문자열 'true'
+					console.log(res);
+					//1. 서버를 불러내는데 성공
+					// window객체 : 현재 열려있는 창의 정보를 가진 객체
+					// window.location : 현재 창에 띄워진 URL
+					// window.location.href = "url";  
+					// location.href="url";
+					//location.href="http://www.naver.com";
+					
+				},
+				error : function() {
+					alert('요청실패!');
+					// 2. 서버를 불러내는걸 실패
+				}
+			})
+			
+			
+		}
+	
+	</script>
 
 </body>
 </html>
