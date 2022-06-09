@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.model.UserDAO;
 import com.model.UserVO;
@@ -28,10 +29,10 @@ public class LoginService extends HttpServlet {
 		UserDAO dao = new UserDAO();
 		UserVO login = dao.login(uvo);
 		
-		request.setAttribute("sorf", login);
-		
 		String nextPage = null;
 		if (login != null) {
+			HttpSession session = request.getSession();
+			session.setAttribute("login", login);
 			nextPage = "GoMain";
 		} else {
 			nextPage = "GoLogin";
