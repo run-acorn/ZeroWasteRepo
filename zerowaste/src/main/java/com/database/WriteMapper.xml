@@ -5,11 +5,7 @@
 <mapper namespace="com.model.CertiVO">
 
 	<insert id="write" parameterType="CertiVO">
-<<<<<<< HEAD
-		insert into certiInfo values (cer_num_seq.nextval, #{id}, #{storeName}, #{review}, #{fileName}, )
-=======
 		insert into certiInfo values (cer_num_seq.nextval, #{id}, #{storeName}, #{review}, #{fileName}, sysdate)
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-6/ZeroWasteRepo
 	</insert>
 	
 	<select id="BoardList" resultType="CertiVO">
