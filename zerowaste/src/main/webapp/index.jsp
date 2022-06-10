@@ -69,11 +69,11 @@
 							<table>
 								<tr>
 									<td><a href="GoLogin"
-										class="btn1 flex-c-m size1 txt3 trans-0-4"> Sign In </a></td>
+										class="btn1 flex-c-m size1 txt3 trans-0-4"> 로그인 </a></td>
 									<td>ㅤㅤ
 									<td>
 									<td><a href="GoJoin"
-										class="btn1 flex-c-m size1 txt3 trans-0-4"> Sign Up </a></td>
+										class="btn1 flex-c-m size1 txt3 trans-0-4"> 회원가입 </a></td>
 								</tr>
 							</table>
 						</div>
@@ -98,11 +98,11 @@
 							<table>
 								<tr>
 									<td><a href="GoLogin"
-										class="btn1 flex-c-m size1 txt3 trans-0-4"> Sign In </a></td>
+										class="btn1 flex-c-m size1 txt3 trans-0-4"> 로그인 </a></td>
 									<td>ㅤㅤ
 									<td>
 									<td><a href="GoJoin"
-										class="btn1 flex-c-m size1 txt3 trans-0-4"> Sign Up </a></td>
+										class="btn1 flex-c-m size1 txt3 trans-0-4"> 회원가입 </a></td>
 								</tr>
 							</table>
 						</div>
@@ -127,10 +127,10 @@
 							<table>
 								<tr>
 									<td><a href="GoLogin"
-										class="btn1 flex-c-m size1 txt3 trans-0-4"> Sign In </a></td>
+										class="btn1 flex-c-m size1 txt3 trans-0-4"> 로그인 </a></td>
 									<td>ㅤㅤ</td>
 									<td><a href="GoJoin"
-										class="btn1 flex-c-m size1 txt3 trans-0-4"> Sign Up </a></td>
+										class="btn1 flex-c-m size1 txt3 trans-0-4"> 회원가입 </a></td>
 								</tr>
 							</table>
 						</div>
@@ -206,8 +206,8 @@
 
 			<li class="t-center">
 				<!-- Button3 --> <a href="GoLogout"
-				class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"> Sign
-					Out </a>
+				class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"> 로그아웃
+					 </a>
 			</li>
 		</ul>
 	</aside>

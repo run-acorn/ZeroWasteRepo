@@ -103,14 +103,39 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
          <li class="t-center m-b-13"><a href="GoMain" class="txt19">Home</a>
          </li>
 
+<<<<<<< HEAD
+			<li class="t-center m-b-33"><a href="GoRegi" class="txt19">Registration</a>
+			</li>
+						
+			<li class="t-center">
+				<!-- Button3 -->
+				<a href="GoLogout" class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto">
+					로그아웃
+				</a>
+			</li>
+		</ul>
+	</aside>
+=======
          <li class="t-center m-b-13"><a href="GoMap" class="txt19">Map</a>
          </li>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-6/ZeroWasteRepo
 
          <li class="t-center m-b-13"><a href="GoTree" class="txt19">My
                Tree</a></li>
 
+<<<<<<< HEAD
+	<!-- Main menu -->
+	<div style="width: 100%; height: 100%;" >
+	<section
+		class="section-mainmenu p-t-70 p-b-70 p-l-70 p-r-70 bg1-pattern" 
+		style="width: 100%; height: 100%; padding: 1%;">
+			<div id="map" style="width: 100%; height: 100%;"></div>
+			<script type="text/javascript"
+				src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b9d52b733842f8156d5455f83b6f4277&libraries=services"></script>
+=======
          <li class="t-center m-b-13"><a href="blog.html" class="txt19">Review
                & Point</a></li>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-6/ZeroWasteRepo
 
          <li class="t-center m-b-33"><a href="GoRegi" class="txt19">Registration</a>
          </li>
@@ -150,6 +175,20 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
       <script type="text/javascript"
          src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b9d52b733842f8156d5455f83b6f4277&libraries=services"></script>
 
+<<<<<<< HEAD
+				// 마커가 지도 위에 표시되도록 설정합니다
+				marker.setMap(map);
+			</script>
+	</section>
+	</div>
+	<!-- Back to top -->
+	<div class="btn-back-to-top bg0-hov" id="myBtn">
+		<span class="symbol-btn-back-to-top"> <i
+			class="fa fa-angle-double-up" aria-hidden="true"></i>
+		</span>
+	</div>
+=======
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-6/ZeroWasteRepo
 
       <!-- 지도영역 -->
 
