@@ -65,13 +65,8 @@
 				<div class="wrap_header trans-0-3">
 					<!-- Logo -->
 					<div class="logo">
-<<<<<<< HEAD
 						<a href="index.jsp">
 							<img src="images/icons/logo.png" alt="IMG-LOGO" data-logofixed="images/icons/logo.png">
-=======
-						<a href="index.html"> <img src="images/icons/logo.png"
-							alt="IMG-LOGO" data-logofixed="images/icons/logo2.png">
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-6/ZeroWasteRepo
 						</a>
 					</div>
 
