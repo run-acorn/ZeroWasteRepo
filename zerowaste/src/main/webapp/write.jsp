@@ -189,7 +189,7 @@
 							</div>
 
 							<!-- Button3 -->
-							<button type="submit"
+							<button align: "center" type="submit"
 								class="btn3 flex-c-m size31 txt11 trans-0-4">제출하기</button>
 						</form>
 					</div>
