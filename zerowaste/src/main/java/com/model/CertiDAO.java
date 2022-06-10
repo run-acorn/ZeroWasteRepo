@@ -32,6 +32,25 @@ public class CertiDAO {
 		
 		return list;
 	}
+
+	public CertiVO boardView(int cernum) {
+		
+		session = sql.openSession(true);
+		CertiVO cvo = session.selectOne("boardView", cernum);
+		session.close();
+		
+		return cvo;
+		
+		
+	}
+
+	public int UpdateService(CertiVO cvo) {
+		
+		session = sql.openSession(true);
+		int cnt = session.update("updateService", cvo);
+		session.close();
+		return cnt;
+	}
 	
 	
 }

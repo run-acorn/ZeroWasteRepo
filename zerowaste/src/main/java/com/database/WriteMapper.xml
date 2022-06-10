@@ -3,12 +3,25 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.model.CertiVO">
+
 	<insert id="write" parameterType="CertiVO">
 		insert into certiInfo values (cer_num_seq.nextval, #{id}, #{storeName}, #{review}, #{fileName})
 	</insert>
 	
-	<select id="BoardList" parameterType="CertiVO" resultType="CertiVO">
+	<select id="BoardList" resultType="CertiVO">
 	select * from certiInfo
 	</select>
 	
+	<select id="boardView" resultType="CertiVO">
+	select * from certiInfo
+	where cerNum = #{cerNum}
+	</select>
+	
+	<update id="updateService" parameterType="CertiVO">
+	update certiInfo
+  	set storeName = #{storeName},
+  		review = #{review},
+  		fileName = #{fileName}
+  	where cerNum = #{cerNum}
+	</update>
 </mapper>

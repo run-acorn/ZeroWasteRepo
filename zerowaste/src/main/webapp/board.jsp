@@ -1,3 +1,6 @@
+<%@page import="com.model.UserVO"%>
+<%@page import="com.model.CertiVO"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -36,7 +39,12 @@
 <!--===============================================================================================-->
 </head>
 <body class="animsition">
+<% List<CertiVO> list = (List<CertiVO>)request.getAttribute("list");
 
+	UserVO login = (UserVO)session.getAttribute("login");
+%>
+
+<% if (login != null){ %>
 	<!-- Header -->
 	<header>
 		<!-- Header desktop -->
@@ -132,28 +140,29 @@
 				
 					<div class="p-t-80 p-b-124 bo5-r h-full p-r-50 p-r-0-md bo-none-md">
 						<!-- Block4 -->
+						
+						<%for(CertiVO cvo : list){ %>
 						<div class="blo4 p-b-63">
 							<div class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">
-								<a href="blog-detail.html">
-									<img src="images/blog-05.jpg" alt="IMG-BLOG">
+								<a class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative" href="GoUpdate?CerNum=<%=cvo.getCerNum()%>">
+									<img src="reviewImg/<%=cvo.getFileName() %>" alt="IMG-BLOG">
 								</a>
-
+								
 								
 							</div>
-
 							<div class="text-blo4 p-t-33">
 								<h4 class="p-b-16">
-									<a href="blog-detail.html" class="tit9">Cooking recipe Delicious</a>
+									<a href="blog-detail.html" class="tit9"><%=cvo.getStoreName() %></a>
 								</h4>
 
 								<div class="txt32 flex-w p-b-24">
 									<span>
-										by Admin
+										<%=cvo.getId() %>
 										<span class="m-r-6 m-l-4">|</span>
 									</span>
 
 									<span>
-										28 December, 2018
+										sysdata들고오기
 										<span class="m-r-6 m-l-4">|</span>
 									</span>
 
@@ -168,16 +177,13 @@
 								</div>
 
 								<p>
-									Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius
+									<%=cvo.getReview() %>
 								</p>
 
-								<a href="blog-detail.html" class="dis-block txt4 m-t-30">
-									Continue Reading
-									<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-								</a>
+								
 							</div>
 						</div>
-
+<%} %>
 						
 						
 
@@ -438,6 +444,7 @@
 			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
 		</span>
 	</div>
+	<%} %>
 
 
 
