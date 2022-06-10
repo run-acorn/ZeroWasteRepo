@@ -152,7 +152,7 @@
 					<!-- Logo -->
 					<div class="logo">
 						<a href="GoMain"> <img src="images/icons/logo.png"
-							alt="IMG-LOGO" data-logofixed="images/icons/logo2.png">
+							alt="IMG-LOGO" data-logofixed="images/icons/logo.png">
 						</a>
 					</div>
 
