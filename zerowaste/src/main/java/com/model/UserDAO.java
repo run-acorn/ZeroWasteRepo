@@ -1,6 +1,8 @@
 package com.model;
 
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -31,5 +33,10 @@ public class UserDAO {
 			return vo;
 		}
 
-		
+		public List<UserVO> treegrow() {
+			session = sql.openSession(true);
+			List<UserVO> vo = session.selectList("treegrow");
+			session.close();
+			return vo;
+		}
 }

@@ -1,9 +1,10 @@
+<%@page import="com.model.UserVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>About Us</title>
+<title>My Tree</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -45,7 +46,9 @@
 <!--===============================================================================================-->
 </head>
 <body class="animsition">
-
+<%
+	UserVO login = (UserVO)session.getAttribute("login");
+%>
 	<!-- Header -->
 	<header>
 		<!-- Header desktop -->
@@ -139,10 +142,7 @@
 
 		<!-- DB데이터 : 사용자 이름 받아오기 -->
 		<p class="tree txt33">
-			<strong>smhrd</strong>님의 나무입니다
-		</p>
-		<p class="tree txt33">
-			현재 나무 상태 : <strong>새싹</strong>
+			<strong><%= login.getNickname() %></strong>님의 나무입니다
 		</p>
 
 		<br>
@@ -150,10 +150,10 @@
 			<table>
 				<tr>
 					<!-- 물 주기 버튼 -->
-
 					<td>
-						<button type="submit" class="btn3 flex-c-m size13 txt13 trans-0-4">
-							물 주기</button>
+						<a href="GrowService" class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto">
+							물 주기
+						</a>
 					</td>
 
 					<!-- 버튼 사이 간격 띄우는 td(공백문자 들어있음) -->
@@ -161,11 +161,10 @@
 
 					<!-- 비료 주기 버튼 -->
 					<td>
-						<!-- Button3 -->
-						<button type="submit" class="btn3 flex-c-m size13 txt13 trans-0-4">
-							비료 주기</button>
+						<a href="GrowService" class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto">
+							비료 주기
+						</a>
 					</td>
-
 				</tr>
 			</table>
 		</div>

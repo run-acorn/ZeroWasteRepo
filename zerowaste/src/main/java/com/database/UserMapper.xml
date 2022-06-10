@@ -4,10 +4,18 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.model.UserDAO">
 	<insert id="join" parameterType="UserVO">
-		insert into userInfo(id, pw, nickname) values (#{id}, #{pw}, #{nickname})
+		insert into userInfo(id, pw,
+		nickname) values (#{id}, #{pw}, #{nickname})
 	</insert>
-	
+
 	<select id="login" parameterType="UserVO" resultType="UserVO">
-		select * from userInfo where id = #{id} and pw = #{pw}
+		select *
+		from userInfo where id = #{id} and pw = #{pw}
+	</select>
+
+	<select id="treegrow" resultType="UserVO">
+		select u.nickname, r.treegrade
+		from userInfo u, rewardInfo r
+		where u.point between r.minvalue and r.maxvalue
 	</select>
 </mapper>

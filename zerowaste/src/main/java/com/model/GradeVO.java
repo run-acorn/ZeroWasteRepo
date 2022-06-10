@@ -7,12 +7,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserVO {
+public class GradeVO {
 
-	private String id;
-	private String pw;
-	private String nickname;
-	private float point;
 	private String treeGrade;
-	
+	private float minValue;
+	private float maxValue;
 }
