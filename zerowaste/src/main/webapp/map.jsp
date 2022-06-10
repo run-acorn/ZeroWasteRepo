@@ -110,7 +110,7 @@
 			<li class="t-center">
 				<!-- Button3 -->
 				<a href="GoLogout" class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto">
-					Sign Out
+					로그아웃
 				</a>
 			</li>
 		</ul>
@@ -123,9 +123,11 @@
 	</section>
 
 	<!-- Main menu -->
+	<div style="width: 100%; height: 100%;" >
 	<section
-		class="section-mainmenu p-t-70 p-b-70 p-l-70 p-r-70 bg1-pattern">
-			<div id="map" style="width: 1780px; height: 1000px;"></div>
+		class="section-mainmenu p-t-70 p-b-70 p-l-70 p-r-70 bg1-pattern" 
+		style="width: 100%; height: 100%; padding: 1%;">
+			<div id="map" style="width: 100%; height: 100%;"></div>
 			<script type="text/javascript"
 				src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b9d52b733842f8156d5455f83b6f4277&libraries=services"></script>
 
@@ -154,6 +156,7 @@
 				marker.setMap(map);
 			</script>
 	</section>
+	</div>
 	<!-- Back to top -->
 	<div class="btn-back-to-top bg0-hov" id="myBtn">
 		<span class="symbol-btn-back-to-top"> <i

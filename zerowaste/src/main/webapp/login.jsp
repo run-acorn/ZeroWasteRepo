@@ -70,7 +70,7 @@
 					<div class="t-center">
 						<span class="tit2 t-center"> 로그인 </span>
 
-						<h3 class="tit3 t-center m-b-35 m-t-2">Sign table</h3>
+						<h3 class="tit3 t-center m-b-35 m-t-2">Zero waste</h3>
 					</div>
 
 					<form class="wrap-form-reservation size22 m-l-r-auto"
@@ -109,7 +109,7 @@
 						<div class="wrap-btn-booking flex-c-m m-t-6">
 							<!-- Button3 -->
 							<button type="submit"
-								class="btn3 flex-c-m size13 txt11 trans-0-4">Sign In</button>
+								class="btn3 flex-c-m size13 txt11 trans-0-4">로그인</button>
 						</div>
 					</form>
 				</div>
