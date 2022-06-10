@@ -33,9 +33,9 @@ public class UserDAO {
 			return vo;
 		}
 
-		public List<UserVO> treegrow() {
+		public UserVO treegrow(String id) {
 			session = sql.openSession(true);
-			List<UserVO> vo = session.selectList("treegrow");
+			UserVO vo = session.selectOne("treegrow", id);
 			session.close();
 			return vo;
 		}
