@@ -182,16 +182,12 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
         
         //분식
         var school = [];
-        ////var sc_info ={content:/*매장명*/,latlng: new kakao.maps.LatLng(/*위도*/, /*경도*/) };
         
         //야식
         var midnight=[];
-        //var mi_info ={content:/*매장명*/,latlng: new kakao.maps.LatLng(/*위도*/, /*경도*/) };
         
         //카페
         var cafe=[];
-        //var ca_info ={content:/*매장명*/,latlng: new kakao.maps.LatLng(/*위도*/, /*경도*/) };
-         
         
         <%int i=0;%>
         
