@@ -13,9 +13,10 @@
 		from userInfo where id = #{id} and pw = #{pw}
 	</select>
 
-	<select id="treegrow" resultType="UserVO">
+	<select id="treegrow" parameterType="UserVO" resultType="UserVO">
 		select u.nickname, r.treegrade
 		from userInfo u, rewardInfo r
 		where u.point between r.minvalue and r.maxvalue
+		and id = #{id}
 	</select>
 </mapper>

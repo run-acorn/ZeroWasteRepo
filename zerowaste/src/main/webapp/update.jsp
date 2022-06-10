@@ -63,7 +63,7 @@
 					<!-- Logo -->
 					<div class="logo">
 						<a href="index.jsp"> <img src="images/icons/logo.png"
-							alt="IMG-LOGO" data-logofixed="images/icons/logo2.png">
+							alt="IMG-LOGO" data-logofixed="images/icons/logo.png">
 						</a>
 					</div>
 
@@ -113,6 +113,13 @@
 					& Point</a></li>
 
 			<li class="t-center m-b-33"><a href="GoRegi" class="txt19">Registration</a>
+			</li>
+			
+			<li class="t-center">
+				<!-- Button3 -->
+				<a href="GoLogout" class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto">
+					Sign Out
+				</a>
 			</li>
 		</ul>
 	</aside>

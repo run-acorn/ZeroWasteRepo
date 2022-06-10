@@ -46,9 +46,11 @@
 <!--===============================================================================================-->
 </head>
 <body class="animsition">
-<%
-	UserVO login = (UserVO)session.getAttribute("login");
-%>
+	<%
+	UserVO login = (UserVO) session.getAttribute("login");
+
+	UserVO grade = (UserVO) request.getAttribute("grade");
+	%>
 	<!-- Header -->
 	<header>
 		<!-- Header desktop -->
@@ -58,7 +60,7 @@
 					<!-- Logo -->
 					<div class="logo">
 						<a href="GoMain"> <img src="images/icons/logo.png"
-							alt="IMG-LOGO" data-logofixed="images/icons/logo2.png">
+							alt="IMG-LOGO" data-logofixed="images/icons/logo.png">
 						</a>
 					</div>
 
@@ -109,12 +111,11 @@
 
 			<li class="t-center m-b-33"><a href="GoRegi" class="txt19">Registration</a>
 			</li>
-						
+
 			<li class="t-center">
-				<!-- Button3 -->
-				<a href="GoLogout" class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto">
-					Sign Out
-				</a>
+				<!-- Button3 --> <a href="GoLogout"
+				class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"> Sign
+					Out </a>
 			</li>
 		</ul>
 	</aside>
@@ -135,39 +136,29 @@
 
 		<!-- 나무 이미지 넣을 div 태그 -->
 		<div id="tree">
+		<% if (grade.getTreeGrade() == "새싹") { %>
 			<img src="images/tree_1.gif" alt="IMG-OUR">
+		<% } else if (grade.getTreeGrade() == "묘목") { %>
+			<img src="images/tree_2.gif" alt="IMG-OUR">
+		<% } else if (grade.getTreeGrade() == "작은나무") { %>
+			<img src="images/tree_3.gif" alt="IMG-OUR">
+		<% } else if (grade.getTreeGrade() == "중간나무") { %>
+			<img src="images/tree_4.gif" alt="IMG-OUR">
+		<% } else if (grade.getTreeGrade() == "큰나무") { %>
+			<img src="images/tree_5.gif" alt="IMG-OUR">
+		<% } else if (grade.getTreeGrade() == "숲") { %>
+			<img src="images/tree_6.gif" alt="IMG-OUR">
+		<% } else { %>
+			<img src="images/tree_7.gif" alt="IMG-OUR">
+		<% } %>
 		</div>
 
 		<br>
 
 		<!-- DB데이터 : 사용자 이름 받아오기 -->
 		<p class="tree txt33">
-			<strong><%= login.getNickname() %></strong>님의 나무입니다
+			<strong><%=login.getNickname()%></strong>님의 나무입니다
 		</p>
-
-		<br>
-		<div class="wrap-btn-booking flex-c-m m-t-6">
-			<table>
-				<tr>
-					<!-- 물 주기 버튼 -->
-					<td>
-						<a href="GrowService" class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto">
-							물 주기
-						</a>
-					</td>
-
-					<!-- 버튼 사이 간격 띄우는 td(공백문자 들어있음) -->
-					<td>ㅤㅤ</td>
-
-					<!-- 비료 주기 버튼 -->
-					<td>
-						<a href="GrowService" class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto">
-							비료 주기
-						</a>
-					</td>
-				</tr>
-			</table>
-		</div>
 	</section>
 
 	<!-- Back to top -->
