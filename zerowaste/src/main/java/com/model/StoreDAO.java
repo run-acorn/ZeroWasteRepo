@@ -1,5 +1,7 @@
 package com.model;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -21,5 +23,14 @@ public class StoreDAO {
 			session.close();
 		}
 		return cnt;
+	}
+	
+	public List<StoreVO> storeInfo() {
+		session = sql.openSession(true);
+
+		List<StoreVO> list = session.selectList("storeInfo");
+		session.close();
+		
+		return list;
 	}
 }

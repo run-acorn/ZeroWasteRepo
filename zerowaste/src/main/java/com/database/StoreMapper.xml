@@ -6,4 +6,8 @@
 	<insert id="insertStore" parameterType="StoreVO">
 		insert into storeInfo values (store_num_seq.nextval, #{storeName}, #{storeAddress}, #{foodType}, #{latutude}, #{longitude}, #{url})
 	</insert>
+	
+	<select id="storeInfo" resultType="StoreVO">
+		select * from storeInfo
+	</select>
 </mapper>
