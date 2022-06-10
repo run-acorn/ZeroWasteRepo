@@ -74,7 +74,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 
                         <li><a href="GoTree">My Tree</a></li>
 
-                        <li><a href="blog.jsp">Review & Point</a></li>
+                        <li><a href="GoBoard">Review & Point</a></li>
 
                         <li><a href="GoRegi">Registration</a></li>
                      </ul>
@@ -90,9 +90,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
       </div>
    </header>
 
-
-
-
    <!-- Sidebar -->
    <aside class="sidebar trans-0-4">
       <!-- Button Hide sidebar -->
@@ -103,39 +100,14 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
          <li class="t-center m-b-13"><a href="GoMain" class="txt19">Home</a>
          </li>
 
-<<<<<<< HEAD
-			<li class="t-center m-b-33"><a href="GoRegi" class="txt19">Registration</a>
-			</li>
-						
-			<li class="t-center">
-				<!-- Button3 -->
-				<a href="GoLogout" class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto">
-					로그아웃
-				</a>
-			</li>
-		</ul>
-	</aside>
-=======
          <li class="t-center m-b-13"><a href="GoMap" class="txt19">Map</a>
          </li>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-6/ZeroWasteRepo
 
          <li class="t-center m-b-13"><a href="GoTree" class="txt19">My
                Tree</a></li>
 
-<<<<<<< HEAD
-	<!-- Main menu -->
-	<div style="width: 100%; height: 100%;" >
-	<section
-		class="section-mainmenu p-t-70 p-b-70 p-l-70 p-r-70 bg1-pattern" 
-		style="width: 100%; height: 100%; padding: 1%;">
-			<div id="map" style="width: 100%; height: 100%;"></div>
-			<script type="text/javascript"
-				src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b9d52b733842f8156d5455f83b6f4277&libraries=services"></script>
-=======
-         <li class="t-center m-b-13"><a href="blog.html" class="txt19">Review
+         <li class="t-center m-b-13"><a href="GoBoard" class="txt19">Review
                & Point</a></li>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-6/ZeroWasteRepo
 
          <li class="t-center m-b-33"><a href="GoRegi" class="txt19">Registration</a>
          </li>
@@ -154,41 +126,24 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
       <h2 class="tit6 t-center">Zero Waste 매장 안내</h2>
    </section>
 
-
-	
    <!-- Main menu -->
    <section class="section-mainmenu p-t-70 p-b-70 p-l-70 p-r-70 bg1-pattern">
    
-   	 <!-- 카테고리 버튼 -->
-   	
-   	<ul class="main_menu">
-   		<li><input type="button" id="korean" value="한식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
-		<li><input type="button" id="western" value="양식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
-		<li><input type="button" id="japanese" value="일식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
-		<li><input type="button" id="school" value="분식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
-		<li><input type="button" id="midnight" value="야식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
-		<li><input type="button" id="cafe" value="카페" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
- 	</ul>
- 	
+       <!-- 카테고리 버튼 -->
+      
+      <ul class="main_menu">
+         <li><input type="button" id="korean" value="한식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
+      <li><input type="button" id="western" value="양식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
+      <li><input type="button" id="japanese" value="일식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
+      <li><input type="button" id="school" value="분식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
+      <li><input type="button" id="midnight" value="야식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
+      <li><input type="button" id="cafe" value="카페" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
+    </ul>
+    
       <!-- 지도 들어갈 공간 -->
       <div id="map" style="width: 1780px; height: 1000px;"></div>
       <script type="text/javascript"
          src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b9d52b733842f8156d5455f83b6f4277&libraries=services"></script>
-
-<<<<<<< HEAD
-				// 마커가 지도 위에 표시되도록 설정합니다
-				marker.setMap(map);
-			</script>
-	</section>
-	</div>
-	<!-- Back to top -->
-	<div class="btn-back-to-top bg0-hov" id="myBtn">
-		<span class="symbol-btn-back-to-top"> <i
-			class="fa fa-angle-double-up" aria-hidden="true"></i>
-		</span>
-	</div>
-=======
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-6/ZeroWasteRepo
 
       <!-- 지도영역 -->
 
@@ -230,237 +185,209 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
         //카페
         var cafe=[];
         //var ca_info ={content:/*매장명*/,latlng: new kakao.maps.LatLng(/*위도*/, /*경도*/) };
-         
         
         <%int i=0;%>
         
-        
         /* ------- 한식 식당 가져오는 함수 ------- */
         let korean_f = function(){
-    		<%for(i = 0; i < list.size(); i++){%>
-            	<%if (list.get(i).getFoodType().equals("한식")){%> 
-		            //ko_info라는 객체 생성(매장이름, 위도, 경도) : 한식 데이터
-		            var ko_info = {content:'<div><%=list.get(i).getStoreName()%><div>',         
-		            latlng: new kakao.maps.LatLng(<%=list.get(i).getLatutude()%>, <%=list.get(i).getLongitude()%>) };   
-		                           
-		            korean.push(ko_info);            //배열변수.push(객체변수); 배열에 객체 추가
-		
-		            
-		            
-		            for (var i = 0; i < korean.length; i ++) {
-		                // 마커를 생성합니다
-		                var marker = new kakao.maps.Marker({
-		                    map: map, // 마커를 표시할 지도
-		                    position: korean[i].latlng // 마커의 위치
-		                });
-		
-		                // 마커에 표시할 인포윈도우를 생성합니다 
-		                var infowindow = new kakao.maps.InfoWindow({
-		                    content: korean[i].content // 인포윈도우에 표시할 내용
-		                });
-		
-		                // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
-		                // 이벤트 리스너로는 클로저를 만들어 등록합니다 
-		                // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
-		                kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
-		                kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
-		                
-		                
-		            }
-		        <%}%>
-    		<%}%>
+          <%for(i = 0; i < list.size(); i++){%>
+               <%if (list.get(i).getFoodType().equals("한식")){%> 
+                  //ko_info라는 객체 생성(매장이름, 위도, 경도) : 한식 데이터
+                  var ko_info = {content:'<div><%=list.get(i).getStoreName()%><div>',         
+                  latlng: new kakao.maps.LatLng(<%=list.get(i).getLatutude()%>, <%=list.get(i).getLongitude()%>) };   
+                                 
+                  korean.push(ko_info);            //배열변수.push(객체변수); 배열에 객체 추가
+                  
+                  for (var i = 0; i < korean.length; i ++) {
+                      // 마커를 생성합니다
+                      var marker = new kakao.maps.Marker({
+                          map: map, // 마커를 표시할 지도
+                          position: korean[i].latlng // 마커의 위치
+                      });
+      
+                      // 마커에 표시할 인포윈도우를 생성합니다 
+                      var infowindow = new kakao.maps.InfoWindow({
+                          content: korean[i].content // 인포윈도우에 표시할 내용
+                      });
+      
+                      // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+                      // 이벤트 리스너로는 클로저를 만들어 등록합니다 
+                      // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+                      kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
+                      kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+                  }
+              <%}%>
+          <%}%>
         }
-
-
         
         /* ------- 양식 식당 가져오는 함수 ------- */
         let western_f = function(){
-    		<%for(i = 0; i < list.size(); i++){%>
-            	<%if(list.get(i).getFoodType().equals("양식")){%>
-		            //we_info 객체 : 양식 데이터
-		            var we_info = {content:'<div><%=list.get(i).getStoreName()%><div>',         
-		            latlng: new kakao.maps.LatLng(<%=list.get(i).getLatutude()%>, <%=list.get(i).getLongitude()%>) };   
-		                        
-		            western.push(we_info);
-		
-		            
-		            for (var i = 0; i < western.length; i ++) {
-		                // 마커를 생성합니다
-		                var marker = new kakao.maps.Marker({
-		                    map: map, // 마커를 표시할 지도
-		                    position: western[i].latlng // 마커의 위치
-		                });
-		
-		                // 마커에 표시할 인포윈도우를 생성합니다 
-		                var infowindow = new kakao.maps.InfoWindow({
-		                    content: western[i].content // 인포윈도우에 표시할 내용
-		                });
-		
-		                // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
-		                // 이벤트 리스너로는 클로저를 만들어 등록합니다 
-		                // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
-		                kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
-		                kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
-		            }
-		         <%}%>
-	    	<%}%>
+          <%for(i = 0; i < list.size(); i++){%>
+               <%if(list.get(i).getFoodType().equals("양식")){%>
+                  //we_info 객체 : 양식 데이터
+                  var we_info = {content:'<div><%=list.get(i).getStoreName()%><div>',         
+                  latlng: new kakao.maps.LatLng(<%=list.get(i).getLatutude()%>, <%=list.get(i).getLongitude()%>) };   
+                              
+                  western.push(we_info);
+      
+                  
+                  for (var i = 0; i < western.length; i ++) {
+                      // 마커를 생성합니다
+                      var marker = new kakao.maps.Marker({
+                          map: map, // 마커를 표시할 지도
+                          position: western[i].latlng // 마커의 위치
+                      });
+      
+                      // 마커에 표시할 인포윈도우를 생성합니다 
+                      var infowindow = new kakao.maps.InfoWindow({
+                          content: western[i].content // 인포윈도우에 표시할 내용
+                      });
+      
+                      // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+                      // 이벤트 리스너로는 클로저를 만들어 등록합니다 
+                      // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+                      kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
+                      kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+                  }
+               <%}%>
+          <%}%>
         }
-        
-        
         
         /* ------- 일식 식당 가져오는 함수 ------- */
         let japanese_f = function(){
-    		<%for(i = 0; i < list.size(); i++){%>
-            	<%if(list.get(i).getFoodType().equals("일식")){%>
-		            //ja_info 객체 : 일식 데이터
-		            var ja_info = {content:'<div><%=list.get(i).getStoreName()%><div>',         
-		            latlng: new kakao.maps.LatLng(<%=list.get(i).getLatutude()%>, <%=list.get(i).getLongitude()%>) };   
-		                        
-		            japanese.push(ja_info);
-		
-		            for (var i = 0; i < japanese.length; i ++) {
-		                // 마커를 생성합니다
-		                var marker = new kakao.maps.Marker({
-		                    map: map, // 마커를 표시할 지도
-		                    position: japanese[i].latlng // 마커의 위치
-		                });
-		
-		                // 마커에 표시할 인포윈도우를 생성합니다 
-		                var infowindow = new kakao.maps.InfoWindow({
-		                    content: japanese[i].content // 인포윈도우에 표시할 내용
-		                });
-		
-		                // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
-		                // 이벤트 리스너로는 클로저를 만들어 등록합니다 
-		                // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
-		                kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
-		                kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
-		            }
-		         <%}%>
-	    	<%}%>
-        	
+          <%for(i = 0; i < list.size(); i++){%>
+               <%if(list.get(i).getFoodType().equals("일식")){%>
+                  //ja_info 객체 : 일식 데이터
+                  var ja_info = {content:'<div><%=list.get(i).getStoreName()%><div>',         
+                  latlng: new kakao.maps.LatLng(<%=list.get(i).getLatutude()%>, <%=list.get(i).getLongitude()%>) };   
+                              
+                  japanese.push(ja_info);
+      
+                  for (var i = 0; i < japanese.length; i ++) {
+                      // 마커를 생성합니다
+                      var marker = new kakao.maps.Marker({
+                          map: map, // 마커를 표시할 지도
+                          position: japanese[i].latlng // 마커의 위치
+                      });
+      
+                      // 마커에 표시할 인포윈도우를 생성합니다 
+                      var infowindow = new kakao.maps.InfoWindow({
+                          content: japanese[i].content // 인포윈도우에 표시할 내용
+                      });
+      
+                      // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+                      // 이벤트 리스너로는 클로저를 만들어 등록합니다 
+                      // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+                      kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
+                      kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+                  }
+               <%}%>
+          <%}%>
+           
         }
-        
-        
-        
         
         /* ------- 분식 식당 가져오는 함수 ------- */
         let school_f = function(){
-    		<%for(i = 0; i < list.size(); i++){%>
-            	<%if(list.get(i).getFoodType().equals("분식")){%>
-		            //sc_info 객체 : 분식 데이터
-		            var sc_info = {content:'<div><%=list.get(i).getStoreName()%><div>',         
-		            latlng: new kakao.maps.LatLng(<%=list.get(i).getLatutude()%>, <%=list.get(i).getLongitude()%>) };   
-		                        
-		            school.push(sc_info);
-		
-		            for (var i = 0; i < school.length; i ++) {
-		                // 마커를 생성합니다
-		                var marker = new kakao.maps.Marker({
-		                    map: map, // 마커를 표시할 지도
-		                    position: school[i].latlng // 마커의 위치
-		                });
-		
-		                // 마커에 표시할 인포윈도우를 생성합니다 
-		                var infowindow = new kakao.maps.InfoWindow({
-		                    content: school[i].content // 인포윈도우에 표시할 내용
-		                });
-		
-		                // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
-		                // 이벤트 리스너로는 클로저를 만들어 등록합니다 
-		                // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
-		                kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
-		                kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
-		            }
-		         <%}%>
-	    	<%}%>
+          <%for(i = 0; i < list.size(); i++){%>
+               <%if(list.get(i).getFoodType().equals("분식")){%>
+                  //sc_info 객체 : 분식 데이터
+                  var sc_info = {content:'<div><%=list.get(i).getStoreName()%><div>',         
+                  latlng: new kakao.maps.LatLng(<%=list.get(i).getLatutude()%>, <%=list.get(i).getLongitude()%>) };   
+                              
+                  school.push(sc_info);
+      
+                  for (var i = 0; i < school.length; i ++) {
+                      // 마커를 생성합니다
+                      var marker = new kakao.maps.Marker({
+                          map: map, // 마커를 표시할 지도
+                          position: school[i].latlng // 마커의 위치
+                      });
+      
+                      // 마커에 표시할 인포윈도우를 생성합니다 
+                      var infowindow = new kakao.maps.InfoWindow({
+                          content: school[i].content // 인포윈도우에 표시할 내용
+                      });
+      
+                      // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+                      // 이벤트 리스너로는 클로저를 만들어 등록합니다 
+                      // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+                      kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
+                      kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+                  }
+               <%}%>
+          <%}%>
         }
-        
-        
-     // 배열에 추가된 마커들을 지도에 표시하거나 삭제하는 함수입니다
-        function setMarkers(map) {
-            for (var i = 0; i < korean.length; i++) {
-            	korean[i].setMap(map);
-            }            
-        }
-        
-     	function hidenMarkers(){
-     		setMarkers(null);
-     	}
         
         /* ------- 야식 식당 가져오는 함수 ------- */
         let midnight_f = function(){
-    		<%for(i = 0; i < list.size(); i++){%>
-            	<%if(list.get(i).getFoodType().equals("야식")){%>
-		            //mi_info 객체 : 야식 데이터
-		            var mi_info = {content:'<div><%=list.get(i).getStoreName()%><div>',         
-		            latlng: new kakao.maps.LatLng(<%=list.get(i).getLatutude()%>, <%=list.get(i).getLongitude()%>) };   
-		                        
-		            midnight.push(mi_info);
-		
-		            for (var i = 0; i < midnight.length; i ++) {
-		                // 마커를 생성합니다
-		                var marker = new kakao.maps.Marker({
-		                    map: map, // 마커를 표시할 지도
-		                    position: midnight[i].latlng // 마커의 위치
-		                });
-		
-		                // 마커에 표시할 인포윈도우를 생성합니다 
-		                var infowindow = new kakao.maps.InfoWindow({
-		                    content: midnight[i].content // 인포윈도우에 표시할 내용
-		                });
-		
-		                // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
-		                // 이벤트 리스너로는 클로저를 만들어 등록합니다 
-		                // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
-		                kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
-		                kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
-		            }
-		         <%}%>
-	    	<%}%>
+          <%for(i = 0; i < list.size(); i++){%>
+               <%if(list.get(i).getFoodType().equals("야식")){%>
+                  //mi_info 객체 : 야식 데이터
+                  var mi_info = {content:'<div><%=list.get(i).getStoreName()%><div>',         
+                  latlng: new kakao.maps.LatLng(<%=list.get(i).getLatutude()%>, <%=list.get(i).getLongitude()%>) };   
+                              
+                  midnight.push(mi_info);
+      
+                  for (var i = 0; i < midnight.length; i ++) {
+                      // 마커를 생성합니다
+                      var marker = new kakao.maps.Marker({
+                          map: map, // 마커를 표시할 지도
+                          position: midnight[i].latlng // 마커의 위치
+                      });
+      
+                      // 마커에 표시할 인포윈도우를 생성합니다 
+                      var infowindow = new kakao.maps.InfoWindow({
+                          content: midnight[i].content // 인포윈도우에 표시할 내용
+                      });
+      
+                      // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+                      // 이벤트 리스너로는 클로저를 만들어 등록합니다 
+                      // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+                      kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
+                      kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+                  }
+               <%}%>
+          <%}%>
         }
-        
-        
         
         /* ------- 카페 식당 가져오는 함수 ------- */
         let cafe_f = function(){
-    		<%for(i = 0; i < list.size(); i++){%>
-            	<%if(list.get(i).getFoodType().equals("카페")){%>
-		            //ca_info 객체 : 카페 데이터
-		            var ca_info = {content:'<div><%=list.get(i).getStoreName()%><div>',         
-		            latlng: new kakao.maps.LatLng(<%=list.get(i).getLatutude()%>, <%=list.get(i).getLongitude()%>) };   
-		                        
-		            cafe.push(ca_info);
-		            
-		            for (var i = 0; i < cafe.length; i ++) {
-		                // 마커를 생성합니다
-		                var marker = new kakao.maps.Marker({
-		                    map: map, // 마커를 표시할 지도
-		                    position: cafe[i].latlng // 마커의 위치
-		                });
-		
-		                // 마커에 표시할 인포윈도우를 생성합니다 
-		                var infowindow = new kakao.maps.InfoWindow({
-		                    content: cafe[i].content // 인포윈도우에 표시할 내용
-		                });
-		
-		                // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
-		                // 이벤트 리스너로는 클로저를 만들어 등록합니다 
-		                // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
-		                kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
-		                kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
-		            }
-		        <%}%>
-	    	<%}%>
-        	
+          <%for(i = 0; i < list.size(); i++){%>
+               <%if(list.get(i).getFoodType().equals("카페")){%>
+                  //ca_info 객체 : 카페 데이터
+                  var ca_info = {content:'<div><%=list.get(i).getStoreName()%><div>',         
+                  latlng: new kakao.maps.LatLng(<%=list.get(i).getLatutude()%>, <%=list.get(i).getLongitude()%>) };   
+                              
+                  cafe.push(ca_info);
+                  
+                  for (var i = 0; i < cafe.length; i ++) {
+                      // 마커를 생성합니다
+                      var marker = new kakao.maps.Marker({
+                          map: map, // 마커를 표시할 지도
+                          position: cafe[i].latlng // 마커의 위치
+                      });
+      
+                      // 마커에 표시할 인포윈도우를 생성합니다 
+                      var infowindow = new kakao.maps.InfoWindow({
+                          content: cafe[i].content // 인포윈도우에 표시할 내용
+                      });
+      
+                      // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+                      // 이벤트 리스너로는 클로저를 만들어 등록합니다 
+                      // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+                      kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
+                      kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+                  }
+              <%}%>
+          <%}%>
+           
         }
-        
         
         /* 접속했을 때 모든 매장 마커 찍어주는 구간 */
 /*              korean_f();
-         	 western_f();
-         	 japanese_f();
-           	 school_f();
+             western_f();
+             japanese_f();
+               school_f();
              midnight_f();
              cafe_f(); */
              
@@ -472,41 +399,37 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
          // 특정 id를 클릭하면 한식 매장 나오게 한다
          
          // 
- 		let kor = document.getElementById('korean');
- 		let wes = document.getElementById('western');
- 		let jap = document.getElementById('japanese');
- 		let sch = document.getElementById('school');
- 		let mid = document.getElementById('midnight');
- 		let caf = document.getElementById('cafe');
+       let kor = document.getElementById('korean');
+       let wes = document.getElementById('western');
+       let jap = document.getElementById('japanese');
+       let sch = document.getElementById('school');
+       let mid = document.getElementById('midnight');
+       let caf = document.getElementById('cafe');
 
- 		
         kor.addEventListener('click', function(){
-        	korean_f();
+           korean_f();
         });
 
         wes.addEventListener('click', function(){
-        	western_f();
+           western_f();
         });
         
         jap.addEventListener('click', function(){
-        	japanese_f();
+           japanese_f();
         });
         
         sch.addEventListener('click', function(){
-        	school_f();
+           school_f();
         });
         
         mid.addEventListener('click', function(){
-        	midnight_f();
+           midnight_f();
         });
         
         caf.addEventListener('click', function(){
-        	cafe_f();
+           cafe_f();
         });
          
-         
-         
-        
         function makeOverListener(map, marker, infowindow) {
             return function() {
                 infowindow.open(map, marker);
