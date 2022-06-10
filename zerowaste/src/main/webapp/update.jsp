@@ -114,36 +114,23 @@
 
 			<li class="t-center m-b-33"><a href="GoRegi" class="txt19">Registration</a>
 			</li>
-			
+
 			<li class="t-center">
-				<!-- Button3 -->
-				<a href="GoLogout" class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto">
-					Sign Out
-				</a>
+				<!-- Button3 --> <a href="GoLogout"
+				class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"> Sign
+					Out </a>
 			</li>
 		</ul>
 	</aside>
 
-
 	<!-- Title Page -->
 	<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15"
 		style="background-image: url(images/bg-title-page-03.jpg);">
-		<h2 class="tit6 t-center">리뷰작성</h2>
+		<h2 class="tit6 t-center">리뷰수정</h2>
 	</section>
-
 
 	<!-- Content page -->
 	<section>
-		<div class="bread-crumb bo5-b p-t-17 p-b-17">
-			<div class="container">
-				<a href="index.html" class="txt27"> Home </a> <span
-					class="txt29 m-l-10 m-r-10">/</span> <a href="blog.html"
-					class="txt27"> 인증게시판 </a> <span class="txt29 m-l-10 m-r-10">/</span>
-
-				<span class="txt29"> 리뷰작성 </span>
-			</div>
-		</div>
-
 		<div class="container p-t-30">
 			<div>
 				<div>
@@ -159,17 +146,18 @@
 						<form class="leave-comment p-t-10 p-b-30"
 							action="UpdateService?CerNum=<%=cvo.getCerNum()%>" method="post"
 							enctype="multipart/form-data">
-							
+
 							<%
 							if (login.getId().equals(cvo.getId())) {
 							%>
-							<h4 class="txt33 p-b-14">리뷰작성</h4>
+							<h4 class="txt33 p-b-14">리뷰수정</h4>
 
-							<p>영수증을 꼭 넣어주세요~</p>
 							<div>
-								<input class="sizefull txt10 p-t-20" type="file" name="fileName"
-									onchange="setThumbnail(event);">
-
+								<span class="txt9"> 영수증 등록 </span>
+								<div class="wrap-inputphone size12 bo2 bo-rad-10 m-t-3 m-b-23">
+									<input class="sizefull txt10 p-t-20" type="file"
+										name="fileName" onchange="setThumbnail(event);">
+								</div>
 								<script>
 									function setThumbnail(event) {
 										var reader = new FileReader();
@@ -189,44 +177,60 @@
 									}
 								</script>
 
+							</div>
+							<div>
+								<span class="txt9"> 매장 명 </span>
 
-
+								<div class="size39 bo2 bo-rad-10 m-t-3 m-b-20">
+									<input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
+										name="storeName" value="<%=cvo.getStoreName()%>">
+								</div>
 
 							</div>
 
-							<textarea
-								class="bo-rad-10 size29 bo2 txt10 p-l-20 p-t-15 m-b-10 m-t-40"
-								name="review"><%=cvo.getReview()%></textarea>
+							<div>
+								<span class="txt9"> 리뷰 </span>
 
-							<div class="size30 bo2 bo-rad-10 m-t-3 m-b-20">
-								<input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
-									name="id" value="<%=login.getId()%>" readonly>
-							</div>
-
-							<div class="size30 bo2 bo-rad-10 m-t-3 m-b-20">
-								<input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
-									name="storeName" value="<%=cvo.getStoreName()%>">
+								<textarea
+									class="bo-rad-10 size29 bo2 txt10 p-l-20 p-t-15 m-b-15 m-t-10"
+									name="review"><%=cvo.getReview()%></textarea>
 							</div>
 							<%
 							} else {
 							%>
-							<div class="container" >							
+							<div class="container">
 
-								<img src="reviewImg/<%=cvo.getFileName() %>" alt="IMG-BLOG">
+								<img src="reviewImg/<%=cvo.getFileName()%>" alt="IMG-BLOG">
 
 							</div>
 
-							<p
-								class="bo-rad-10 size29 bo2 txt10 p-l-20 p-t-15 m-b-10 m-t-40"
-								name="review"><%=cvo.getReview()%></p>
+							<div>
+								<span class="txt9"> 리뷰 </span>
 
-							<span>
-								작성자 : <%=cvo.getId()%>
-							</span>
-<br>
-							<span>
-								가게명 : <%=cvo.getStoreName()%>
-							</span>
+								<textarea
+									class="bo-rad-10 size29 bo2 txt10 p-l-20 p-t-15 m-b-15 m-t-10"
+									readonly name="review"><%=cvo.getReview()%></textarea>
+							</div>
+
+							<div>
+								<span class="txt9"> 매장 명 </span>
+
+								<div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
+									<input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
+										name="storeName" value="<%=cvo.getStoreName()%>" readonly>
+								</div>
+							</div>
+
+							<div>
+								<span class="txt9"> 작성자 </span>
+
+								<div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
+									<input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
+										name="id" value="<%=cvo.getId()%>" readonly>
+								</div>
+							</div>
+							<button type="button"
+								class="btn3 flex-c-m size13 txt11 trans-0-4">제출하기</button>
 							<%
 							}
 							%>
@@ -235,19 +239,16 @@
 							%>
 							<!-- Button3 -->
 							<button type="submit"
-								class="btn3 flex-c-m size31 txt11 trans-0-4">수정하기</button>
+								class="btn3 flex-c-m size13 txt11 trans-0-4">제출하기</button>
 							<%
 							}
 							%>
 						</form>
 					</div>
 				</div>
-
-
 			</div>
 		</div>
 	</section>
-
 
 	<!-- Back to top -->
 	<div class="btn-back-to-top bg0-hov" id="myBtn">
@@ -255,8 +256,6 @@
 			class="fa fa-angle-double-up" aria-hidden="true"></i>
 		</span>
 	</div>
-
-
 
 	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>

@@ -135,19 +135,19 @@
 
 		<!-- 나무 이미지 넣을 div 태그 -->
 		<div id="tree">
-		<% if (grade.getTreeGrade() == "새싹") { %>
+		<% if (grade.getTreeGrade().equals("새싹")) { %>
 			<img src="images/tree_1.gif" alt="IMG-OUR">
-		<% } else if (grade.getTreeGrade() == "묘목") { %>
+		<% } else if (grade.getTreeGrade().equals("묘목")) { %>
 			<img src="images/tree_2.gif" alt="IMG-OUR">
-		<% } else if (grade.getTreeGrade() == "작은나무") { %>
+		<% } else if (grade.getTreeGrade().equals("작은나무")) { %>
 			<img src="images/tree_3.gif" alt="IMG-OUR">
-		<% } else if (grade.getTreeGrade() == "중간나무") { %>
+		<% } else if (grade.getTreeGrade().equals("중간나무")) { %>
 			<img src="images/tree_4.gif" alt="IMG-OUR">
-		<% } else if (grade.getTreeGrade() == "큰나무") { %>
+		<% } else if (grade.getTreeGrade().equals("큰나무")) { %>
 			<img src="images/tree_5.gif" alt="IMG-OUR">
-		<% } else if (grade.getTreeGrade() == "숲") { %>
+		<% } else if (grade.getTreeGrade().equals("숲")) { %>
 			<img src="images/tree_6.gif" alt="IMG-OUR">
-		<% } else { %>
+		<% } else if (grade.getTreeGrade().equals("대자연")) { %>
 			<img src="images/tree_7.gif" alt="IMG-OUR">
 		<% } %>
 		</div>

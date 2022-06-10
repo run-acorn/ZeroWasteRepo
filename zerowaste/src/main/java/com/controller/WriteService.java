@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.model.CertiDAO;
 import com.model.CertiVO;
 import com.model.UserDAO;
+import com.model.UserVO;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
@@ -38,28 +39,28 @@ public class WriteService extends HttpServlet {
 			e.printStackTrace();
 		}
 		
-		
 		String id = multi.getParameter("id");
 		String storeName = multi.getParameter("storeName");
-		String review = multi.getParameter("review");
 		String fileName = multi.getFilesystemName("fileName");
+		String review = multi.getParameter("review");
 		
 		CertiVO cvo = new CertiVO();
 		cvo.setId(id);
 		cvo.setStoreName(storeName);
-		cvo.setReview(review);
 		cvo.setFileName(fileName);
+		cvo.setReview(review);
 		
 		CertiDAO dao = new CertiDAO();
 		int cnt = dao.write(cvo);
 		
+		UserDAO udao = new UserDAO();
+		udao.pointup();
 		
 		if(cnt>0) {
 			response.sendRedirect("GoBoard");
 		} else {
 			response.sendRedirect("GoWrite");
 		}
-		
 	}
 
 }
