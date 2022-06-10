@@ -65,6 +65,8 @@ cerNum number(10),
 id varchar2(20) not null,
 storeName varchar2(50) not null,
 review varchar2(500),
+fileName varchar2(100) not null,
+day date,
 constraint certiInfo_cnum_pk primary key(cerNum),
 constraint certiInfo_id_fk foreign key(id) references userInfo(id)
 );
@@ -78,6 +80,11 @@ create sequence cer_num_seq
         maxvalue 999999
         nocycle
         nocache
-        
-alter table certiInfo add fileName varchar2(100);
-alter table certiInfo modify (fileName not null)
+
+drop table certiInfo
+drop sequence cer_num_seq
+
+select u.nickname, r.treegrade
+		from userInfo u, rewardInfo r
+		where u.point between r.minvalue and r.maxvalue
+		and id = 'ÃÖÇö¿ì'

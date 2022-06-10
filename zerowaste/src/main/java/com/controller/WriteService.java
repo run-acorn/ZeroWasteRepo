@@ -50,11 +50,6 @@ public class WriteService extends HttpServlet {
 		cvo.setReview(review);
 		cvo.setFileName(fileName);
 		
-		System.out.println(id);
-		System.out.println(storeName);
-		System.out.println(review);
-		System.out.println(fileName);
-		
 		CertiDAO dao = new CertiDAO();
 		int cnt = dao.write(cvo);
 		

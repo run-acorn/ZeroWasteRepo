@@ -14,5 +14,6 @@ public class CertiVO {
 	private String storeName;
 	private String review;
 	private String fileName;
+	private String day;
 	
 }
