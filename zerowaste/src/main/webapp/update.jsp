@@ -63,7 +63,7 @@
 					<!-- Logo -->
 					<div class="logo">
 						<a href="index.jsp"> <img src="images/icons/logo.png"
-							alt="IMG-LOGO" data-logofixed="images/icons/logo.png">
+							alt="IMG-LOGO" data-logofixed="images/icons/logo2.png">
 						</a>
 					</div>
 
@@ -117,8 +117,8 @@
 
 			<li class="t-center">
 				<!-- Button3 --> <a href="GoLogout"
-				class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"> Sign
-					Out </a>
+				class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"> 로그아웃
+					 </a>
 			</li>
 		</ul>
 	</aside>
