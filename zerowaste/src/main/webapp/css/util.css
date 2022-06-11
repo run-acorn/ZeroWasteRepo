@@ -1211,7 +1211,7 @@
 }
 
 .p-t-90 {
-	padding-top: 90px;
+	padding-top: 5px;
 }
 
 .p-t-91 {
@@ -9886,8 +9886,8 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 
 .tit7 {
 	font-family: NanumBarunGothic;
-	font-weight: 500;
-	font-size: 22px;
+	font-weight: 600;
+	font-size: 25px;
 	line-height: 1.2;
 	color: #222222;
 	text-transform: uppercase;
@@ -10007,7 +10007,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 }
 
 .txt10 {
-	font-family: Montserrat;
+	font-family: NanumBarunGothic;
 	font-weight: 400;
 	font-size: 14px;
 	color: #666666;
@@ -10204,9 +10204,9 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 }
 
 .txt33 {
-	font-family: Poppins;
-	font-weight: 500;
-	font-size: 22px;
+	font-family: NanumBarunGothic;
+	font-weight: 600;
+	font-size: 25px;
 	color: #222222;
 	text-transform: uppercase;
 	letter-spacing: 3px;
