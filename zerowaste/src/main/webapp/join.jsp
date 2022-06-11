@@ -112,7 +112,7 @@
 						<div class="wrap-btn-booking flex-c-m m-t-6">
 							<!-- Button3 -->
 							<button type="button" class="btn3 flex-c-m size13 txt11 trans-0-4" onClick="join();">
-								Sign Up
+								회원가입
 							</button>
 						</div>
 					</form>

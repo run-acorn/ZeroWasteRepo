@@ -100,7 +100,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 body, html {
 	height: 100%;
-	font-family: Montserrat, sans-serif;
+	font-family: NanumBarunGothic;
   font-weight: 400;
 }
 
@@ -133,7 +133,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p {
-	font-family: Montserrat;
+	font-family: NanumBarunGothic;
   font-weight: 400;
 	font-size: 15px;
 	line-height: 1.7;
@@ -1431,7 +1431,7 @@ body {padding-right: 0px !important;}
 */
 .bg-title-page {
   width: 100%;
-  min-height: 545px;
+  min-height: 425px;
   padding-left: 15px;
   padding-right: 15px;
   background-repeat: no-repeat;

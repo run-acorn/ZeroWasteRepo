@@ -120,8 +120,8 @@
 
 			<li class="t-center">
 				<!-- Button3 --> <a href="GoLogout"
-				class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"> Sign
-					Out </a>
+				class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"> 로그아웃
+					 </a>
 			</li>
 		</ul>
 	</aside>
@@ -137,10 +137,10 @@
 	<!-- Content page -->
 	<section>
 		<div class="bread-crumb bo5-b p-t-17 p-b-17">
-			<div class="container">
-				<a class="btn3 flex-c-m size31 txt11 trans-0-4 m-t-10 m-r-50"
-				href="GoWrite">리뷰작성하기</a>
-			</div>
+			<div class="wrap-btn-booking flex-c-m m-t-6">
+            <!-- Button3 -->
+            <a href="GoWrite" class="btn3 flex-c-m size13 txt11 trans-0-4">리뷰작성하기</a>
+         </div>
 		</div>
 		<br>
 		<div class="container">
