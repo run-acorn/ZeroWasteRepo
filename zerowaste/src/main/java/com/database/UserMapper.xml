@@ -23,4 +23,8 @@
 	<update id="pointup">
 		update userInfo set point = point + 1 where id=#{id}
 	</update>
+	
+	<update id="reset">
+		update userInfo set point = 0 where id = #{id}
+	</update>
 </mapper>

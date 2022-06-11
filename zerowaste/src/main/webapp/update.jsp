@@ -212,7 +212,6 @@
 									class="btn3 flex-c-m size13 txt11 trans-0-4">목록 돌아가기</a> <br>
 								<br> <br> <br>
 							</div>
-
 						</form>
 					</div>
 				</div>
@@ -271,8 +270,11 @@
 							<p class="bo-rad-10 size29 bo2 txt10 p-l-20 p-t-15 m-t-3 m-b-50"
 								name="review"><%=cvo.getReview()%></p>
 						</div>
-						<a href="GoBoard" class="btn3 flex-c-m size13 txt11 trans-0-4">목록
-							돌아가기</a> <br> <br>
+						<div class="wrap-btn-booking flex-c-m m-t-6">
+							<!-- Button3 -->
+							<a href="GoBoard" class="btn3 flex-c-m size13 txt11 trans-0-4">목록 돌아가기</a>
+							<br> <br> <br> <br>
+						</div>
 					</div>
 				</div>
 			</div>

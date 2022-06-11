@@ -1,7 +1,6 @@
 package com.controller;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,26 +8,30 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-import com.model.CertiDAO;
-import com.model.CertiVO;
+import com.model.UserDAO;
+import com.model.UserVO;
 
-@WebServlet("/GoBoard")
-public class GoBoard extends HttpServlet {
+@WebServlet("/GoCoupon")
+public class GoCoupon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		CertiDAO dao = new CertiDAO();
-		List<CertiVO> list = dao.BoardList();
-
-		request.setAttribute("list", list);
-
+		HttpSession session = request.getSession();
 		request.setCharacterEncoding("UTF-8");
-		String nextPage = "board.jsp";
-		RequestDispatcher rd = request.getRequestDispatcher(nextPage);
-		rd.forward(request, response);
-
+		UserVO user = (UserVO)session.getAttribute("login");
+		
+//		UserDAO dao = new UserDAO();
+//		int cnt = dao.reset(user.getId());
+		
+//		if (cnt > 0) {
+			RequestDispatcher rd = request.getRequestDispatcher("coupon.jsp");
+			rd.forward(request, response);
+//		} else {
+//			response.sendRedirect("GoTree");
+//		}
 	}
 
 }

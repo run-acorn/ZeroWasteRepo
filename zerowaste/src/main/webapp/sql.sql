@@ -15,6 +15,8 @@ select * from USERINFO
 
 drop table userInfo
 
+update USERINFO set point = 7 where id = 'masterid'
+
 -- 매장 정보 테이블
 create table storeInfo (
 storeNum number(10),

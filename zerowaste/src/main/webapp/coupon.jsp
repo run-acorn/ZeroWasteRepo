@@ -1,9 +1,10 @@
+<%@page import="com.model.UserVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Reservation</title>
+	<title>Coupon</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -36,90 +37,144 @@
 <!--===============================================================================================-->
 </head>
 <body class="animsition">
-
+<%
+	UserVO login = (UserVO)session.getAttribute("login");
+%>
 	<!-- Header -->
 	<header>
 		<!-- Header desktop -->
-		<div>
+		<div class="wrap-menu-header gradient1 trans-0-4">
 			<div class="container h-full">
 				<div class="wrap_header trans-0-3">
+					<!-- Logo -->
+					<div class="logo">
+						<a href="index.jsp"> <img src="images/icons/logo.png"
+							alt="IMG-LOGO" data-logofixed="images/icons/logo2.png">
+						</a>
+					</div>
 
+					<!-- Menu -->
+					<div class="wrap_menu p-l-45 p-l-0-xl">
+						<nav class="menu">
+							<ul class="main_menu">
+								<li><a href="GoMain">Home</a></li>
 
+								<li><a href="GoMap">Map</a></li>
+
+								<li><a href="GoTree">My Tree</a></li>
+
+								<li><a href="GoBoard">Review & Point</a></li>
+
+								<li><a href="GoRegi">Registration</a></li>
+							</ul>
+						</nav>
+					</div>
+
+					<!-- Social -->
+					<div class="social flex-w flex-l-m p-r-20">
+						<button class="btn-show-sidebar m-l-33 trans-0-4"></button>
+					</div>
 				</div>
 			</div>
 		</div>
 	</header>
 
+	<!-- Sidebar -->
+	<aside class="sidebar trans-0-4">
+		<!-- Button Hide sidebar -->
+		<button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>
+
+		<!-- - -->
+		<ul class="menu-sidebar p-t-95 p-b-70">
+			<li class="t-center m-b-13"><a href="GoMain" class="txt19">Home</a>
+			</li>
+
+			<li class="t-center m-b-13"><a href="GoMap" class="txt19">Map</a>
+			</li>
+
+			<li class="t-center m-b-13"><a href="GoTree" class="txt19">My
+					Tree</a></li>
+
+			<li class="t-center m-b-13"><a href="GoBoard" class="txt19">Review
+					& Point</a></li>
+
+			<li class="t-center m-b-33"><a href="GoRegi" class="txt19">Registration</a>
+			</li>
+
+			<li class="t-center">
+				<!-- Button3 --> <a href="GoLogout"
+				class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"> 로그아웃 </a>
+			</li>
+		</ul>
+	</aside>
+
 	<!-- Title Page -->
 	<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url(images/bg-title-page-02.jpg);">
 		<h2 class="tit6 t-center">
-			Welcome!
+			쿠폰받기
 		</h2>
 	</section>
 
-	<!-- Reservation -->
-	<section class="section-reservation bg1-pattern p-t-100 p-b-113">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 p-b-30">
-					<div class="t-center">
-						<span class="tit2 t-center">
-							Sign Up
-						</span>
+	<!-- Gallery -->
+	<div class="section-gallery p-t-118 p-b-100">
+		<div class="wrap-label-gallery filter-tope-group size27 flex-w flex-sb-m m-l-r-auto flex-col-c-sm p-l-15 p-r-15 m-b-60">
+			<button class="label-gallery txt26 trans-0-4 is-actived" data-filter="*">
+				All Photo
+			</button>
 
-						<h3 class="tit3 t-center m-b-35 m-t-2">
-							Zero waste
-						</h3>
-					</div>
+			<button class="label-gallery txt26 trans-0-4" data-filter=".interior">
+				Interior
+			</button>
 
-					<form class="wrap-form-reservation size22 m-l-r-auto" action="JoinService" method="post">
-						<div class="row">
-							<div class="col-md-4">
-								<!-- Name -->
-								<span class="txt9">
-									Id
-								</span>
+			<button class="label-gallery txt26 trans-0-4" data-filter=".food">
+				Food
+			</button>
 
-								<div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
-									<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="id" placeholder="ID를 입력하세요.">
-								</div>
-							</div>
+			<button class="label-gallery txt26 trans-0-4" data-filter=".events">
+				Events
+			</button>
 
-							<div class="col-md-4">
-								<!-- Phone -->
-								<span class="txt9">
-									PassWord
-								</span>
+			<button class="label-gallery txt26 trans-0-4" data-filter=".guests">
+				Vip guests
+			</button>
+		</div>
 
-								<div class="wrap-inputphone size12 bo2 bo-rad-10 m-t-3 m-b-23">
-									<input class="bo-rad-10 sizefull txt10 p-l-20" type="password" name="pw" placeholder="비밀번호를 입력하세요.">
-								</div>
-							</div>
+		<div class="wrap-gallery isotope-grid flex-w p-l-25 p-r-25">
+			<!-- - -->
+			<div class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/photo-gallery-13.jpg" alt="IMG-GALLERY">
 
-							<div class="col-md-4">
-								<!-- Email -->
-								<span class="txt9">
-									NickName
-								</span>
+				<div class="overlay-item-gallery trans-0-4 flex-c-m">
+					<a class="btn-show-gallery flex-c-m fa fa-search" href="images/photo-gallery-13.jpg" data-lightbox="gallery"></a>
+				</div>
+			</div>
 
-								<div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
-									<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="nick" placeholder="NickName을 입력하세요.">
-								</div>
-							</div>
+			<!-- - -->
+			<div class="item-gallery isotope-item bo-rad-10 hov-img-zoom food">
+				<img src="images/photo-gallery-14.jpg" alt="IMG-GALLERY">
 
-						</div>
+				<div class="overlay-item-gallery trans-0-4 flex-c-m">
+					<a class="btn-show-gallery flex-c-m fa fa-search" href="images/photo-gallery-14.jpg" data-lightbox="gallery"></a>
+				</div>
+			</div>
 
-						<div class="wrap-btn-booking flex-c-m m-t-6">
-							<!-- Button3 -->
-							<button type="button" class="btn3 flex-c-m size13 txt11 trans-0-4"> <!-- onClick="join();" -->
-								Sign Up
-							</button>
-						</div>
-					</form>
+			<!-- - -->
+			<div class="item-gallery isotope-item bo-rad-10 hov-img-zoom events">
+				<img src="images/photo-gallery-15.jpg" alt="IMG-GALLERY">
+
+				<div class="overlay-item-gallery trans-0-4 flex-c-m">
+					<a class="btn-show-gallery flex-c-m fa fa-search" href="images/photo-gallery-15.jpg" data-lightbox="gallery"></a>
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
+
+	<!-- Back to top -->
+	<div class="btn-back-to-top bg0-hov" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
+		</span>
+	</div>
 
 <!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
@@ -146,41 +201,9 @@
 <!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/lightbox2/js/lightbox.min.js"></script>
 <!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/isotope/isotope.pkgd.min.js"></script>
+<!--===============================================================================================-->
 	<script src="js/main.js"></script>
-	<!-- <script type="text/javascript">
-		function join(){
-			// ajax 사용
-			// input태그 값들을 controller에게 전달
-			$.ajax({
-				// 요청할 서버의 url
-				url : '',
-				type : '',
-				data : {
-					// javascript객체 형태로 데이터 전달
-				},
-				//dataType : 'json',
-				success : function(res) {
-					// res --> 서버페이지에서 받아온 결과값
-					// 문자열 'true'
-					console.log(res);
-					//1. 서버를 불러내는데 성공
-					// window객체 : 현재 열려있는 창의 정보를 가진 객체
-					// window.location : 현재 창에 띄워진 URL
-					// window.location.href = "url";  
-					// location.href="url";
-					//location.href="http://www.naver.com";
-					
-				},
-				error : function() {
-					alert('요청실패!');
-					// 2. 서버를 불러내는걸 실패
-				}
-			})
-			
-			
-		}
-	
-	</script>
- -->
+
 </body>
 </html>

@@ -41,9 +41,22 @@ public class UserDAO {
 		}
 		
 		public int pointup(String id) {
-			session = sql.openSession(true);
-			int point = session.update("pointup", id);
-			session.close();
-			return point;
+			try {
+				session = sql.openSession(true);
+				cnt = session.update("pointup", id);
+			} catch (Exception e) {
+				session.close();
+			}
+			return cnt;
+		}
+		
+		public int reset(String id) {
+			try {
+				session = sql.openSession(true);
+				cnt = session.update("reset", id);
+			} catch (Exception e) {
+				session.close();
+			}
+			return cnt;
 		}
 }
