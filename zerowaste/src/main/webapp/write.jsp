@@ -112,26 +112,14 @@
 		</ul>
 	</aside>
 
-
 	<!-- Title Page -->
 	<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15"
 		style="background-image: url(images/bg-title-page-03.jpg);">
 		<h2 class="tit6 t-center">리뷰작성</h2>
 	</section>
 
-
 	<!-- Content page -->
 	<section>
-		<div class="bread-crumb bo5-b p-t-17 p-b-17">
-			<div class="container">
-				<a href="index.html" class="txt27"> Home </a> <span
-					class="txt29 m-l-10 m-r-10">/</span> <a href="blog.html"
-					class="txt27"> 인증게시판 </a> <span class="txt29 m-l-10 m-r-10">/</span>
-
-				<span class="txt29"> 리뷰작성 </span>
-			</div>
-		</div>
-
 		<div class="container p-t-30">
 			<div>
 				<div>
@@ -139,89 +127,65 @@
 						<!-- Block4 -->
 						<div class="blo4 p-b-63">
 							<!-- - -->
-							<div id="image_container" class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">								
-
-							</div>
+							<div id="image_container"
+								class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative"></div>
 						</div>
 
 						<!-- Leave a comment -->
-						 <form class="wrap-form-reservation size22 m-l-r-auto"
-                        action="RegiService" method="get">
-                        <div>
-                           <div>
-                              <span class="txt9"> 제목 </span>
+						<form class="wrap-form-reservation size22 m-l-r-auto"
+							action="WriteService" method="post" enctype="multipart/form-data">
 
-                              <div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
-                                 <input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
-                                    name="title" placeholder="제목을 입력 해주세요.">
-                              </div>
-                           </div>
+							<div>
+								<div>
+									<span class="txt9"> 영수증 등록 </span>
 
-                           <div>
-                              <span class="txt9"> 작성자 </span>
+									<div class="wrap-inputphone size12 bo2 bo-rad-10 m-t-3 m-b-23">
+										<input class="sizefull txt10 p-t-20" type="file"
+											name="fileName" onchange="setThumbnail(event);">
+									</div>
+								</div>
 
+								<div>
+									<span class="txt9"> 제목 </span>
 
-                              <div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
-                                 <input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
-                                    name="id" value="<%=login.getId()%>" readonly>
-                              </div>
-                           </div>
+									<div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
+										<input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
+											name="title" placeholder="제목을 입력 해주세요.">
+									</div>
+								</div>
 
-                           <div>
-                              <span class="txt9"> 매장 명 </span>
+								<div>
+									<span class="txt9"> 매장 명 </span>
 
-                              <div class="wrap-inputphone size12 bo2 bo-rad-10 m-t-3 m-b-23">
-                                 <input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
-                                    name="storeName" placeholder="방문한 매장명을 작성해주세요">
-                              </div>
-                           </div>
-
-                           <div>
-                              <span class="txt9"> 영수증 등록 </span>
-
-                              <div class="wrap-inputphone size12 bo2 bo-rad-10 m-t-3 m-b-23">
-                                 <input class="sizefull txt10 p-t-20" type="file"
-                                    name="fileName" onchange="setThumbnail(event);">
-
-                              </div>
-                           </div>
+									<div class="wrap-inputphone size12 bo2 bo-rad-10 m-t-3 m-b-23">
+										<input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
+											name="storeName" placeholder="방문한 매장명을 작성해주세요">
+									</div>
+								</div>
 
 
-                           <div>
-                              <span class="txt9"> 글 내용 작성 </span>
+								<div>
+									<span class="txt9"> 글 내용 작성 </span>
 
+									<textarea
+										class="bo-rad-10 size29 bo2 txt10 p-l-20 p-t-15 m-b-10 m-t-10"
+										name="review" placeholder="500자 이하 작성 가능"></textarea>
+								</div>
 
-                              <textarea
-                                 class="bo-rad-10 size29 bo2 txt10 p-l-20 p-t-15 m-b-10 m-t-40"
-                                 name="review" placeholder="500자 이하 작성 가능"></textarea>
+							</div>
 
-
-                           </div>
-
-
-
-
-                        </div>
-
-
-                        <div class="wrap-btn-booking flex-c-m m-t-6">
-                           <!-- Button3 -->
-                           <button type="submit"
-                              class="btn3 flex-c-m size13 txt11 trans-0-4">제출하기</button>
-                              <br>
-                        </div>
-
-
-
-                     </form>
+							<div class="wrap-btn-booking flex-c-m m-t-6">
+								<!-- Button3 -->
+								<button type="submit"
+									class="btn3 flex-c-m size13 txt11 trans-0-4">제출하기</button>
+								<br> <br> <br> <br>
+							</div>
+						</form>
 					</div>
 				</div>
-
-
 			</div>
 		</div>
 	</section>
-
 
 	<!-- Back to top -->
 	<div class="btn-back-to-top bg0-hov" id="myBtn">
@@ -229,8 +193,6 @@
 			class="fa fa-angle-double-up" aria-hidden="true"></i>
 		</span>
 	</div>
-
-
 
 	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
@@ -266,23 +228,23 @@
 	<script type="text/javascript" src="vendor/isotope/isotope.pkgd.min.js"></script>
 	<!--===============================================================================================-->
 	<script src="js/main.js"></script>
-	
+
 	<!-- 파일 넣어주는 스크립트 -->
 	<script>
-      function setThumbnail(event) {
-         var reader = new FileReader();
+		function setThumbnail(event) {
+			var reader = new FileReader();
 
-         reader.onload = function(event) {
-            var img = document.createElement("img");
-            img.setAttribute("src", event.target.result);
-            document.querySelector("div#image_container").appendChild(img);
-         };
+			reader.onload = function(event) {
+				var img = document.createElement("img");
+				img.setAttribute("src", event.target.result);
+				document.querySelector("div#image_container").appendChild(img);
+			};
 
-         reader.readAsDataURL(event.target.files[0]);
-      }
-   </script>
-	
-	
+			reader.readAsDataURL(event.target.files[0]);
+		}
+	</script>
+
+
 
 </body>
 </html>

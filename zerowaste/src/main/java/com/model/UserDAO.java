@@ -39,4 +39,11 @@ public class UserDAO {
 			session.close();
 			return vo;
 		}
+		
+		public int pointup() {
+			session = sql.openSession(true);
+			int point = session.update("pointup");
+			session.close();
+			return point;
+		}
 }

@@ -19,4 +19,8 @@
 		where u.point between r.minvalue and r.maxvalue
 		and id = #{id}
 	</select>
+		
+	<update id="pointup">
+		update userInfo set point=(select count(id) from certiInfo where userInfo.id=certiInfo.id)
+	</update>
 </mapper>
