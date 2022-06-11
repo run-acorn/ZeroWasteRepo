@@ -127,22 +127,27 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
    </section>
 
    <!-- Main menu -->
-   <section class="section-mainmenu p-t-70 p-b-70 p-l-70 p-r-70 bg1-pattern">
+   <div style="width: 100%; height: 100%;" >
+   <section class="section-mainmenu p-t-70 p-b-70 p-l-70 p-r-70 bg1-pattern" style="width: 100%; height: 100%; padding: 1%;">
    
    	 <!-- 카테고리 버튼 -->
    	
-   	<ul class="main_menu">
-   		<li><input type="button" id="allMarkers" value="전체" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
-   		<li><input type="button" id="korean" value="한식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
-		<li><input type="button" id="western" value="양식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
-		<li><input type="button" id="japanese" value="일식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
-		<li><input type="button" id="school" value="분식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
-		<li><input type="button" id="midnight" value="야식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
-		<li><input type="button" id="cafe" value="카페" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
+   	
+   	<div class="kategorie" >
+   	
+   	<ul class="main_menu2">
+   		<li class="foodlist"><input type="button" id="korean" value="한식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
+      <li class="foodlist"><input type="button" id="western" value="양식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
+      <li class="foodlist"><input type="button" id="japanese" value="일식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
+      <li class="foodlist" ><input type="button" id="school" value="분식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
+      <li class="foodlist"><input type="button" id="midnight" value="야식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
+      <li class="foodlist" ><input type="button" id="cafe" value="카페" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
  	</ul>
+ 	<br>
+   </div>
  	
       <!-- 지도 들어갈 공간 -->
-      <div id="map" style="width: 1780px; height: 1000px;"></div>
+      <div id="map" style="width: 100%; height: 100%;"></div>
       <script type="text/javascript"
          src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b9d52b733842f8156d5455f83b6f4277&libraries=services"></script>
 
@@ -466,7 +471,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
       </script>
 
     </section>
-            
+            </div>
    <!-- Back to top -->
    <div class="btn-back-to-top bg0-hov" id="myBtn">
       <span class="symbol-btn-back-to-top"> <i

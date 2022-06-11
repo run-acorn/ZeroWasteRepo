@@ -560,6 +560,17 @@ input[type="date" i] {
   justify-content: center;
 }
 
+.main_menu2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 .main_menu li {
   display: block;
   position: relative;
@@ -1624,4 +1635,31 @@ body {padding-right: 0px !important;}
   left: 20px;
   border-radius: 10px;
   background-color: #ec1d25;
+  
+}
+
+
+
+/*지도 관련 css*/
+
+
+.kategorie{
+	
+	
+	position: relative; 
+	width: 100%;
+	
+}
+
+.foodlist{
+	
+	width: 17%;
+    position: relative;
+	
+	
+}
+
+.foodlist>input {
+    width: 100%;
+    position: relative;
 }
