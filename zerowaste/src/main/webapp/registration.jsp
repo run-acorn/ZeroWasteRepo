@@ -55,7 +55,7 @@
 					<!-- Logo -->
 					<div class="logo">
 						<a href="GoMain"> <img src="images/icons/logo.png"
-							alt="IMG-LOGO" data-logofixed="images/icons/logo.png">
+							alt="IMG-LOGO" data-logofixed="images/icons/logo2.png">
 						</a>
 					</div>
 
@@ -118,7 +118,7 @@
 	<!-- Title Page -->
 	<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15"
 		style="background-image: url(images/bg-title-page-02.jpg);">
-		<h2 class="tit6 t-center">Registration</h2>
+		<h2 class="tit6 t-center">ZERO WASTE 매장 등록</h2>
 	</section>
 
 	<!-- Contact form -->
@@ -236,7 +236,7 @@
 				<div class="wrap-btn-booking flex-c-m m-t-13">
 					<!-- Button3 -->
 					<button type="submit" class="btn3 flex-c-m size36 txt11 trans-0-4">
-						Submit</button>
+						확인</button>
 				</div>
 			</form>
 		</div>

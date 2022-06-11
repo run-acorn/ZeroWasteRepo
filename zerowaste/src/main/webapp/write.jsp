@@ -58,7 +58,7 @@
 					<!-- Logo -->
 					<div class="logo">
 						<a href="index.jsp"> <img src="images/icons/logo.png"
-							alt="IMG-LOGO" data-logofixed="images/icons/logo.png">
+							alt="IMG-LOGO" data-logofixed="images/icons/logo2.png">
 						</a>
 					</div>
 
