@@ -160,11 +160,12 @@
 							</div>
 							<div class="text-blo4 p-t-33">
 								<h4 class="p-b-16">
-									<%=cvo.getStoreName()%>
+									<%=cvo.getTitle()%>
 								</h4>
 
 								<div class="txt32 flex-w p-b-24">
 									<span> <%=cvo.getId()%> <span class="m-r-6 m-l-4">|</span>
+									<span> <%=cvo.getStoreName()%> <span class="m-r-6 m-l-4">|</span>
 									</span> <span> <%=cvo.getDay()%>
 									</span>
 								</div>

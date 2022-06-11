@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.model.CertiDAO;
 import com.model.CertiVO;
@@ -21,7 +22,7 @@ public class WriteService extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// 여기서 인서트 해서 성공하면 board페이지로 가면됨
-		
+		HttpSession session = request.getSession();
 		request.setCharacterEncoding("UTF-8");
 		
 		String savePath = request.getServletContext().getRealPath("reviewImg");
@@ -39,25 +40,27 @@ public class WriteService extends HttpServlet {
 			e.printStackTrace();
 		}
 		
-		String id = multi.getParameter("id");
 		String storeName = multi.getParameter("storeName");
 		String fileName = multi.getFilesystemName("fileName");
 		String review = multi.getParameter("review");
+		String title = multi.getParameter("title");
+		
+		UserVO user = (UserVO)session.getAttribute("login");
 		
 		CertiVO cvo = new CertiVO();
-		cvo.setId(id);
+		cvo.setId(user.getId());
 		cvo.setStoreName(storeName);
 		cvo.setFileName(fileName);
 		cvo.setReview(review);
+		cvo.setTitle(title);
 		
 		CertiDAO dao = new CertiDAO();
+		UserDAO udao = new UserDAO();
 		int cnt = dao.write(cvo);
 		
-		UserDAO udao = new UserDAO();
-		udao.pointup();
-		
-		if(cnt>0) {
-			response.sendRedirect("GoBoard");
+		if(cnt > 0) {
+			udao.pointup(user.getId());
+			response.sendRedirect("GoTree");
 		} else {
 			response.sendRedirect("GoWrite");
 		}

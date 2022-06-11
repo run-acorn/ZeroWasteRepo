@@ -14,13 +14,13 @@
 	</select>
 
 	<select id="treegrow" parameterType="UserVO" resultType="UserVO">
-		select u.nickname, r.treegrade
+		select u.nickname, u.point
 		from userInfo u, rewardInfo r
 		where u.point between r.minvalue and r.maxvalue
 		and id = #{id}
 	</select>
 		
 	<update id="pointup">
-		update userInfo set point=(select count(id) from certiInfo where userInfo.id=certiInfo.id)
+		update userInfo set point = point + 1 where id=#{id}
 	</update>
 </mapper>

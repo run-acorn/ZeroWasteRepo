@@ -40,9 +40,9 @@ public class UserDAO {
 			return vo;
 		}
 		
-		public int pointup() {
+		public int pointup(String id) {
 			session = sql.openSession(true);
-			int point = session.update("pointup");
+			int point = session.update("pointup", id);
 			session.close();
 			return point;
 		}

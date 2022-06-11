@@ -27,7 +27,6 @@ public class GoTree extends HttpServlet {
 		UserDAO dao = new UserDAO();
 		UserVO uvo = dao.treegrow(user.getId());
 		
-		System.out.println(uvo.getTreeGrade());
 		request.setAttribute("grade", uvo);
 		
 		request.setCharacterEncoding("UTF-8");

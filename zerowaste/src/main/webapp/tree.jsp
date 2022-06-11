@@ -53,42 +53,42 @@
 	%>
 	<!-- Header -->
 	<header>
-      <!-- Header desktop -->
-      <div class="wrap-menu-header gradient1 trans-0-4">
-         <div class="container h-full">
-            <div class="wrap_header trans-0-3">
-               <!-- Logo -->
-               <div class="logo">
-                  <a href="GoMain"> <img src="images/icons/logo.png"
-                     alt="IMG-LOGO" data-logofixed="images/icons/logo2.png">
-                  </a>
-               </div>
+		<!-- Header desktop -->
+		<div class="wrap-menu-header gradient1 trans-0-4">
+			<div class="container h-full">
+				<div class="wrap_header trans-0-3">
+					<!-- Logo -->
+					<div class="logo">
+						<a href="GoMain"> <img src="images/icons/logo.png"
+							alt="IMG-LOGO" data-logofixed="images/icons/logo2.png">
+						</a>
+					</div>
 
-               <!-- Menu -->
-               <div class="wrap_menu p-l-45 p-l-0-xl">
-                  <nav class="menu">
-                     <ul class="main_menu">
-                        <li><a href="GoMain">Home</a></li>
+					<!-- Menu -->
+					<div class="wrap_menu p-l-45 p-l-0-xl">
+						<nav class="menu">
+							<ul class="main_menu">
+								<li><a href="GoMain">Home</a></li>
 
-                        <li><a href="GoMap">Map</a></li>
+								<li><a href="GoMap">Map</a></li>
 
-                        <li><a href="GoTree">My Tree</a></li>
+								<li><a href="GoTree">My Tree</a></li>
 
-                        <li><a href="GoBoard">Review & Point</a></li>
+								<li><a href="GoBoard">Review & Point</a></li>
 
-                        <li><a href="GoRegi">Registration</a></li>
-                     </ul>
-                  </nav>
-               </div>
+								<li><a href="GoRegi">Registration</a></li>
+							</ul>
+						</nav>
+					</div>
 
-               <!-- Social -->
-               <div class="social flex-w flex-l-m p-r-20">
-                  <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
-               </div>
-            </div>
-         </div>
-      </div>
-   </header>
+					<!-- Social -->
+					<div class="social flex-w flex-l-m p-r-20">
+						<button class="btn-show-sidebar m-l-33 trans-0-4"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
 
 	<!-- Sidebar -->
 	<aside class="sidebar trans-0-4">
@@ -114,8 +114,7 @@
 
 			<li class="t-center">
 				<!-- Button3 --> <a href="GoLogout"
-				class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"> 로그아웃
-					 </a>
+				class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"> 로그아웃 </a>
 			</li>
 		</ul>
 	</aside>
@@ -135,21 +134,38 @@
 
 		<!-- 나무 이미지 넣을 div 태그 -->
 		<div id="tree">
-		<% if (grade.getTreeGrade().equals("새싹")) { %>
+			<%
+			if (grade.getPoint() == 0) {
+			%>
 			<img src="images/tree_1.gif" alt="IMG-OUR">
-		<% } else if (grade.getTreeGrade().equals("묘목")) { %>
+			<%
+			} else if (grade.getPoint() == 1) {
+			%>
 			<img src="images/tree_2.gif" alt="IMG-OUR">
-		<% } else if (grade.getTreeGrade().equals("작은나무")) { %>
+			<%
+			} else if (grade.getPoint() == 2) {
+			%>
 			<img src="images/tree_3.gif" alt="IMG-OUR">
-		<% } else if (grade.getTreeGrade().equals("중간나무")) { %>
+			<%
+			} else if (grade.getPoint() == 3) {
+			%>
 			<img src="images/tree_4.gif" alt="IMG-OUR">
-		<% } else if (grade.getTreeGrade().equals("큰나무")) { %>
+			<%
+			} else if (grade.getPoint() == 4) {
+			%>
 			<img src="images/tree_5.gif" alt="IMG-OUR">
-		<% } else if (grade.getTreeGrade().equals("숲")) { %>
+			<%
+			} else if (grade.getPoint() == 5) {
+			%>
 			<img src="images/tree_6.gif" alt="IMG-OUR">
-		<% } else if (grade.getTreeGrade().equals("대자연")) { %>
+			<%
+			} else if (grade.getPoint() == 6) {
+			%>
 			<img src="images/tree_7.gif" alt="IMG-OUR">
-		<% } %>
+			<%
+			} else { %>
+			<img src="images/gift.gif" alt="IMG-OUR">
+			<% } %>
 		</div>
 
 		<br>
@@ -158,6 +174,12 @@
 		<p class="tree txt33">
 			<strong><%=login.getNickname()%></strong>님의 나무입니다
 		</p>
+		<% if (login.getPoint() >= 7) { %>
+		<div class="wrap-btn-booking flex-c-m m-t-6">
+			<!-- Button3 -->
+			<button type="button" class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받으러가기</button>
+		</div>
+		<% } %>
 	</section>
 
 	<!-- Back to top -->
