@@ -127,10 +127,25 @@
 
 
 	<!-- Zero Waste -->
-	<section class="bg2-pattern p-t-116 p-b-110 t-center p-l-15 p-r-15">
-		<span class="tit2 t-center"> Zero Waste </span>
+	<section class="bg2-pattern p-t-80 p-b-80 t-center p-l-15 p-r-15">
 
-		<h3 class="tit3 t-center m-b-35 m-t-5">My Tree</h3>
+		<!-- DB데이터 : 사용자 이름 받아오기 -->
+		<p class="tree txt33">
+			<strong><%=login.getNickname()%></strong>님의 나무입니다!
+			<br>
+			🍀 나무를 키워주세요 🍀</p>
+		<br>
+		<%
+		if (login.getPoint() >= 7) {
+		%>
+		<div class="wrap-btn-booking flex-c-m m-t-6">
+			<!-- Button3 -->
+			<button type="button" class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰
+				받으러가기</button>
+		</div>
+		<%
+		}
+		%>
 
 		<!-- 나무 이미지 넣을 div 태그 -->
 		<div id="tree">
@@ -163,23 +178,14 @@
 			%>
 			<img src="images/tree_7.gif" alt="IMG-OUR">
 			<%
-			} else { %>
+			} else {
+			%>
 			<img src="images/gift.gif" alt="IMG-OUR">
-			<% } %>
+			<%
+			}
+			%>
 		</div>
 
-		<br>
-
-		<!-- DB데이터 : 사용자 이름 받아오기 -->
-		<p class="tree txt33">
-			<strong><%=login.getNickname()%></strong>님의 나무입니다
-		</p>
-		<% if (login.getPoint() >= 7) { %>
-		<div class="wrap-btn-booking flex-c-m m-t-6">
-			<!-- Button3 -->
-			<button type="button" class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받으러가기</button>
-		</div>
-		<% } %>
 	</section>
 
 	<!-- Back to top -->

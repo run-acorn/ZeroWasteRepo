@@ -142,7 +142,7 @@
 				href="GoWrite">리뷰작성하기</a>
 			</div>
 		</div>
-
+		<br>
 		<div class="container">
 			<div>
 				<div>
