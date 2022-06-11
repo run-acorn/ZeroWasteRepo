@@ -117,11 +117,14 @@
 
 			<li class="t-center">
 				<!-- Button3 --> <a href="GoLogout"
-				class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"> 로그아웃
-					 </a>
+				class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"> 로그아웃 </a>
 			</li>
 		</ul>
 	</aside>
+
+	<%
+	if (login.getId().equals(cvo.getId())) {
+	%>
 
 	<!-- Title Page -->
 	<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15"
@@ -147,22 +150,14 @@
 							action="UpdateService?CerNum=<%=cvo.getCerNum()%>" method="post"
 							enctype="multipart/form-data">
 
-							<%
-							if (login.getId().equals(cvo.getId())) {
-							%>
-
-								
 							<h4 class="txt33 p-b-14">리뷰수정</h4>
-
-
 
 							<div>
 								<span class="txt9"> 영수증 등록 </span>
 
-								<div class="wrap-inputphone size12 bo2 bo-rad-10 m-t-3 m-b-23">
-									<input class="sizefull txt10 p-t-20" type="file"
-										name="fileName" onchange="setThumbnail(event);">
-
+								<div>
+									<input type="file" name="fileName"
+										onchange="setThumbnail(event);" class="m-t-3 m-b-23">
 								</div>
 							</div>
 
@@ -182,106 +177,110 @@
 									reader.readAsDataURL(event.target.files[0]);
 								}
 							</script>
-					</div>
 
-					<div>
-						<span class="txt9"> 글 내용 작성 </span>
+							<div>
+								<span class="txt9"> 제목 </span>
 
+								<div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
+									<input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
+										name="title" value="<%=cvo.getTitle()%>">
+								</div>
+							</div>
 
-						<textarea
-								class="bo-rad-10 size29 bo2 txt10 p-l-20 p-t-15 m-b-10 m-t-40"
-								name="review"><%=cvo.getReview()%></textarea>
+							<div>
+								<span class="txt9"> 매장 명 </span>
 
+								<div class="wrap-inputphone size12 bo2 bo-rad-10 m-t-3 m-b-23">
+									<input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
+										name="storeName" value="<%=cvo.getStoreName()%>" readonly>
+								</div>
+							</div>
 
-					</div>
+							<div>
+								<span class="txt9"> 글 내용 작성 </span>
 
+								<textarea
+									class="bo-rad-10 size29 bo2 txt10 p-l-20 p-t-15 m-t-3 m-b-23"
+									name="review"><%=cvo.getReview()%></textarea>
+							</div>
 
-					<div>
-						<span class="txt9"> 작성자 </span>
+							<div class="wrap-btn-booking flex-c-m m-t-6">
+								<!-- Button3 -->
+								<button type="submit"
+									class="btn3 flex-c-m size13 txt11 trans-0-4">수정하기</button>
+								&emsp; <a href="GoBoard"
+									class="btn3 flex-c-m size13 txt11 trans-0-4">목록 돌아가기</a> <br>
+								<br> <br> <br>
+							</div>
 
-
-						<div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
-							<input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
-								name="id" value="<%=login.getId()%>" readonly>
-						</div>
-					</div>
-
-
-					<div>
-						<span class="txt9"> 매장 명 </span>
-
-						<div class="wrap-inputphone size12 bo2 bo-rad-10 m-t-3 m-b-23">
-							<input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
-								name="storeName" value="<%=cvo.getStoreName()%>" readonly>
-						</div>
-					</div>
-
-					<%
-					} else {
-					%>
-
-
-
-
-
-					<div class="container">
-
-						<img src="reviewImg/<%=cvo.getFileName()%>" alt="IMG-BLOG">
-
-					</div>
-
-					<p class="bo-rad-10 size29 bo2 txt10 p-l-20 p-t-15 m-b-10 m-t-40"
-						name="review"><%=cvo.getReview()%></p>
-
-
-
-					<div>
-						<span class="txt9"> 작성자 </span>
-
-
-						<div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
-							<input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
-								name="id" value="<%=cvo.getId()%>" readonly>
-						</div>
-					</div>
-
-
-					<div>
-						<span class="txt9"> 매장명 </span>
-
-
-						<div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
-							<input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
-								name="id" value="<%=cvo.getStoreName()%>" readonly>
-						</div>
-					</div>
-
-
-
-
-
-					</span>
-					<%
-					}
-					%>
-					<%
-					if (login.getId().equals(cvo.getId())) {
-					%>
-					<div class="wrap-btn-booking flex-c-m m-t-6">
-						<!-- Button3 -->
-						<button type="submit" class="btn3 flex-c-m size13 txt11 trans-0-4">수정하기</button>
-						<br>
-					</div>
-
-					<%
-					}
-					%>
-					</form>
+						</form>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+	<%
+	} else {
+	%>
+	<!-- Title Page -->
+	<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15"
+		style="background-image: url(images/bg-title-page-03.jpg);">
+		<h2 class="tit6 t-center">리뷰 상세보기</h2>
+	</section>
+
+	<!-- Content page -->
+	<section>
+		<div class="container p-t-30">
+			<div>
+				<div>
+					<div>
+						<!-- Block4 -->
+						<div class="blo4 p-b-63">
+							<!-- - -->
+							<div id="image_container"
+								class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative"></div>
+						</div>
+
+						<h4 class="txt33 p-b-14">리뷰 상세보기</h4>
+
+						<div class="container">
+							<img src="reviewImg/<%=cvo.getFileName()%>" alt="IMG-BLOG">
+						</div>
+
+						<div>
+							<span class="txt9"> 제목 </span>
+
+							<div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
+								<input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
+									name="id" value="<%=cvo.getTitle()%>" readonly>
+							</div>
+						</div>
+
+						<div>
+							<span class="txt9"> 매장명 </span>
+
+							<div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
+								<input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
+									name="id" value="<%=cvo.getStoreName()%>" readonly>
+							</div>
+						</div>
+
+						<div>
+							<span class="txt9"> 글 작성 내용 </span>
+
+							<p class="bo-rad-10 size29 bo2 txt10 p-l-20 p-t-15 m-t-3 m-b-50"
+								name="review"><%=cvo.getReview()%></p>
+						</div>
+						<a href="GoBoard" class="btn3 flex-c-m size13 txt11 trans-0-4">목록
+							돌아가기</a> <br> <br>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<%
+	}
+	%>
 
 	<!-- Back to top -->
 	<div class="btn-back-to-top bg0-hov" id="myBtn">
@@ -324,8 +323,8 @@
 	<script type="text/javascript" src="vendor/isotope/isotope.pkgd.min.js"></script>
 	<!--===============================================================================================-->
 	<script src="js/main.js"></script>
-	
-	
+
+
 	<!-- 파일 넣어주는 스크립트 -->
 
 
@@ -342,8 +341,8 @@
 			reader.readAsDataURL(event.target.files[0]);
 		}
 	</script>
-	
-	
+
+
 
 </body>
 </html>
