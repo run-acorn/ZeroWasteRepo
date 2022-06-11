@@ -148,30 +148,30 @@
 				<div>
 					<div>
 						<!-- Block4 -->
-						<%
-						for (CertiVO cvo : list) {
+						<%				
+						for (int i = list.size()-1 ; i >= 0 ; i--) {							
 						%>
 						<div class="blo4 p-b-63">
 							<div class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">
 								<a class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative"
-									href="GoUpdate?CerNum=<%=cvo.getCerNum()%>"> <img
-									src="reviewImg/<%=cvo.getFileName()%>" alt="IMG-BLOG">
+									href="GoUpdate?CerNum=<%= list.get(i).getCerNum()%>"> <img
+									src="reviewImg/<%=list.get(i).getFileName()%>" alt="IMG-BLOG">
 								</a>
 							</div>
 							<div class="text-blo4 p-t-33">
 								<h4 class="p-b-16">
-									<%=cvo.getTitle()%>
+									<%=list.get(i).getTitle()%>
 								</h4>
 
 								<div class="txt32 flex-w p-b-24">
-									<span> <%=cvo.getId()%> <span class="m-r-6 m-l-4">|</span>
-									<span> <%=cvo.getStoreName()%> <span class="m-r-6 m-l-4">|</span>
-									</span> <span> <%=cvo.getDay()%>
+									<span> <%=list.get(i).getId()%> <span class="m-r-6 m-l-4">|</span>
+									<span> <%=list.get(i).getStoreName()%> <span class="m-r-6 m-l-4">|</span>
+									</span> <span> <%=list.get(i).getDay()%>
 									</span>
 								</div>
 
 								<p>
-									<%=cvo.getReview()%>
+									<%=list.get(i).getReview()%>
 								</p>
 							</div>
 						</div>
