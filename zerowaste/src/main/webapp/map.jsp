@@ -74,7 +74,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 
                         <li><a href="GoTree">My Tree</a></li>
 
-                        <li><a href="blog.jsp">Review & Point</a></li>
+                        <li><a href="GoBoard">Review & Point</a></li>
 
                         <li><a href="GoRegi">Registration</a></li>
                      </ul>
@@ -89,9 +89,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
          </div>
       </div>
    </header>
-
-
-
 
    <!-- Sidebar -->
    <aside class="sidebar trans-0-4">
@@ -109,7 +106,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
          <li class="t-center m-b-13"><a href="GoTree" class="txt19">My
                Tree</a></li>
 
-         <li class="t-center m-b-13"><a href="blog.html" class="txt19">Review
+         <li class="t-center m-b-13"><a href="GoBoard" class="txt19">Review
                & Point</a></li>
 
          <li class="t-center m-b-33"><a href="GoRegi" class="txt19">Registration</a>
@@ -129,8 +126,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
       <h2 class="tit6 t-center">Zero Waste 매장 안내</h2>
    </section>
 
-
-	
    <!-- Main menu -->
    <section class="section-mainmenu p-t-70 p-b-70 p-l-70 p-r-70 bg1-pattern">
    
@@ -151,7 +146,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
       <script type="text/javascript"
          src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b9d52b733842f8156d5455f83b6f4277&libraries=services"></script>
 
-
       <!-- 지도영역 -->
 
       <script>
@@ -165,7 +159,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
         };
 
         var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-
         
         // DB에 있는 데이터 전부 가져오기
         // 여기서는 매장이름, 위도, 경도만 필요함 
@@ -197,8 +190,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
         
         <%int i=0;%>
         
-
-        
         /* ------- 전체 식당 가져오는 함수 ------- */
 
         let all_f = function(){
@@ -226,8 +217,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 	 			kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
 	 	    }
         }
-
-	
         
         /* ------- 한식 식당 가져오는 함수 ------- */
         let korean_f = function(){
@@ -262,12 +251,9 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		        // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
 		        kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
 		        kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
-
 		    }
 
         }
-
-
         
         /* ------- 양식 식당 가져오는 함수 ------- */
         let western_f = function(){
@@ -295,11 +281,8 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		
 		         kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
 		         kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
-
 		     }
         }
-        
-        
         
         /* ------- 일식 식당 가져오는 함수 ------- */
         let japanese_f = function(){
@@ -329,11 +312,8 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		
 		         kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
 		         kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
-
 		    }
         }
-        
-        
         
         
         /* ------- 분식 식당 가져오는 함수 ------- */
@@ -357,7 +337,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		                
 		         marker.setMap(map);
 		
-
 		         var infowindow = new kakao.maps.InfoWindow({
 		                    content: school[i].content
 		         });
@@ -367,8 +346,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		     }
 
         }
-        
-        
         
         /* ------- 야식 식당 가져오는 함수 ------- */
         let midnight_f = function(){
@@ -397,12 +374,9 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		
 		        kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
 		        kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
-		            
 		     }
 
         }
-         
-        
         
         /* ------- 카페 가져오는 함수 ------- */
         let cafe_f = function(){
@@ -424,25 +398,18 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		        	position: cafe[i].latlng
 		        });
 		        marker.setMap(map);
-		                
 
 		        var infowindow = new kakao.maps.InfoWindow({
 		            content: cafe[i].content
 		        });
 		
-
 		        kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
 		        kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
 		    }
-
-        	
         }
         
-
         /* 접속했을 때 모든 매장 마커 찍어주는 구간 */
         all_f();
-             
-            
             
          /* 카테고리별로 매장위치 확인할 수 있는 구간 */
          // id값을 각각의 input에 준다
@@ -454,7 +421,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
  		let sch = document.getElementById('school');
  		let mid = document.getElementById('midnight');
  		let caf = document.getElementById('cafe');
-
 
  		all.addEventListener('click', function(){
  			all_f();
@@ -483,7 +449,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
         caf.addEventListener('click', function(){
         	cafe_f();
         });
-         
         
         function makeOverListener(map, marker, infowindow) {
             return function() {
