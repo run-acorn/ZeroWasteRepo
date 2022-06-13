@@ -167,7 +167,7 @@
 					</div>
 
 					<div>
-						<div id="map" style="width: 870px; height: 300px;"></div>
+						<div id="map" style="width: 100%; height: 200px;"></div>
 						<script type="text/javascript"
 							src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b9d52b733842f8156d5455f83b6f4277&libraries=services"></script>
 
