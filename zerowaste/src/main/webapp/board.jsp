@@ -149,13 +149,13 @@
 					<div>
 						<!-- Block4 -->
 						<%
-						for (int i = 1; i <= list.size()-1; i++) {
+						for (int i = 0; i <= list.size()-1; i++) {
 						%>
 						<div class="blo4 p-b-63">
 							<div class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">
 								<a class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative"
 									href="GoUpdate?CerNum=<%=list.get(i).getCerNum()%>"> <img
-									src="webapp\reviewImg/<%=list.get(i).getFileName()%>" alt="IMG-BLOG">
+									src="reviewImg/<%=list.get(i).getFileName()%>" alt="IMG-BLOG">
 								</a>
 							</div>
 							<div class="text-blo4 p-t-33">
