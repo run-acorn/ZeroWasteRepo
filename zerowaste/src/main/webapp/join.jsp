@@ -59,9 +59,9 @@
 			<div class="row">
 				<div class="col-lg-12 p-b-30">
 					<div class="t-center">
-						<span class="tit2 t-center"> Sign Up </span>
+						<span class="tit2 t-center">zero waste</span>
 
-						<h3 class="tit3 t-center m-b-35 m-t-2">Zero waste</h3>
+						<h3 class="tit3 t-center m-b-35 m-t-2">회원가입</h3>
 					</div>
 
 					<form class="wrap-form-reservation size22 m-l-r-auto"
@@ -104,7 +104,7 @@
 							<button type="submit"
 								class="btn3 flex-c-m size13 txt11 trans-0-4">
 								<!-- onClick="join();" -->
-								회원가입
+								가입하기
 							</button>
 						</div>
 					</form>
