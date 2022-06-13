@@ -81,8 +81,8 @@
 								<li><a href="GoTree">내 나무</a></li>
 
 								<li><a href="GoBoard">리뷰 & 인증</a></li>
-
-								<li><a href="GoRegi">매장 등록</a></li>
+								
+								<li><a href="GoRegi">매장 등록</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -115,7 +115,7 @@
 			<li class="t-center m-b-13"><a href="GoBoard" class="txt19">리뷰 & 인증
 					</a></li>
 
-			<li class="t-center m-b-33"><a href="GoRegi" class="txt19">매장 등록</a>
+			<li class="t-center m-b-13"><a href="GoRegi" class="txt19">매장 등록</a>
 			</li>
 
 			<li class="t-center">
@@ -129,7 +129,7 @@
 	<!-- Title Page -->
 	<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15"
 		style="background-image: url(images/bg-title-page-03.jpg);">
-		<h2 class="tit6 t-center">인증 게시판</h2>
+		<h2 class="tit6 t-center">리뷰 & 인증</h2>
 	</section>
 
 
