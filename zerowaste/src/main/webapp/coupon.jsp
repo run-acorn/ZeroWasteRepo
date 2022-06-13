@@ -45,7 +45,7 @@
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
 </head>
-<body class="animsition">
+<body class="animsition" onload="noBack();" onpageshow="if(event.persisted) noBack();" onunload="">
 	<%
 	UserVO login = (UserVO) session.getAttribute("login");
 	%>
@@ -101,16 +101,16 @@
 			<li class="t-center m-b-13"><a href="GoMap" class="txt19">지도</a>
 			</li>
 
-			<li class="t-center m-b-13"><a href="GoTree" class="txt19">내 나무
-					</a></li>
+			<li class="t-center m-b-13"><a href="GoTree" class="txt19">내
+					나무 </a></li>
 
-			<li class="t-center m-b-13"><a href="GoBoard" class="txt19">리뷰 & 인증
-					</a></li>
-					
-			<li class="t-center m-b-13"><a href="GoRegi" class="txt19">매장 등록
-					</a></li>
+			<li class="t-center m-b-13"><a href="GoBoard" class="txt19">리뷰
+					& 인증 </a></li>
 
-			
+			<li class="t-center m-b-13"><a href="GoRegi" class="txt19">매장
+					등록 </a></li>
+
+
 			<li class="t-center">
 				<!-- Button3 --> <a href="GoLogout"
 				class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"> 로그아웃 </a>
@@ -520,6 +520,12 @@
 	<script type="text/javascript" src="vendor/isotope/isotope.pkgd.min.js"></script>
 	<!--===============================================================================================-->
 	<script src="js/main.js"></script>
+	<script type="text/javascript">
+		window.history.forward();
+		function noBack() {
+			window.history.forward();
+		}
+	</script>
 
 </body>
 </html>
