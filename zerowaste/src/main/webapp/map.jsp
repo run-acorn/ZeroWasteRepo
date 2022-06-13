@@ -74,7 +74,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 
                         <li><a href="GoTree">내 나무</a></li>
 
-                        <li><a href="blog.jsp">리뷰 & 인증</a></li>
+                        <li><a href="GoBoard">리뷰 & 인증</a></li>
                         
                         <li><a href="GoRegi">매장 등록</a></li>
                      </ul>
