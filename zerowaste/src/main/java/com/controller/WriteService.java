@@ -1,6 +1,9 @@
 package com.controller;
 
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -25,7 +28,8 @@ public class WriteService extends HttpServlet {
 		HttpSession session = request.getSession();
 		request.setCharacterEncoding("UTF-8");
 		
-		String savePath = request.getServletContext().getRealPath("reviewImg");
+		
+		String savePath = "C:\\Users\\GITCT\\git\\ZeroWasteRepo\\zerowaste\\src\\main\\webapp\\reviewImg";
 		
 		int maxSize = 5 * 1024 * 1024;
 		

@@ -91,3 +91,9 @@ select u.nickname, r.treegrade
 		from userInfo u, rewardInfo r
 		where u.point between r.minvalue and r.maxvalue
 		and id = 'ÃÖÇö¿ì'
+		
+		
+		
+		
+		
+		select * from certiInfo order by day desc;

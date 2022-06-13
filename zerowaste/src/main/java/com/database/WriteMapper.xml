@@ -9,7 +9,7 @@
 	</insert>
 
 	<select id="BoardList" resultType="CertiVO">
-		select * from certiInfo
+		select * from certiInfo order by day desc
 	</select>
 
 	<select id="boardView" resultType="CertiVO">
