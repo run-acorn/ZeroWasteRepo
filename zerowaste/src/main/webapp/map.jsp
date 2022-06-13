@@ -74,7 +74,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 
                         <li><a href="GoTree">My Tree</a></li>
 
-                        <li><a href="blog.jsp">Review & Point</a></li>
+                        <li><a href="GoBoard">Review & Point</a></li>
 
                         <li><a href="GoRegi">Registration</a></li>
                      </ul>

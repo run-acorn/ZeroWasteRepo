@@ -1,3 +1,4 @@
+<%@page import="com.model.UserVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -110,7 +111,7 @@
 
 						<div class="wrap-btn-booking flex-c-m m-t-6">
 							<!-- Button3 -->
-							<button type="button"
+							<button type="submit"
 								class="btn3 flex-c-m size13 txt11 trans-0-4">
 								<!-- onClick="join();" -->
 								회원가입
