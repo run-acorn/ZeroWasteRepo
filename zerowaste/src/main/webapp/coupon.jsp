@@ -4,42 +4,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Coupon</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coupon</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+	rel="stylesheet">
 <!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
+<link rel="icon" type="image/png" href="images/icons/favicon.png" />
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css"
+	href="vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css"
+	href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/themify/themify-icons.css">
+<link rel="stylesheet" type="text/css"
+	href="fonts/themify/themify-icons.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<link rel="stylesheet" type="text/css"
+	href="vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<link rel="stylesheet" type="text/css"
+	href="vendor/animsition/css/animsition.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<link rel="stylesheet" type="text/css"
+	href="vendor/select2/select2.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<link rel="stylesheet" type="text/css"
+	href="vendor/daterangepicker/daterangepicker.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/lightbox2/css/lightbox.min.css">
+<link rel="stylesheet" type="text/css"
+	href="vendor/lightbox2/css/lightbox.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/util.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
 </head>
 <body class="animsition">
-<%
-	UserVO login = (UserVO)session.getAttribute("login");
-%>
+	<%
+	UserVO login = (UserVO) session.getAttribute("login");
+	%>
 	<!-- Header -->
 	<header>
 		<!-- Header desktop -->
@@ -110,61 +119,34 @@
 	</aside>
 
 	<!-- Title Page -->
-	<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url(images/bg-title-page-02.jpg);">
-		<h2 class="tit6 t-center">
-			쿠폰받기
-		</h2>
+	<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15"
+		style="background-image: url(images/bg-title-page-02.jpg);">
+		<h2 class="tit6 t-center">쿠폰받기</h2>
 	</section>
 
 	<!-- Gallery -->
-	<div class="section-gallery p-t-118 p-b-100">
-		<div class="wrap-label-gallery filter-tope-group size27 flex-w flex-sb-m m-l-r-auto flex-col-c-sm p-l-15 p-r-15 m-b-60">
-			<button class="label-gallery txt26 trans-0-4 is-actived" data-filter="*">
-				All Photo
-			</button>
-
-			<button class="label-gallery txt26 trans-0-4" data-filter=".interior">
-				Interior
-			</button>
-
-			<button class="label-gallery txt26 trans-0-4" data-filter=".food">
-				Food
-			</button>
-
-			<button class="label-gallery txt26 trans-0-4" data-filter=".events">
-				Events
-			</button>
-
-			<button class="label-gallery txt26 trans-0-4" data-filter=".guests">
-				Vip guests
-			</button>
+	<div class="bread-crumb bo5-b p-t-17 p-b-17">
+		<div class="wrap-btn-booking flex-c-m m-t-6">
+			<p class="tree txt33">🎉 인증하고 나무를 키우시면 더 많은 쿠폰을 얻을 수 있습니다! 🎁</p>
 		</div>
+	</div>
+
+	<%
+	if (login.getPoint() == 1) {
+	%>
+
+	<div class="section-gallery p-t-20 p-b-100">
 
 		<div class="wrap-gallery isotope-grid flex-w p-l-25 p-r-25">
 			<!-- - -->
-			<div class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/photo-gallery-13.jpg" alt="IMG-GALLERY">
-
-				<div class="overlay-item-gallery trans-0-4 flex-c-m">
-					<a class="btn-show-gallery flex-c-m fa fa-search" href="images/photo-gallery-13.jpg" data-lightbox="gallery"></a>
-				</div>
-			</div>
-
-			<!-- - -->
-			<div class="item-gallery isotope-item bo-rad-10 hov-img-zoom food">
-				<img src="images/photo-gallery-14.jpg" alt="IMG-GALLERY">
-
-				<div class="overlay-item-gallery trans-0-4 flex-c-m">
-					<a class="btn-show-gallery flex-c-m fa fa-search" href="images/photo-gallery-14.jpg" data-lightbox="gallery"></a>
-				</div>
-			</div>
-
-			<!-- - -->
-			<div class="item-gallery isotope-item bo-rad-10 hov-img-zoom events">
-				<img src="images/photo-gallery-15.jpg" alt="IMG-GALLERY">
-
-				<div class="overlay-item-gallery trans-0-4 flex-c-m">
-					<a class="btn-show-gallery flex-c-m fa fa-search" href="images/photo-gallery-15.jpg" data-lightbox="gallery"></a>
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_1000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a href="CouponService"
+						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
 				</div>
 			</div>
 		</div>
@@ -172,38 +154,371 @@
 
 	<!-- Back to top -->
 	<div class="btn-back-to-top bg0-hov" id="myBtn">
-		<span class="symbol-btn-back-to-top">
-			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
+		<span class="symbol-btn-back-to-top"> <i
+			class="fa fa-angle-double-up" aria-hidden="true"></i>
 		</span>
 	</div>
 
-<!--===============================================================================================-->
+	<%
+	} else if (login.getPoint() == 2) {
+	%>
+
+	<div class="section-gallery p-t-20 p-b-100">
+
+		<div class="wrap-gallery isotope-grid flex-w p-l-25 p-r-25">
+
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_1000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a href="CouponService"
+						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
+				</div>
+			</div>
+
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_2000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a href="CouponService"
+						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Back to top -->
+	<div class="btn-back-to-top bg0-hov" id="myBtn">
+		<span class="symbol-btn-back-to-top"> <i
+			class="fa fa-angle-double-up" aria-hidden="true"></i>
+		</span>
+	</div>
+
+	<%
+	} else if (login.getPoint() == 3) {
+	%>
+
+	<div class="section-gallery p-t-20 p-b-100">
+
+		<div class="wrap-gallery isotope-grid flex-w p-l-25 p-r-25">
+
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_1000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a href="CouponService"
+						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
+				</div>
+			</div>
+
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_2000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a href="CouponService"
+						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
+				</div>
+			</div>
+
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_3000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a href="CouponService"
+						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Back to top -->
+	<div class="btn-back-to-top bg0-hov" id="myBtn">
+		<span class="symbol-btn-back-to-top"> <i
+			class="fa fa-angle-double-up" aria-hidden="true"></i>
+		</span>
+	</div>
+
+	<%
+	} else if (login.getPoint() == 4) {
+	%>
+
+	<div class="section-gallery p-t-20 p-b-100">
+
+		<div class="wrap-gallery isotope-grid flex-w p-l-25 p-r-25">
+
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_1000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a href="CouponService"
+						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
+				</div>
+			</div>
+
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_2000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a href="CouponService"
+						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
+				</div>
+			</div>
+
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_3000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a href="CouponService"
+						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
+				</div>
+			</div>
+
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_5000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a href="CouponService"
+						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Back to top -->
+	<div class="btn-back-to-top bg0-hov" id="myBtn">
+		<span class="symbol-btn-back-to-top"> <i
+			class="fa fa-angle-double-up" aria-hidden="true"></i>
+		</span>
+	</div>
+
+	<%
+	} else if (login.getPoint() == 5) {
+	%>
+
+	<div class="section-gallery p-t-20 p-b-100">
+
+		<div class="wrap-gallery isotope-grid flex-w p-l-25 p-r-25">
+
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_1000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a href="CouponService"
+						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
+				</div>
+			</div>
+
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_2000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a href="CouponService"
+						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
+				</div>
+			</div>
+
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_3000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a href="CouponService"
+						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
+				</div>
+			</div>
+
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_5000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a href="CouponService"
+						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
+				</div>
+			</div>
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_7000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a href="CouponService"
+						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Back to top -->
+	<div class="btn-back-to-top bg0-hov" id="myBtn">
+		<span class="symbol-btn-back-to-top"> <i
+			class="fa fa-angle-double-up" aria-hidden="true"></i>
+		</span>
+	</div>
+
+	<%
+	} else if (login.getPoint() >= 6) {
+	%>
+
+	<div class="section-gallery p-t-20 p-b-100">
+
+		<div class="wrap-gallery isotope-grid flex-w p-l-25 p-r-25">
+
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_1000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a href="CouponService"
+						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
+				</div>
+			</div>
+
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_2000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a href="CouponService"
+						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
+				</div>
+			</div>
+
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_3000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a href="CouponService"
+						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
+				</div>
+			</div>
+
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_5000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a href="CouponService"
+						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
+				</div>
+			</div>
+
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_7000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a href="CouponService"
+						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
+				</div>
+			</div>
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_10000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a href="CouponService"
+						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Back to top -->
+	<div class="btn-back-to-top bg0-hov" id="myBtn">
+		<span class="symbol-btn-back-to-top"> <i
+			class="fa fa-angle-double-up" aria-hidden="true"></i>
+		</span>
+	</div>
+
+	<%
+	}
+	%>
+
+	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
+	<script type="text/javascript"
+		src="vendor/animsition/js/animsition.min.js"></script>
+	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/bootstrap/js/popper.js"></script>
-	<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
+	<script type="text/javascript"
+		src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/daterangepicker/moment.min.js"></script>
-	<script type="text/javascript" src="vendor/daterangepicker/daterangepicker.js"></script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
+	<script type="text/javascript"
+		src="vendor/daterangepicker/moment.min.js"></script>
+	<script type="text/javascript"
+		src="vendor/daterangepicker/daterangepicker.js"></script>
+	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
 	<script type="text/javascript" src="js/slick-custom.js"></script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/parallax100/parallax100.js"></script>
 	<script type="text/javascript">
-        $('.parallax100').parallax100();
+		$('.parallax100').parallax100();
 	</script>
-<!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/countdowntime/countdowntime.js"></script>
-<!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/lightbox2/js/lightbox.min.js"></script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
+	<script type="text/javascript"
+		src="vendor/countdowntime/countdowntime.js"></script>
+	<!--===============================================================================================-->
+	<script type="text/javascript"
+		src="vendor/lightbox2/js/lightbox.min.js"></script>
+	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/isotope/isotope.pkgd.min.js"></script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script src="js/main.js"></script>
 
 </body>

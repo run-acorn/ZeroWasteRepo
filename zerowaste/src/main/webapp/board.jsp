@@ -65,8 +65,8 @@
 				<div class="wrap_header trans-0-3">
 					<!-- Logo -->
 					<div class="logo">
-						<a href="index.jsp">
-							<img src="images/icons/logo.png" alt="IMG-LOGO" data-logofixed="images/icons/logo2.png">
+						<a href="index.jsp"> <img src="images/icons/logo.png"
+							alt="IMG-LOGO" data-logofixed="images/icons/logo2.png">
 						</a>
 					</div>
 
@@ -121,8 +121,7 @@
 
 			<li class="t-center">
 				<!-- Button3 --> <a href="GoLogout"
-				class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"> 로그아웃
-					 </a>
+				class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"> 로그아웃 </a>
 			</li>
 		</ul>
 	</aside>
@@ -139,9 +138,9 @@
 	<section>
 		<div class="bread-crumb bo5-b p-t-17 p-b-17">
 			<div class="wrap-btn-booking flex-c-m m-t-6">
-            <!-- Button3 -->
-            <a href="GoWrite" class="btn3 flex-c-m size13 txt11 trans-0-4">리뷰작성하기</a>
-         </div>
+				<!-- Button3 -->
+				<a href="GoWrite" class="btn3 flex-c-m size13 txt11 trans-0-4">리뷰작성하기</a>
+			</div>
 		</div>
 		<br>
 		<div class="container">
@@ -149,13 +148,13 @@
 				<div>
 					<div>
 						<!-- Block4 -->
-						<%				
-						for (int i = list.size()-1 ; i >= 0 ; i--) {							
+						<%
+						for (int i = list.size() - 1; i >= 0; i--) {
 						%>
 						<div class="blo4 p-b-63">
 							<div class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">
 								<a class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative"
-									href="GoUpdate?CerNum=<%= list.get(i).getCerNum()%>"> <img
+									href="GoUpdate?CerNum=<%=list.get(i).getCerNum()%>"> <img
 									src="reviewImg/<%=list.get(i).getFileName()%>" alt="IMG-BLOG">
 								</a>
 							</div>
@@ -165,8 +164,9 @@
 								</h4>
 
 								<div class="txt32 flex-w p-b-24">
-									<span> <%=list.get(i).getId()%> <span class="m-r-6 m-l-4">|</span>
-									<span> <%=list.get(i).getStoreName()%> <span class="m-r-6 m-l-4">|</span>
+									<span> <%=list.get(i).getId()%> <span
+										class="m-r-6 m-l-4">|</span> <span> <%=list.get(i).getStoreName()%>
+											<span class="m-r-6 m-l-4">|</span>
 									</span> <span> <%=list.get(i).getDay()%>
 									</span>
 								</div>

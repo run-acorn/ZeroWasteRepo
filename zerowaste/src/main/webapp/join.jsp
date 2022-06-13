@@ -1,3 +1,4 @@
+<%@page import="com.model.UserVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -45,16 +46,6 @@
 <!--===============================================================================================-->
 </head>
 <body class="animsition">
-
-	<!-- Header -->
-	<header>
-		<!-- Header desktop -->
-		<div>
-			<div class="container h-full">
-				<div class="wrap_header trans-0-3"></div>
-			</div>
-		</div>
-	</header>
 
 	<!-- Title Page -->
 	<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15"
@@ -110,7 +101,7 @@
 
 						<div class="wrap-btn-booking flex-c-m m-t-6">
 							<!-- Button3 -->
-							<button type="button"
+							<button type="submit"
 								class="btn3 flex-c-m size13 txt11 trans-0-4">
 								<!-- onClick="join();" -->
 								가입하기

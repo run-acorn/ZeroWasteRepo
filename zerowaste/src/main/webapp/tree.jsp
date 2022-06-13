@@ -136,7 +136,7 @@
 			🍀 나무를 키워주세요 🍀</p>
 		<br>
 		<%
-		if (login.getPoint() >= 7) {
+		if (login.getPoint() >= 1) {
 		%>
 		<div class="wrap-btn-booking flex-c-m m-t-6">
 			<!-- Button3 -->
@@ -173,16 +173,11 @@
 			%>
 			<img src="images/tree_6.gif" alt="IMG-OUR">
 			<%
-			} else if (grade.getPoint() == 6) {
+			} else if (grade.getPoint() >= 6) {
 			%>
 			<img src="images/tree_7.gif" alt="IMG-OUR">
 			<%
-			} else {
-			%>
-			<img src="images/gift.gif" alt="IMG-OUR">
-			<%
-			}
-			%>
+			} %>
 		</div>
 
 	</section>

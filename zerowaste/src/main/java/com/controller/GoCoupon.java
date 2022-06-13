@@ -21,17 +21,11 @@ public class GoCoupon extends HttpServlet {
 			throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		request.setCharacterEncoding("UTF-8");
-		UserVO user = (UserVO)session.getAttribute("login");
-		
-//		UserDAO dao = new UserDAO();
-//		int cnt = dao.reset(user.getId());
-		
-//		if (cnt > 0) {
-			RequestDispatcher rd = request.getRequestDispatcher("coupon.jsp");
-			rd.forward(request, response);
-//		} else {
-//			response.sendRedirect("GoTree");
-//		}
+		UserVO user = (UserVO) session.getAttribute("login");
+
+		RequestDispatcher rd = request.getRequestDispatcher("coupon.jsp");
+		rd.forward(request, response);
+
 	}
 
 }

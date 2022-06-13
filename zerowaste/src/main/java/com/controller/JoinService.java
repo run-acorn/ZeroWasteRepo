@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.model.UserDAO;
 import com.model.UserVO;
@@ -19,6 +20,7 @@ public class JoinService extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		HttpSession session = request.getSession();
 		request.setCharacterEncoding("UTF-8");
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
@@ -31,7 +33,7 @@ public class JoinService extends HttpServlet {
 
 		UserDAO dao = new UserDAO();
 		int cnt = dao.join(uvo);
-
+		
 		String nextPage = null;
 		if (cnt > 0) {
 			nextPage = "GoLogin";

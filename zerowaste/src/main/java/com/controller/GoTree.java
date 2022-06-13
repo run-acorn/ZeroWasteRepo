@@ -21,7 +21,7 @@ public class GoTree extends HttpServlet {
 			throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		request.setCharacterEncoding("UTF-8");
-		// session에서 가져오기
+		
 		UserVO user = (UserVO)session.getAttribute("login");
 		
 		UserDAO dao = new UserDAO();
@@ -29,7 +29,10 @@ public class GoTree extends HttpServlet {
 		
 		request.setAttribute("grade", uvo);
 		
-		request.setCharacterEncoding("UTF-8");
+		//session update
+		user.setPoint(uvo.getPoint());
+		session.setAttribute("login", user);
+		
 		String nextPage = "tree.jsp";
 		RequestDispatcher rd = request.getRequestDispatcher(nextPage);
 		rd.forward(request, response);
