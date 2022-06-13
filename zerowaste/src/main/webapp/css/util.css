@@ -9836,15 +9836,15 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 
 .tit2 {
 	font-family: Courgette;
-	font-size: 30px;
+	font-size: 40px;
 	line-height: 1.2;
-	color: #d61c22;
+	color: #3ba810;
 }
 
 .tit3 {
 	font-family: Poppins;
 	font-weight: 700;
-	font-size: 50px;
+	font-size: 30px;
 	line-height: 1.2;
 	color: #222222;
 	text-transform: uppercase;
@@ -10767,6 +10767,16 @@ RESPONSIVE  RESPONSIVE  RESPONSIVE  RESPONSIVE   RESPONSIVE
 	font-size: 20px;
 	font-weight: nomal;
 	color: black;
+}
+
+.tree,.txt33>strong {
+    font-size: 130%;
+}
+
+#tree>img {
+   
+   border-style: ridge;
+   
 }
 
 .data {

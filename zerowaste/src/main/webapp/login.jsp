@@ -68,9 +68,9 @@
 			<div class="row">
 				<div class="col-lg-12 p-b-30">
 					<div class="t-center">
-						<span class="tit2 t-center"> 로그인 </span>
+						<span class="tit2 t-center">zero waste</span>
 
-						<h3 class="tit3 t-center m-b-35 m-t-2">Zero waste</h3>
+						<h3 class="tit3 t-center m-b-35 m-t-2">로그인</h3>
 					</div>
 
 					<form class="wrap-form-reservation size22 m-l-r-auto"
