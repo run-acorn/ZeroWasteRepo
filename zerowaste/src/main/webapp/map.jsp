@@ -137,18 +137,18 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
    	 <!-- 카테고리 버튼 -->
    	
    	<ul class="main_menu">
-   		<li><input type="button" id="allMarkers" value="전체" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
-   		<li><input type="button" id="korean" value="한식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
-		<li><input type="button" id="western" value="양식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
-		<li><input type="button" id="japanese" value="일식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
-		<li><input type="button" id="school" value="분식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
-		<li><input type="button" id="midnight" value="야식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
-		<li><input type="button" id="cafe" value="카페" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
+   		<li class="foodlist" ><input type="button" id="allMarkers" value="전체" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
+   		<li class="foodlist" ><input type="button" id="korean" value="한식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
+		<li class="foodlist" ><input type="button" id="western" value="양식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
+		<li class="foodlist" ><input type="button" id="japanese" value="일식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
+		<li class="foodlist" ><input type="button" id="school" value="분식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
+		<li class="foodlist" ><input type="button" id="midnight" value="야식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
+		<li class="foodlist" ><input type="button" id="cafe" value="카페" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
  	</ul>
  	
       <!-- 지도 들어갈 공간 -->
       <div class="map_wrap">
-      	<div id="map" style="width: 1780px; height: 800px;"></div>
+      	<div id="map" style="width: 100%; height: 150%;"></div>
       		<!-- <button onclick="panTo()">지도 중심좌표 부드럽게 이동시키기</button> -->
 	       <div id="menu_wrap" class="bg_white">
 	        <div class="option">
