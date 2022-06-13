@@ -117,8 +117,8 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 
          <li class="t-center">
             <!-- Button3 --> <a href="GoLogout"
-            class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"> Sign
-               Out </a>
+            class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"> 로그아웃
+               </a>
          </li>
       </ul>
    </aside>
