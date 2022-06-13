@@ -10769,6 +10769,16 @@ RESPONSIVE  RESPONSIVE  RESPONSIVE  RESPONSIVE   RESPONSIVE
 	color: black;
 }
 
+.tree,.txt33>strong {
+    font-size: 130%;
+}
+
+#tree>img {
+   
+   border-style: ridge;
+   
+}
+
 .data {
 	display: block;
 	font-size: 23px;

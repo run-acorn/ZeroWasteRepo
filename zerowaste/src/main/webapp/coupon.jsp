@@ -66,15 +66,15 @@
 					<div class="wrap_menu p-l-45 p-l-0-xl">
 						<nav class="menu">
 							<ul class="main_menu">
-								<li><a href="GoMain">Home</a></li>
+								<li><a href="GoMain">홈</a></li>
 
-								<li><a href="GoMap">Map</a></li>
+								<li><a href="GoMap">지도</a></li>
 
-								<li><a href="GoTree">My Tree</a></li>
+								<li><a href="GoTree">내 나무</a></li>
 
-								<li><a href="GoBoard">Review & Point</a></li>
+								<li><a href="GoBoard">리뷰 & 인증</a></li>
 
-								<li><a href="GoRegi">Registration</a></li>
+								<li><a href="GoRegi">매장 등록</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -95,21 +95,22 @@
 
 		<!-- - -->
 		<ul class="menu-sidebar p-t-95 p-b-70">
-			<li class="t-center m-b-13"><a href="GoMain" class="txt19">Home</a>
+			<li class="t-center m-b-13"><a href="GoMain" class="txt19">홈</a>
 			</li>
 
-			<li class="t-center m-b-13"><a href="GoMap" class="txt19">Map</a>
+			<li class="t-center m-b-13"><a href="GoMap" class="txt19">지도</a>
 			</li>
 
-			<li class="t-center m-b-13"><a href="GoTree" class="txt19">My
-					Tree</a></li>
+			<li class="t-center m-b-13"><a href="GoTree" class="txt19">내 나무
+					</a></li>
 
-			<li class="t-center m-b-13"><a href="GoBoard" class="txt19">Review
-					& Point</a></li>
+			<li class="t-center m-b-13"><a href="GoBoard" class="txt19">리뷰 & 인증
+					</a></li>
+					
+			<li class="t-center m-b-13"><a href="GoRegi" class="txt19">매장 등록
+					</a></li>
 
-			<li class="t-center m-b-33"><a href="GoRegi" class="txt19">Registration</a>
-			</li>
-
+			
 			<li class="t-center">
 				<!-- Button3 --> <a href="GoLogout"
 				class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"> 로그아웃 </a>
