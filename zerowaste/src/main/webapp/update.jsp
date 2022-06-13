@@ -128,7 +128,7 @@
 	<!-- Title Page -->
 	<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15"
 		style="background-image: url(images/bg-title-page-03.jpg);">
-		<h2 class="tit6 t-center">리뷰수정</h2>
+		<h2 class="tit6 t-center">리뷰 수정</h2>
 	</section>
 
 	<!-- Content page -->
@@ -149,7 +149,7 @@
 							action="UpdateService?CerNum=<%=cvo.getCerNum()%>" method="post"
 							enctype="multipart/form-data">
 
-							<h4 class="txt33 p-b-14">리뷰수정</h4>
+							<h4 class="txt33 t-center p-b-14">리뷰 수정</h4>
 
 							<div>
 								<span class="txt9"> 영수증 등록 </span>
