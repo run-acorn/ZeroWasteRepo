@@ -104,6 +104,9 @@ body, html {
   font-weight: 400;
 }
 
+.col-md-4{
+	margin : auto;
+}
 /* ------------------------------------ */
 a {
 	font-family: Montserrat;

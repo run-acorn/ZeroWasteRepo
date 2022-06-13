@@ -29,6 +29,10 @@ public class GoTree extends HttpServlet {
 		
 		request.setAttribute("grade", uvo);
 		
+		//session update
+		user.setPoint(uvo.getPoint());
+		session.setAttribute("login", user);
+		
 		String nextPage = "tree.jsp";
 		RequestDispatcher rd = request.getRequestDispatcher(nextPage);
 		rd.forward(request, response);

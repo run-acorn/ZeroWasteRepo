@@ -47,16 +47,6 @@
 </head>
 <body class="animsition">
 
-	<!-- Header -->
-	<header>
-		<!-- Header desktop -->
-		<div>
-			<div class="container h-full">
-				<div class="wrap_header trans-0-3"></div>
-			</div>
-		</div>
-	</header>
-
 	<!-- Title Page -->
 	<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15"
 		style="background-image: url(images/bg-title-page-02.jpg);">
