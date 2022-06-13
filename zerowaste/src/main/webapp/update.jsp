@@ -240,7 +240,7 @@
 								class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative"></div>
 						</div>
 
-						<h4 class="txt33 p-b-14">리뷰 상세보기</h4>
+						<h4 class="txt33 p-b-14 t-center">리뷰 상세보기</h4>
 
 						<div class="container">
 							<img src="reviewImg/<%=cvo.getFileName()%>" alt="IMG-BLOG">
