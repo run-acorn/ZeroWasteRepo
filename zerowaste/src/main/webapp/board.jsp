@@ -149,7 +149,7 @@
 					<div>
 						<!-- Block4 -->
 						<%
-						for (int i = 1; i <= list.size()-1; i++) {
+						for (int i = 0; i <= list.size(); i++) {
 						%>
 						<div class="blo4 p-b-63">
 							<div class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">
