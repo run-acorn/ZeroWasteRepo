@@ -19,6 +19,7 @@ public class GoBoard extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
 		CertiDAO dao = new CertiDAO();
 		List<CertiVO> list = dao.BoardList();
 
