@@ -29,7 +29,7 @@ public class WriteService extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		
 		
-		String savePath = request.getServletContext().getRealPath("reviewImg");
+		String savePath = "C:\\Users\\GTICT\\git\\ZeroWasteRepo\\zerowaste\\src\\main\\webapp\\reviewImg";
 		
 		int maxSize = 5 * 1024 * 1024;
 		
