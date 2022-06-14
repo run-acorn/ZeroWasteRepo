@@ -2,15 +2,8 @@
 ///////////////////////////////////////////////////////////
 */
 
-/* 메인화면 포인트 색상*/
-span.ingredient {
-    color: #f5d654;
-   
-}
 
-span#ingredient2{
-	font-family: twayfly;
-}
+
 
 /* font*/
 
@@ -10835,4 +10828,26 @@ h2#maintit2 {
 div.mainout{
 	
 	width: 600px;
+}
+
+
+
+
+
+/* 메인화면 포인트 색상*/
+span>span.ingredient {
+    color: #f5d654;
+}
+
+span>span#ingredient2 {
+    font-family:'twayfly';
+}
+
+span#ingredient2 {
+    font-family: 'twayfly';
+    color: #f5d654;
+}
+
+span>span{
+	font-family:'twayfly';
 }

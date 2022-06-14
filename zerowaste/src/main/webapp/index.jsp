@@ -124,11 +124,11 @@
 						class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span
 							class="caption1-slide1 txt1 t-center animated visible-false m-b-15"
-							data-appear="rotateInDownLeft"> <span class="ingredient">용기</span>내서 </span>
+							data-appear="rotateInDownLeft"> <span class="ingredient" id="ingredient2">용기</span> <span>내서</span> </span>
 
 						<h2
 							class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
-							data-appear="rotateInUpRight"> <span class="ingredient">용기</span>내</h2>
+							data-appear="rotateInUpRight"> <span class="ingredient" id="ingredient2">용기</span> <span style="font-family:'twayfly'; ">내</span> </h2>
 
 						<div class="wrap-btn-slide1 animated visible-false"
 							data-appear="rotateIn">
@@ -274,11 +274,11 @@
 						
 						<span
 							class="caption1-slide1 txt1 t-center animated visible-false m-b-15"
-							data-appear="rotateInDownLeft"> <span class="ingredient" id="ingredient2">용기</span>내서 </span>
+							data-appear="rotateInDownLeft"> <span class="ingredient" id="ingredient2">용기</span> <span>내서</span> </span>
 
 						<h2
 							class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
-							data-appear="rotateInUpRight"> <span class="ingredient" id="ingredient2">용기</span>내</h2>
+							data-appear="rotateInUpRight"> <span class="ingredient" id="ingredient2">용기</span> <span style="font-family:'twayfly'; ">내</span> </h2>
 
 						<div class="wrap-btn-slide1 animated visible-false"
 							data-appear="rotateIn"></div>
