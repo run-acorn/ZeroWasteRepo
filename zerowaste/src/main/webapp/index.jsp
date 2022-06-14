@@ -90,7 +90,7 @@
 						<br> <br> <br>
 							<h2
 								class="caption1-slide1 t-center animated visible-false m-b-15"
-								data-appear="fadeInDown" id="maintit">제로웨이스트란?</h2>
+								data-appear="fadeInDown" id="maintit">제로 웨이스트(zero waste)란?</h2>
 
 							<h2
 								class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
@@ -254,7 +254,7 @@
 						<br> <br> <br>
 							<h2
 								class="caption1-slide1 t-center animated visible-false m-b-15"
-								data-appear="fadeInDown" id="maintit">제로웨이스트란?</h2>
+								data-appear="fadeInDown" id="maintit">제로 웨이스트(zero waste)란?</h2>
 
 							<h2
 								class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
@@ -274,11 +274,11 @@
 						
 						<span
 							class="caption1-slide1 txt1 t-center animated visible-false m-b-15"
-							data-appear="rotateInDownLeft"> <span class="ingredient">용기</span>내서 </span>
+							data-appear="rotateInDownLeft"> <span class="ingredient" id="ingredient2">용기</span>내서 </span>
 
 						<h2
 							class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
-							data-appear="rotateInUpRight"> <span class="ingredient">용기</span>내</h2>
+							data-appear="rotateInUpRight"> <span class="ingredient" id="ingredient2">용기</span>내</h2>
 
 						<div class="wrap-btn-slide1 animated visible-false"
 							data-appear="rotateIn"></div>
