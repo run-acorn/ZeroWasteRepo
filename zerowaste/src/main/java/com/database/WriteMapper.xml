@@ -5,7 +5,7 @@
 <mapper namespace="com.model.CertiVO">
 	<insert id="write" parameterType="CertiVO">
 		insert into certiInfo values
-		(cer_num_seq.nextval, #{id}, #{storeName}, #{review}, #{fileName}, #{title}, sysdate)
+		(cer_num_seq.nextval, #{id}, #{storeName}, #{review}, #{fileName}, #{title}, current_date)
 	</insert>
 
 	<select id="BoardList" resultType="CertiVO">
