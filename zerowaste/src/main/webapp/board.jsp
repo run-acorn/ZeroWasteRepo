@@ -183,7 +183,7 @@
 						%>
 						<!-- Pagination -->
 						<div class="pagination flex-l-m flex-w m-l--6 p-t-25">
-							<%for(int i = 0; i < board/10; i++){ %>
+							<%for(int i = 0; i < Math.ceil((double)board/10); i++){ %>
 							<a class="item-pagination flex-c-m trans-0-4 active-pagination" 
 							href="GoBoard?page=<%=i*10+1%>"><%=i+1%></a>
 							<%} %>
