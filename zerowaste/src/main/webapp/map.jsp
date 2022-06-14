@@ -126,7 +126,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
    <!-- Title Page -->
    <section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15"
       style="background-image: url(images/bg-title-page-01.jpg);">
-      <h2 class="tit6 t-center">Zero Waste 매장 안내</h2>
+      <h2 class="tit6 t-center texttitle">Zero Waste 매장 안내</h2>
    </section>
 
 
