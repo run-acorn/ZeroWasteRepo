@@ -20,10 +20,16 @@ public class GoBoard extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
+		int page = Integer.parseInt(request.getParameter("page"));
+		
 		CertiDAO dao = new CertiDAO();
-		List<CertiVO> list = dao.BoardList();
+		
+		List<CertiVO> list = dao.pageList(page);
+		
+		int board = dao.BoardList().size();
 
 		request.setAttribute("list", list);
+		request.setAttribute("board", board);
 
 		request.setCharacterEncoding("UTF-8");
 		String nextPage = "board.jsp";

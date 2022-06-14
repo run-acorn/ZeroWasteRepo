@@ -24,4 +24,10 @@
 		fileName = #{fileName}
 		where cerNum = #{cerNum}
 	</update>
+	
+	<select id="pageList" resultType="CertiVO">
+	select * from certiInfo
+	where cernum between #{page} and #{page}+9
+	order by day desc		
+	</select>
 </mapper>

@@ -52,6 +52,8 @@
 	List<CertiVO> list = (List<CertiVO>) request.getAttribute("list");
 
 	UserVO login = (UserVO) session.getAttribute("login");
+	
+	int board = (int) request.getAttribute("board");
 	%>
 
 	<%
@@ -80,7 +82,7 @@
 
 								<li><a href="GoTree">내 나무</a></li>
 
-								<li><a href="GoBoard">리뷰 & 인증</a></li>
+								<li><a href="GoBoard?page=1">리뷰 & 인증</a></li>
 								
 								<li><a href="GoRegi">매장 등록</a></li>
 							</ul>
@@ -112,7 +114,7 @@
 			<li class="t-center m-b-13"><a href="GoTree" class="txt19">내 나무
 					</a></li>
 
-			<li class="t-center m-b-13"><a href="GoBoard" class="txt19">리뷰 & 인증
+			<li class="t-center m-b-13"><a href="GoBoard?page=1" class="txt19">리뷰 & 인증
 					</a></li>
 					
 			<li class="t-center m-b-13"><a href="GoRegi" class="txt19">매장 등록
@@ -181,9 +183,11 @@
 						%>
 						<!-- Pagination -->
 						<div class="pagination flex-l-m flex-w m-l--6 p-t-25">
-							<a href="GoBoard?page"
-								class="item-pagination flex-c-m trans-0-4 active-pagination"1></a>
-							<a href="#" class="item-pagination flex-c-m trans-0-4">2</a>
+							<%for(int i = 0; i < board/10; i++){ %>
+							<a class="item-pagination flex-c-m trans-0-4 active-pagination" 
+							href="GoBoard?page=<%=i*10+1%>"><%=i+1%></a>
+							<%} %>
+
 						</div>
 					</div>
 				</div>

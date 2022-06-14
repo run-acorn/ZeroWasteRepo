@@ -51,6 +51,13 @@ public class CertiDAO {
 		session.close();
 		return cnt;
 	}
+
+	public List<CertiVO> pageList(int page) {
+		session = sql.openSession(true);
+		List<CertiVO> list = session.selectList("pageList", page);
+		session.close();
+		return list;
+	}
 	
 	
 }
