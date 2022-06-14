@@ -84,13 +84,28 @@
 					style="background-image: url(images/master-slides-02.jpg);">
 					<div
 						class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-						<span
-							class="caption1-slide1 txt1 t-center animated visible-false m-b-15"
-							data-appear="rollIn"> Welcome to </span>
+						
+						
+						<div class="mainout">
+						
+							<h2
+								class="caption1-slide1 t-center animated visible-false m-b-15"
+								data-appear="fadeInDown" id="maintit">제로 웨이스트(zero waste)란?</h2>
+								<br> <br>
 
-						<h2
-							class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
-							data-appear="lightSpeedIn">Zero Waste World</h2>
+							<h2
+								class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
+								data-appear="fadeInUp" id="maintit2">생활 속 쓰레기를 최소한으로 줄이고 
+								</h2>
+								
+								<h2
+								class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
+								data-appear="fadeInUp" id="maintit2">재사용 가능한 제품을 선호하는 라이프 스타일 입니다.</h2>
+								
+
+						</div>
+						
+						
 
 						<div class="wrap-btn-slide1 animated visible-false"
 							data-appear="slideInUp">
@@ -115,11 +130,11 @@
 						class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span
 							class="caption1-slide1 txt1 t-center animated visible-false m-b-15"
-							data-appear="rotateInDownLeft"> Welcome to </span>
+							data-appear="rotateInDownLeft"> <span class="ingredient" id="ingredient2">용기</span> <span>내서</span> </span>
 
 						<h2
 							class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
-							data-appear="rotateInUpRight">Zero Waste World</h2>
+							data-appear="rotateInUpRight"> <span class="ingredient" id="ingredient2">용기</span> <span style="font-family:'twayfly'; ">내</span> </h2>
 
 						<div class="wrap-btn-slide1 animated visible-false"
 							data-appear="rotateIn">
@@ -238,16 +253,32 @@
 
 				<div class="item-slick1 item2-slick1"
 					style="background-image: url(images/master-slides-02.jpg);">
+					
+					
 					<div
 						class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-						<span
-							class="caption1-slide1 txt1 t-center animated visible-false m-b-15"
-							data-appear="rollIn"> Welcome to </span>
+						
+						<div class="mainout">
+						
+							<h2
+								class="caption1-slide1 t-center animated visible-false m-b-15"
+								data-appear="fadeInDown" id="maintit">제로 웨이스트(zero waste)란?</h2>
+								<br> <br>
 
-						<h2
-							class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
-							data-appear="lightSpeedIn">Zero Waste World</h2>
+							<h2
+								class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
+								data-appear="fadeInUp" id="maintit2">생활 속 쓰레기를 최소한으로 줄이고 
+								</h2>
+								
+								<h2
+								class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
+								data-appear="fadeInUp" id="maintit2">재사용 가능한 제품을 선호하는 라이프 스타일 입니다.</h2>
+								
 
+						</div>
+						
+						
+						
 						<div class="wrap-btn-slide1 animated visible-false"
 							data-appear="slideInUp"></div>
 					</div>
@@ -257,13 +288,14 @@
 					style="background-image: url(images/master-slides-01.jpg);">
 					<div
 						class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+						
 						<span
 							class="caption1-slide1 txt1 t-center animated visible-false m-b-15"
-							data-appear="rotateInDownLeft"> Welcome to </span>
+							data-appear="rotateInDownLeft"> <span class="ingredient" id="ingredient2">용기</span> <span>내서</span> </span>
 
 						<h2
 							class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
-							data-appear="rotateInUpRight">Zero Waste World</h2>
+							data-appear="rotateInUpRight"> <span class="ingredient" id="ingredient2">용기</span> <span style="font-family:'twayfly'; ">내</span> </h2>
 
 						<div class="wrap-btn-slide1 animated visible-false"
 							data-appear="rotateIn"></div>

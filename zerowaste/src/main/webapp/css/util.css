@@ -2,6 +2,9 @@
 ///////////////////////////////////////////////////////////
 */
 
+
+
+
 /* font*/
 
 @font-face {
@@ -9830,8 +9833,8 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 	line-height: 1.1;
 	color: white;
 	text-transform: uppercase;
-	letter-spacing: 10px;
-	word-spacing: 10px;
+	letter-spacing: 3px;
+	word-spacing: -2px;
 }
 
 .tit2 {
@@ -10080,7 +10083,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 .txt19 {
 	font-family: Montserrat;
 	font-weight: 400;
-	font-size: 14px;
+	font-size: 15px;
 	color: #222222;
 	line-height: 1.2;
 	text-transform: uppercase;
@@ -10798,4 +10801,53 @@ RESPONSIVE  RESPONSIVE  RESPONSIVE  RESPONSIVE   RESPONSIVE
 
 h2.tit6, t-center, texttitle {
     text-shadow: 2px 2px 2px #111;
+}
+
+
+
+
+/* 메인 슬라이드 꾸미기 css*/
+
+
+h2#maintit {
+   font-size:40px;
+   color: white;
+   font-weight: 600px;
+   font-family: twayfly;
+}
+
+h2#maintit2 {
+   
+    font-size:30px;
+   color: white;
+   font-weight: 700px;
+   font-family: twayfly;
+   
+}
+
+div.mainout{
+	
+	width: 70%;
+}
+
+
+
+
+
+/* 메인화면 포인트 색상*/
+span>span.ingredient {
+    color: #f5d654;
+}
+
+span>span#ingredient2 {
+    font-family:'twayfly';
+}
+
+span#ingredient2 {
+    font-family: 'twayfly';
+    color: #f5d654;
+}
+
+span>span{
+	font-family:'twayfly';
 }
