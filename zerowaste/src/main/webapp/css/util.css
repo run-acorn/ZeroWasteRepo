@@ -10002,7 +10002,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 .txt9 {
 	font-family: NanumBarunGothic;
 	font-weight: 400;
-	font-size: 15px;
+	font-size: 18px;
 	color: #555555;
 }
 
@@ -10791,4 +10791,11 @@ RESPONSIVE  RESPONSIVE  RESPONSIVE  RESPONSIVE   RESPONSIVE
 	width:600px;
 	margin-right:auto;
 	margin-left:auto;
+}
+
+
+/* 헤더 font 그림자 주는 css*/
+
+h2.tit6, t-center, texttitle {
+    text-shadow: 2px 2px 2px #111;
 }

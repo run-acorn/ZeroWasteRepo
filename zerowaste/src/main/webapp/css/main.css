@@ -162,12 +162,13 @@ textarea {
 
 textarea:focus, input:focus {
   border-color: transparent !important;
-  box-shadow: 0 0 0px 2px #ec1d25;
-  -moz-box-shadow: 0 0 0px 2px #ec1d25;
-  -webkit-box-shadow: 0 0 0px 2px #ec1d25;
-  -o-box-shadow: 0 0 0px 2px #ec1d25;
-  -ms-box-shadow: 0 0 0px 2px #ec1d25;
+  box-shadow: 0 0 0px 2px #2a5d1b;
+  -moz-box-shadow: 0 0 0px 2px #2a5d1b;
+  -webkit-box-shadow: 0 0 0px 2px #2a5d1b;
+  -o-box-shadow: 0 0 0px 2px #2a5d1b;
+  -ms-box-shadow: 0 0 0px 2px #2a5d1b;
 }
+
 
 input:focus::-webkit-input-placeholder { color:transparent; }
 input:focus:-moz-placeholder { color:transparent; }
