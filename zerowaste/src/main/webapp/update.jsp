@@ -152,29 +152,44 @@
 							<h4 class="txt33 t-center p-b-14">리뷰 수정</h4>
 
 							<div>
-								<span class="txt9"> 영수증 등록 </span>
-
-								<div>
-									<input type="file" name="fileName"
+								<span class="txt9"> 영수증 사진 등록 </span> <span class="txt99">(* 필수 정보입니다.)</span>
+									
+									<div>
+										<input type="file" name="fileNameCopy"
+										class="m-t-3 m-b-23">
+									</div>
+									
+									<span class="txt9"> 음식 사진 </span> <span class="txt99">(* 필수 정보입니다.)</span>
+									
+									<div>
+										<input type="file" name="fileName"
 										onchange="setThumbnail(event);" class="m-t-3 m-b-23">
-								</div>
+									</div>
 							</div>
 
 							<script>
-								function setThumbnail(event) {
-									var reader = new FileReader();
+							function setThumbnail(event){
+								var reader = new FileReader();
 
-									reader.onload = function(event) {
-										var img = document.createElement("img");
-										img.setAttribute("src",
-												event.target.result);
-										document.querySelector(
-												"div#image_container")
-												.appendChild(img);
-									};
+								
 
-									reader.readAsDataURL(event.target.files[0]);
-								}
+								reader.onload = function(event){
+									var target = document.querySelector("div#image_container");
+
+									var img = document.createElement("img");
+
+									img.setAttribute("src", event.target.result);
+
+
+						                        target.innerHTML = '';
+
+									target.append(img);
+
+								};
+
+								reader.readAsDataURL(event.target.files[0]);
+
+							}	
 							</script>
 
 							<div>

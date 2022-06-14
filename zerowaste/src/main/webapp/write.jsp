@@ -148,9 +148,17 @@
 									<span class="txt9"> 영수증 사진 등록 </span> <span class="txt99">(* 필수 정보입니다.)</span>
 									
 									<div>
+										<input type="file" name="fileNameCopy"
+										class="m-t-3 m-b-23">
+									</div>
+									
+									<span class="txt9"> 음식 사진 </span> <span class="txt99">(* 필수 정보입니다.)</span>
+									
+									<div>
 										<input type="file" name="fileName"
 										onchange="setThumbnail(event);" class="m-t-3 m-b-23">
 									</div>
+									
 								</div>
 
 								<div>
