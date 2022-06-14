@@ -74,7 +74,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 
                         <li><a href="GoTree">내 나무</a></li>
 
-                        <li><a href="GoBoard?page=1">리뷰 & 인증</a></li>
+                        <li><a href="GoBoard">리뷰 & 인증</a></li>
                         
                         <li><a href="GoRegi">매장 등록</a></li>
                      </ul>
@@ -109,7 +109,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
          <li class="t-center m-b-13"><a href="GoTree" class="txt19">내 나무
                </a></li>
 
-         <li class="t-center m-b-13"><a href="GoBoard?page=1" class="txt19">리뷰 & 인증
+         <li class="t-center m-b-13"><a href="GoBoard" class="txt19">리뷰 & 인증
                </a></li>
                
          <li class="t-center m-b-13"><a href="GoRegi" class="txt19">매장 등록
@@ -154,7 +154,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 	        <div class="option">
 	            <div>
 	                <form onsubmit="searchPlaces(); return false;">
-	                    키워드 : <input type="text" value="커피볶는집" id="keyword" size="15"> 
+	                    키워드 : <input type="text" value="" id="keyword" size="15"> 
 	                    <button type="submit">검색하기</button> 
 	                </form>
 	            </div>
@@ -177,7 +177,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
       // 지도를 표시할 div 
         mapOption = {
            center : new kakao.maps.LatLng(35.14919736053822,
-                 126.92650745620224), // 지도의 중심좌표
+                   126.92650745620224), // 지도의 중심좌표
            level : 3
         // 지도의 확대 레벨
         };
@@ -221,41 +221,97 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
         var allMarkers = [];
         
         var markers = [];
-        
+        var contents = [];		//오버레이 객체정보 담는 배열
         <%int i=0;%>
         
-
+       
         
-<%--         /* ------- 전체 식당 가져오는 함수 ------- */
-
+        
+        
+         /* ------- 전체 식당 가져오는 함수 ------- */
+		//문제 : '전체' 버튼 클릭하기 전에는 마커 클릭해도 오버레이 안떠
+		
         let all_f = function(){
 	        <%for(i = 0; i < list.size(); i++){%>
 	    	
+	        /* ----------- 카테고리별 마커찍기 기능에 필요한 객체 배열------------ */
+	        	//all 이라는 객체에 매장명, 위치(위도, 경도) DB 값 받아와서 담는 작업
  				var all = {content:'<div><%=list.get(i).getStoreName()%><div>',         
  				latlng: new kakao.maps.LatLng(<%=list.get(i).getLatutude()%>, <%=list.get(i).getLongitude()%>) };   
- 	                        
+ 	                 
+	        	
+ 				//위에서 선언한 allMarkers라는 배열에 각 매장정보 객체들을 추가
  				allMarkers.push(all);
- 	   		<%}%>
- 	        
-	 		map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-	 	    for (var i = 0; i < allMarkers.length; i ++) {
-	 			var marker = new kakao.maps.Marker({
-	 				map: map, // 마커를 표시할 지도
-	 				position: allMarkers[i].latlng // 마커의 위치
-	 			});
+ 				
+ 				
+ 				
+ 			/* ----------- 오버레이 기능에 필요한 객체 배열------------ */
+ 			
+ 				//오버레이로 만들 div와 그 안의 내용을 담은 객체
+			    var con = {content : '<div class="wrap">' + 
+			            '    <div class="info">' + 
+			            '        <div class="title">' + 
+			            '            <%=list.get(i).getStoreName()%>' + 
+			            '            <div class="close" id="close_overlay" title="닫기"></div>' + 
+			            '        </div>' + 
+			            '        <div class="body">' + 
+			            '            <div class="img">' +
+			            '                <img src="http://t1.daumcdn.net/friends/prod/editor/dc8b3d02-a15a-4afa-a88b-989cf2a50476.jpg" width="73" height="70">' +
+			            '           </div>' + 
+			            '            <div class="desc">' + 
+			            '                <div class="ellipsis"><%=list.get(i).getStoreAddress()%></div>' + 
+			            '                <div><a href="<%=list.get(i).getUrl()%>" target="_blank" class="link">홈페이지</a></div>' + 
+			            '            </div>' + 
+			            '        </div>' + 
+			            '    </div>' +    
+			            '</div>'
+	            	       		
+	            };
+	            
+ 				//오버레이 내용 담은 객체들을 contents 배열에 추가
+	            contents.push(con);
+	            
+		  
+		<%}%>		
+	            
+		
+		// 카테고리별로 마커를 새로 찍기 위해 지도 다시 생성
+	    map = new kakao.maps.Map(mapContainer, mapOption);
+		
+		//아까 만든 배열 길이만큼 반복
+	    for (let i = 0; i < allMarkers.length; i ++) {
+	        // 마커를 생성합니다
+	        var marker = new kakao.maps.Marker({
+	              map: map, 						// 마커를 표시할 지도
+	              position: allMarkers[i].latlng 	// 마커의 위치
+	                       
+	      	});
+	        
+	         
+	    /* 문제 : 다른 마커 클릭하면 기존 오버레이 삭제되어야 하는데 그 기능 안됨 --> 중복되어 나오고 오버레이 하나 닫으면 다른것까지 다 닫힘*/
+	        //마커 클릭하면 오버레이 생성	         
+	        kakao.maps.event.addListener(marker, 'click', function() {
+		         var overlay = new kakao.maps.CustomOverlay({
+		             content: contents[i].content,
+		             position: allMarkers[i].latlng
+		         });
+		         overlay.setMap(map);
+		         
+				// close 버튼(X) 누르면 오버레이 닫기
+			    $(document).on('click','#close_overlay',function(){
 
-	
-	 			var infowindow = new kakao.maps.InfoWindow({
-	 				content: allMarkers[i].content // 인포윈도우에 표시할 내용
-	 			});
-	 	
- 	 			kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
-	 			kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
-	 	    }
-        } --%>
+			    	overlay.setMap(null); 
+
+			    });
+			});
+	     } 
+        } 
 
 	
         
+         
+         
+         
         /* ------- 한식 식당 가져오는 함수 ------- */
         let korean_f = function(){
 
@@ -284,39 +340,54 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 	                           
 	            korean.push(ko_info);            //배열변수.push(객체변수); 배열에 객체 추가
 	
+			    var con = {content : '<div class="wrap">' + 
+			            '    <div class="info">' + 
+			            '        <div class="title">' + 
+			            '            <%=list.get(i).getStoreName()%>' + 
+			            '            <div class="close" id="close_overlay" title="닫기"></div>' + 
+			            '        </div>' + 
+			            '        <div class="body">' + 
+			            '            <div class="img">' +
+			            '                <img src="http://t1.daumcdn.net/friends/prod/editor/dc8b3d02-a15a-4afa-a88b-989cf2a50476.jpg" width="73" height="70">' +
+			            '           </div>' + 
+			            '            <div class="desc">' + 
+			            '                <div class="ellipsis"><%=list.get(i).getStoreAddress()%></div>' + 
+			            '                <div><a href="<%=list.get(i).getUrl()%>" target="_blank" class="link">홈페이지</a></div>' + 
+			            '            </div>' + 
+			            '        </div>' + 
+			            '    </div>' +    
+			            '</div>'
+	            	       		
+	            };
+	            
+	            contents.push(con);
+	            
 		     <%}%>
-	    <%}%>
-		            
-		    map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-		    for (var i = 0; i < korean.length; i ++) {
-		        // 마커를 생성합니다
-		        var marker = new kakao.maps.Marker({
-		              map: map, // 마커를 표시할 지도
-		              position: korean[i].latlng // 마커의 위치
-		        });
-		        
-		        // 마커에 표시할 인포윈도우를 생성합니다 
-		        var overlay = new kakao.maps.CustomOverlay({
-		              content: korean[i].content, // 인포윈도우에 표시할 내용
-		              map: map,
-		              position: korean[i].latlng   
+		<%}%>		
+	            
+	    map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+	    for (let i = 0; i < korean.length; i ++) {
+	        // 마커를 생성합니다
+	        var marker = new kakao.maps.Marker({
+	              map: map, // 마커를 표시할 지도
+	              position: korean[i].latlng // 마커의 위치
+	                       
+	      	});
+	        
 
-		        });
-		
-		        // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
-		        // 이벤트 리스너로는 클로저를 만들어 등록합니다 
-		        // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
- 		       /*  kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, overlay));
-		        kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(overlay)); */
+	        kakao.maps.event.addListener(marker, 'click', function() {
+		         var overlay = new kakao.maps.CustomOverlay({
+		             content: contents[i].content,
+		             position: korean[i].latlng
+		         });
+		         overlay.setMap(map);
+		         
+			    $(document).on('click','#close_overlay',function(){
 
-/*  		        kakao.maps.event.addListener(marker, 'mouseover', function(){
-		        	overlay.setMap(map);
-		        }); */
-		        
-		       kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, overlay));
- 		       kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(overlay));
-		    }
-
+			    	overlay.setMap(null); 
+			    });
+			});
+	     } 
         }
 
  
@@ -330,28 +401,61 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		            latlng: new kakao.maps.LatLng(<%=list.get(i).getLatutude()%>, <%=list.get(i).getLongitude()%>) };   
 		                        
 		            western.push(we_info);
+				    var con = {content : '<div class="wrap">' + 
+				            '    <div class="info">' + 
+				            '        <div class="title">' + 
+				            '            <%=list.get(i).getStoreName()%>' + 
+				            '            <div class="close" id="close_overlay" title="닫기"></div>' + 
+				            '        </div>' + 
+				            '        <div class="body">' + 
+				            '            <div class="img">' +
+				            '                <img src="http://t1.daumcdn.net/friends/prod/editor/dc8b3d02-a15a-4afa-a88b-989cf2a50476.jpg" width="73" height="70">' +
+				            '           </div>' + 
+				            '            <div class="desc">' + 
+				            '                <div class="ellipsis"><%=list.get(i).getStoreAddress()%></div>' + 
+				            '                <div><a href="<%=list.get(i).getUrl()%>" target="_blank" class="link">홈페이지</a></div>' + 
+				            '            </div>' + 
+				            '        </div>' + 
+				            '    </div>' +    
+				            '</div>'
+		            	       		
+		            };
+		            
+		            contents.push(con);
+		            
 			     <%}%>
 			<%}%>		
 		            
-		     map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-		     for (var i = 0; i < western.length; i ++) {
-		    	 	 var marker = new kakao.maps.Marker({
- 		             map: map, // 마커를 표시할 지도
-		             position: western[i].latlng
-		         });
+		    map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+		    for (let i = 0; i < western.length; i ++) {
+		        // 마커를 생성합니다
+		        var marker = new kakao.maps.Marker({
+		              map: map, // 마커를 표시할 지도
+		              position: western[i].latlng // 마커의 위치
+		                       
+		      	});
+		        
+		         
+		         
+		        kakao.maps.event.addListener(marker, 'click', function() {
+			         var overlay = new kakao.maps.CustomOverlay({
+			             content: contents[i].content,
+			             position: western[i].latlng
+			         });
+			         overlay.setMap(map);
+			         
+					// 마커를 클릭했을 때 커스텀 오버레이를 표시합니다	
+				    $(document).on('click','#close_overlay',function(){
 
-		        /*  var infowindow = new kakao.maps.InfoWindow({
-		              content: western[i].content 
-		         });
-		
-		         kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
-		         kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow)); */
+				    	overlay.setMap(null); 
 
-		     }
+				    });
+				});
+		     } 
         }
         
         
-        <%--       
+     
         /* ------- 일식 식당 가져오는 함수 ------- */
         let japanese_f = function(){
 
@@ -362,24 +466,58 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		            latlng: new kakao.maps.LatLng(<%=list.get(i).getLatutude()%>, <%=list.get(i).getLongitude()%>) };   
 		                        
 		            japanese.push(ja_info);
-			    <%}%>
-			<%}%>
-			
-			map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-		    for (var i = 0; i < japanese.length; i ++) {
-		    		  var marker = new kakao.maps.Marker({
-		               map: map, // 마커를 표시할 지도 
+		            
+				    var con = {content : '<div class="wrap">' + 
+				            '    <div class="info">' + 
+				            '        <div class="title">' + 
+				            '            <%=list.get(i).getStoreName()%>' + 
+				            '            <div class="close" id="close_overlay" title="닫기"></div>' + 
+				            '        </div>' + 
+				            '        <div class="body">' + 
+				            '            <div class="img">' +
+				            '                <img src="http://t1.daumcdn.net/friends/prod/editor/dc8b3d02-a15a-4afa-a88b-989cf2a50476.jpg" width="73" height="70">' +
+				            '           </div>' + 
+				            '            <div class="desc">' + 
+				            '                <div class="ellipsis"><%=list.get(i).getStoreAddress()%></div>' + 
+				            '                <div><a href="<%=list.get(i).getUrl()%>" target="_blank" class="link">홈페이지</a></div>' + 
+				            '            </div>' + 
+				            '        </div>' + 
+				            '    </div>' +    
+				            '</div>'
+		            	       		
+		            };
+		            
+		            contents.push(con);
+		            
+			     <%}%>
+			<%}%>		
+		            
+		    map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+		    for (let i = 0; i < japanese.length; i ++) {
+		        // 마커를 생성합니다
+		        var marker = new kakao.maps.Marker({
+		              map: map, // 마커를 표시할 지도
 		              position: japanese[i].latlng // 마커의 위치
-		         });
-		
-		         var infowindow = new kakao.maps.InfoWindow({
-		              content: japanese[i].content // 인포윈도우에 표시할 내용
-		         });
-		
-		         kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
-		         kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+		                       
+		      	});
+		        
+		         
+		         
+		        kakao.maps.event.addListener(marker, 'click', function() {
+			         var overlay = new kakao.maps.CustomOverlay({
+			             content: contents[i].content,
+			             position: japanese[i].latlng
+			         });
+			         overlay.setMap(map);
+			         
+					// 마커를 클릭했을 때 커스텀 오버레이를 표시합니다	
+				    $(document).on('click','#close_overlay',function(){
 
-		    }
+				    	overlay.setMap(null); 
+
+				    });
+				});
+		     } 
         }
         
         
@@ -395,23 +533,57 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		            latlng: new kakao.maps.LatLng(<%=list.get(i).getLatutude()%>, <%=list.get(i).getLongitude()%>) };   
 		                        
 		            school.push(sc_info);
-			    <%}%>
-			<%}%>
-			map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-		    for (var i = 0; i < school.length; i ++) {
-		    	var marker = new kakao.maps.Marker({
-		            map: map, // 마커를 표시할 지도
-		            position: school[i].latlng // 마커의 위치
-		         });
-		
+				    var con = {content : '<div class="wrap">' + 
+				            '    <div class="info">' + 
+				            '        <div class="title">' + 
+				            '            <%=list.get(i).getStoreName()%>' + 
+				            '            <div class="close" id="close_overlay" title="닫기"></div>' + 
+				            '        </div>' + 
+				            '        <div class="body">' + 
+				            '            <div class="img">' +
+				            '                <img src="http://t1.daumcdn.net/friends/prod/editor/dc8b3d02-a15a-4afa-a88b-989cf2a50476.jpg" width="73" height="70">' +
+				            '           </div>' + 
+				            '            <div class="desc">' + 
+				            '                <div class="ellipsis"><%=list.get(i).getStoreAddress()%></div>' + 
+				            '                <div><a href="<%=list.get(i).getUrl()%>" target="_blank" class="link">홈페이지</a></div>' + 
+				            '            </div>' + 
+				            '        </div>' + 
+				            '    </div>' +    
+				            '</div>'
+		            	       		
+		            };
+		            
+		            contents.push(con);
+		            
+			     <%}%>
+			<%}%>		
+		            
+		    map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+		    for (let i = 0; i < school.length; i ++) {
+		        // 마커를 생성합니다
+		        var marker = new kakao.maps.Marker({
+		              map: map, // 마커를 표시할 지도
+		              position: school[i].latlng // 마커의 위치
+		                       
+		      	});
+		        
+		         
+		         
+		        kakao.maps.event.addListener(marker, 'click', function() {
+			         var overlay = new kakao.maps.CustomOverlay({
+			             content: contents[i].content,
+			             position: school[i].latlng
+			         });
+			         overlay.setMap(map);
+			         
+					// 마커를 클릭했을 때 커스텀 오버레이를 표시합니다	
+				    $(document).on('click','#close_overlay',function(){
 
-		         var infowindow = new kakao.maps.InfoWindow({
-		                    content: school[i].content
-		         });
-		
-		         kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
-		         kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
-		     }
+				    	overlay.setMap(null); 
+
+				    });
+				});
+		     } 
 
         }
         
@@ -427,23 +599,57 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		            latlng: new kakao.maps.LatLng(<%=list.get(i).getLatutude()%>, <%=list.get(i).getLongitude()%>) };   
 		                        
 		            midnight.push(mi_info);
-			    <%}%>
-			<%}%>
-			map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-		    for (var i = 0; i < midnight.length; i ++) {
-		    		var marker = new kakao.maps.Marker({
-		           map: map, // 마커를 표시할 지도
-		           position: midnight[i].latlng // 마커의 위치
-		        });
-
-		        var infowindow = new kakao.maps.InfoWindow({
-		           content: midnight[i].content // 인포윈도우에 표시할 내용
-		        });
-		
-		        kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
-		        kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+				    var con = {content : '<div class="wrap">' + 
+				            '    <div class="info">' + 
+				            '        <div class="title">' + 
+				            '            <%=list.get(i).getStoreName()%>' + 
+				            '            <div class="close" id="close_overlay" title="닫기"></div>' + 
+				            '        </div>' + 
+				            '        <div class="body">' + 
+				            '            <div class="img">' +
+				            '                <img src="http://t1.daumcdn.net/friends/prod/editor/dc8b3d02-a15a-4afa-a88b-989cf2a50476.jpg" width="73" height="70">' +
+				            '           </div>' + 
+				            '            <div class="desc">' + 
+				            '                <div class="ellipsis"><%=list.get(i).getStoreAddress()%></div>' + 
+				            '                <div><a href="<%=list.get(i).getUrl()%>" target="_blank" class="link">홈페이지</a></div>' + 
+				            '            </div>' + 
+				            '        </div>' + 
+				            '    </div>' +    
+				            '</div>'
+		            	       		
+		            };
 		            
-		     }
+		            contents.push(con);
+		            
+			     <%}%>
+			<%}%>		
+		            
+		    map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+		    for (let i = 0; i < midnight.length; i ++) {
+		        // 마커를 생성합니다
+		        var marker = new kakao.maps.Marker({
+		              map: map, // 마커를 표시할 지도
+		              position: midnight[i].latlng // 마커의 위치
+		                       
+		      	});
+		        
+		         
+		         
+		        kakao.maps.event.addListener(marker, 'click', function() {
+			         var overlay = new kakao.maps.CustomOverlay({
+			             content: contents[i].content,
+			             position: midnight[i].latlng
+			         });
+			         overlay.setMap(map);
+			         
+					// 마커를 클릭했을 때 커스텀 오버레이를 표시합니다	
+				    $(document).on('click','#close_overlay',function(){
+
+				    	overlay.setMap(null); 
+
+				    });
+				});
+		     } 
 
         }
          
@@ -460,27 +666,60 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		                        
 		            cafe.push(ca_info);
 		            
+				    var con = {content : '<div class="wrap">' + 
+				            '    <div class="info">' + 
+				            '        <div class="title">' + 
+				            '            <%=list.get(i).getStoreName()%>' + 
+				            '            <div class="close" id="close_overlay" title="닫기"></div>' + 
+				            '        </div>' + 
+				            '        <div class="body">' + 
+				            '            <div class="img">' +
+				            '                <img src="http://t1.daumcdn.net/friends/prod/editor/dc8b3d02-a15a-4afa-a88b-989cf2a50476.jpg" width="73" height="70">' +
+				            '           </div>' + 
+				            '            <div class="desc">' + 
+				            '                <div class="ellipsis"><%=list.get(i).getStoreAddress()%></div>' + 
+				            '                <div><a href="<%=list.get(i).getUrl()%>" target="_blank" class="link">홈페이지</a></div>' + 
+				            '            </div>' + 
+				            '        </div>' + 
+				            '    </div>' +    
+				            '</div>'
+		            	       		
+		            };
+		            
+		            contents.push(con);
+		            
 			     <%}%>
-			<%}%>
-			map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-		    for (var i = 0; i < cafe.length; i ++) {
-		    		var marker = new kakao.maps.Marker({
-		        	map: map, // 마커를 표시할 지도
-		        	position: cafe[i].latlng
-		        });
-		                
+			<%}%>		
+		            
+		    map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+		    for (let i = 0; i < cafe.length; i ++) {
+		        // 마커를 생성합니다
+		        var marker = new kakao.maps.Marker({
+		              map: map, // 마커를 표시할 지도
+		              position: cafe[i].latlng // 마커의 위치
+		                       
+		      	});
+		        
+		         
+		         
+		        kakao.maps.event.addListener(marker, 'click', function() {
+			         var overlay = new kakao.maps.CustomOverlay({
+			             content: contents[i].content,
+			             position: cafe[i].latlng
+			         });
+			         overlay.setMap(map);
+			         
+					// 마커를 클릭했을 때 커스텀 오버레이를 표시합니다	
+				    $(document).on('click','#close_overlay',function(){
 
-		        var infowindow = new kakao.maps.InfoWindow({
-		            content: cafe[i].content
-		        });
-		
+				    	overlay.setMap(null); 
 
-		        kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
-		        kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
-		    }
+				    });
+				});
+		     } 
 
         	
-        } --%>
+        } 
         
         
         
@@ -679,35 +918,15 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		 
 		 
 		 
-		 
-		/* ------ 중심위치 이동시키는 함수 ------ */
-		 
-<%-- 		function panTo() {
-			//입력한 검색어 값 가져와서
-			//keyword.value
-			
-			//DB 매장이름이랑 비교한 뒤 일치하면
-			if(keyword.value === <%=list.get(0).getStoreName()%>){
-				//이동할 위도 경도 가져오기
-			}
+		
+		
 
-			
-		    // 이동할 위도 경도 위치를 생성합니다 
-		    var moveLatLon = new kakao.maps.LatLng(33.450580, 126.574942);
-		    
-		    // 지도 중심을 부드럽게 이동시킵니다
-		    // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
-		    map.panTo(moveLatLon);            
-		} --%>
-		
-		
-		
-		
 		
 		
 		/* ------ 마커찍기 기능 ------ */
         /* 접속했을 때 모든 매장 마커 찍어주는 구간 */
-/*         all_f(); */
+        all_f();
+
              
             
             
@@ -723,9 +942,9 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
  		let caf = document.getElementById('cafe');
 
 
-/*  		alk.addEventListener('click', function(){
+  		alk.addEventListener('click', function(){
  			all_f();
- 		}); */
+ 		});
  		
         kor.addEventListener('click', function(){
         	korean_f();
@@ -735,7 +954,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
         	western_f();
         });
         
-         /*          jap.addEventListener('click', function(){
+         jap.addEventListener('click', function(){
         	japanese_f();
         });
         
@@ -749,37 +968,9 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
         
         caf.addEventListener('click', function(){
         	cafe_f();
-        }); */
-         
-        
-        
-        
-        /* 검색 마커 클릭 시 중심좌표 이동시키기 */
-        let btn = document.getElementsByClassName('markerbg marker_1');
-        
-/*         btn.addEventListener('click', function(){
-        	panTo();
         });
-         */
-        
-      // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다 
-/*         function closeOverlay() {
-            overlay.setMap(null);     
-        }
-      */
-     
-        function makeOverListener(map, marker, overlay) {
-            return function() {
-            	overlay.setMap(map);
-            };
-        }
+         
 
-        // 인포윈도우를 닫는 클로저를 만드는 함수입니다 
-        function makeOutListener(overlay) {
-            return function() {
-            	overlay.setMap(null);     
-            };
-        }
 
       </script>
 
