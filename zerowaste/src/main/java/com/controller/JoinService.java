@@ -34,14 +34,10 @@ public class JoinService extends HttpServlet {
 		UserDAO dao = new UserDAO();
 		int cnt = dao.join(uvo);
 		
-		String nextPage = null;
 		if (cnt > 0) {
-			nextPage = "GoLogin";
-			// out.print >> ajax에게 응답
-		} else {
-			nextPage = "GoJoin";
+			PrintWriter out = response.getWriter();
+            out.print(cnt);
 		}
-		response.sendRedirect(nextPage);
 	}
 
 }

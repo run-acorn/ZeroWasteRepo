@@ -207,7 +207,7 @@
 								<!-- Button3 -->
 								<button type="submit"
 									class="btn3 flex-c-m size13 txt11 trans-0-4">수정하기</button>
-								&emsp; <a href="GoBoard"
+								&emsp; <a href="GoBoard?page=1"
 									class="btn3 flex-c-m size13 txt11 trans-0-4">목록 돌아가기</a> <br>
 								<br> <br> <br>
 							</div>
@@ -271,7 +271,7 @@
 						</div>
 						<div class="wrap-btn-booking flex-c-m m-t-6">
 							<!-- Button3 -->
-							<a href="GoBoard" class="btn3 flex-c-m size13 txt11 trans-0-4">목록 돌아가기</a>
+							<a href="GoBoard?page=1" class="btn3 flex-c-m size13 txt11 trans-0-4">목록 돌아가기</a>
 							<br> <br> <br> <br>
 						</div>
 					</div>

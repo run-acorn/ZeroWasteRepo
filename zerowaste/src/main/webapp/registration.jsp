@@ -129,7 +129,7 @@
 			<form class="wrap-form-reservation size22 m-l-r-auto" action="RegiService" method="get">
 				<div>
 					<div>
-						<span class="txt9"> 매장명 </span>
+						<span class="txt9"> 매장명 </span> <span class="txt99">(* 필수 정보입니다.)</span>
 
 						<div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
 							<input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
@@ -140,7 +140,7 @@
 					<div>
 						<span class="txt9"> 매장주소 </span> &#160
 						<button display="inline" id="btn" type="button"
-							class="btn3 size13 txt11 trans-0-4 m-l-r-auto">주소 확인하기</button>
+							class="btn3 size13 txt11 trans-0-4 m-l-r-auto">주소 확인하기</button> <span class="txt99">(* 필수 정보입니다.)</span>
 
 						<div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
 							<input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
@@ -149,7 +149,7 @@
 					</div>
 
 					<div>
-						<span class="txt9"> 음식종류 </span>
+						<span class="txt9"> 음식종류 </span> <span class="txt99">(* 필수 정보입니다.)</span>
 
 						<div class="wrap-inputphone size12 bo2 bo-rad-10 m-t-3 m-b-23">
 							<input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
@@ -158,7 +158,7 @@
 					</div>
 
 					<div>
-						<span class="txt9"> 가게 소개 페이지 </span>
+						<span class="txt9"> 가게 소개 페이지 </span> <span class="txt99">(* 필수 정보입니다.)</span>
 
 						<div class="wrap-inputphone size12 bo2 bo-rad-10 m-t-3 m-b-23">
 							<input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
@@ -232,11 +232,11 @@
 						<!-- 위도/경도 찾기 -->
 						<input name="lat" id="lat" type="hidden">
 						<input name="lng" id="lng" type="hidden">
-
+				<br>
 				<div class="wrap-btn-booking flex-c-m m-t-13">
 					<!-- Button3 -->
-					<button type="submit" class="btn3 flex-c-m size36 txt11 trans-0-4">
-						확인</button>
+					<button type="button" id="regi" class="btn3 flex-c-m size36 txt11 trans-0-4">
+						등록하기</button>
 				</div>
 			</form>
 		</div>
@@ -288,6 +288,39 @@
 	<script src="js/map-custom.js"></script>
 	<!--===============================================================================================-->
 	<script src="js/main.js"></script>
-
+	<script type="text/javascript">
+		$('button#regi').on('click', function() {
+			let storeName = $('input[name=storeName]').val();
+			let address = $('input[name=address]').val();
+			let food = $('input[name=food]').val();
+			let url = $('input[name=url]').val();
+			let lat = $('input[name=lat]').val();
+			let lng = $('input[name=lng]').val();
+			$.ajax({
+				url : 'RegiService',
+				type : 'POST',
+				data : {
+					'storeName' : storeName,
+					'address' : address,
+					'food' : food,
+					'url' : url,
+					'lat' : lat,
+					'lng' : lng
+				},
+				dataType : 'text',
+				success : function(cnt) {
+					if (cnt == 0) {
+						alert('매장 등록에 실패하였습니다. 필수 정보를 확인해주세요.')
+					} else if (cnt == 1) {
+						alert('매장 등록이 완료되었습니다!')
+						location.replace('GoMain');
+					}
+				},
+				error : function() {
+					alert('연결 실패')
+				}
+			});
+		});
+	</script>
 </body>
 </html>

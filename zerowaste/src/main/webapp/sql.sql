@@ -5,7 +5,6 @@ pw varchar2(20) not null,
 nickname varchar2(20) not null,
 point number(4,1) default 0 not null,
 constraint userInfo_id_pk primary key(id),
-constraint userInfo_nick_uq unique (nickname)
 );
 
 insert into userInfo(id, pw, nickname)

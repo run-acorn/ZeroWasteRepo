@@ -45,7 +45,8 @@
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
 </head>
-<body class="animsition" onload="noBack();" onpageshow="if(event.persisted) noBack();" onunload="">
+<body class="animsition" onload="noBack();"
+	onpageshow="if(event.persisted) noBack();" onunload="">
 	<%
 	UserVO login = (UserVO) session.getAttribute("login");
 	%>
@@ -73,7 +74,7 @@
 								<li><a href="GoTree">내 나무</a></li>
 
 								<li><a href="GoBoard?page=1">리뷰 & 인증</a></li>
-								
+
 								<li><a href="GoRegi">매장 등록</a></li>
 							</ul>
 						</nav>
@@ -104,11 +105,11 @@
 			<li class="t-center m-b-13"><a href="GoTree" class="txt19">내
 					나무 </a></li>
 
-			<li class="t-center m-b-13"><a href="GoBoard?page=1" class="txt19">리뷰
-					& 인증 </a></li>
-					
-			<li class="t-center m-b-13"><a href="GoRegi?page=1" class="txt19">매장 등록
-					</a></li>
+			<li class="t-center m-b-13"><a href="GoBoard?page=1"
+				class="txt19">리뷰 & 인증 </a></li>
+
+			<li class="t-center m-b-13"><a href="GoRegi?page=1"
+				class="txt19">매장 등록 </a></li>
 
 			<li class="t-center">
 				<!-- Button3 --> <a href="GoLogout"
@@ -126,7 +127,13 @@
 	<!-- Gallery -->
 	<div class="bread-crumb bo5-b p-t-17 p-b-17">
 		<div class="wrap-btn-booking flex-c-m m-t-6">
-			<p class="tree txt33">🎉 인증하고 나무를 키우시면 더 많은 쿠폰을 얻을 수 있습니다! 🎁</p>
+			<p class="tree txt33">
+				<strong>🎉 게시판에 제로웨이스트 실천을 인증하고 나무를 키우시면 더 많은 쿠폰을 얻을 수
+					있습니다! 🎁 </strong>
+			</p>
+		</div>
+		<div class="wrap-btn-booking flex-c-m m-t-6">
+			<p class="tree txt33">쿠폰 선택 후 나무는 다시 씨앗으로 돌아가니 신중히 선택해 주세요!</p>
 		</div>
 	</div>
 

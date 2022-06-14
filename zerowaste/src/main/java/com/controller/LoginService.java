@@ -1,6 +1,7 @@
 package com.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -17,27 +18,24 @@ import com.model.UserVO;
 public class LoginService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void service(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
-		
+
 		UserVO uvo = new UserVO();
 		uvo.setId(id);
 		uvo.setPw(pw);
-		
+
 		UserDAO dao = new UserDAO();
 		UserVO login = dao.login(uvo);
-		
-		String nextPage = null;
+
 		if (login != null) {
 			HttpSession session = request.getSession();
 			session.setAttribute("login", login);
-			nextPage = "GoMain";
-		} else {
-			nextPage = "GoLogin";
+			PrintWriter out = response.getWriter();
+            out.print(login);
 		}
-		response.sendRedirect(nextPage);
 	}
-
 }

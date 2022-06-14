@@ -145,8 +145,8 @@
 								<h4 class="txt33 t-center p-b-14">리뷰 작성</h4>
 							
 								<div>
-									<span class="txt9"> 영수증 등록 </span>
-
+									<span class="txt9"> 영수증 사진 등록 </span> <span class="txt99">(* 필수 정보입니다.)</span>
+									
 									<div>
 										<input type="file" name="fileName"
 										onchange="setThumbnail(event);" class="m-t-3 m-b-23">
@@ -154,7 +154,7 @@
 								</div>
 
 								<div>
-									<span class="txt9"> 제목 </span>
+									<span class="txt9"> 제목 </span> <span class="txt99">(* 필수 정보입니다.)</span>
 
 									<div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
 										<input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
@@ -163,7 +163,7 @@
 								</div>
 
 								<div>
-									<span class="txt9"> 매장 명 </span>
+									<span class="txt9"> 매장 명 </span> <span class="txt99">(* 필수 정보입니다.)</span>
 
 									<div class="wrap-inputphone size12 bo2 bo-rad-10 m-t-3 m-b-23">
 										<input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
@@ -187,7 +187,7 @@
 								<button type="submit"
 									class="btn3 flex-c-m size13 txt11 trans-0-4">제출하기</button>
 								&emsp;
-								<a href="GoBoard" class="btn3 flex-c-m size13 txt11 trans-0-4">목록 돌아가기</a>
+								<a href="GoBoard?page=1" class="btn3 flex-c-m size13 txt11 trans-0-4">목록 돌아가기</a>
 								<br> <br> <br> <br>
 							</div>
 						</form>

@@ -67,16 +67,16 @@
 						action="LoginService" method="post">
 						<div class="row">
 							<div class="col-md-4">
-								<span class="txt9"> Id </span>
+								<span class="txt9"> 아이디 </span>
 
 								<div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
 									<input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
-										name="id" placeholder="ID를 입력하세요.">
+										name="id" placeholder="아이디를 입력하세요.">
 								</div>
 							</div>
 
 							<div class="col-md-4">
-								<span class="txt9"> PassWord </span>
+								<span class="txt9"> 비밀번호 </span>
 
 								<div class="wrap-inputphone size12 bo2 bo-rad-10 m-t-3 m-b-23">
 									<input class="bo-rad-10 sizefull txt10 p-l-20" type="password"
@@ -87,7 +87,7 @@
 						<br>
 						<div class="wrap-btn-booking flex-c-m m-t-6">
 							<!-- Button3 -->
-							<button type="submit"
+							<button type="button" id="login"
 								class="btn3 flex-c-m size13 txt11 trans-0-4">로그인</button>
 						</div>
 					</form>
@@ -128,6 +128,30 @@
 		src="vendor/lightbox2/js/lightbox.min.js"></script>
 	<!--===============================================================================================-->
 	<script src="js/main.js"></script>
-
+	<script type="text/javascript">
+		$('button#login').on('click', function() {
+			let id = $('input[name=id]').val();
+			let pw = $('input[name=pw]').val();
+			$.ajax({
+				url : 'LoginService',
+				type : 'POST',
+				data : {
+					'id' : id,
+					'pw' : pw,
+				},
+				dataType : 'text',
+				success : function(login) {
+					if (!login) {
+						alert('아이디 또는 비밀번호를 잘못 입력했습니다. 입력하신 내용을 다시 확인해주세요.')
+					} else {
+						location.replace('GoMain');
+					}
+				},
+				error : function() {
+					alert('연결 실패')
+				}
+			});
+		});
+	</script>
 </body>
 </html>

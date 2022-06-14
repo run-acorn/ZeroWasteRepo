@@ -1,6 +1,7 @@
 package com.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -37,13 +38,10 @@ public class RegiService extends HttpServlet {
 		StoreDAO dao = new StoreDAO();
 		int cnt = dao.insertStore(svo);
 		
-		String nextPage = null;
 		if (cnt > 0) {
-			nextPage = "GoMain";
-		} else {
-			nextPage = "GoRegi";
+			PrintWriter out = response.getWriter();
+            out.print(cnt);
 		}
-		response.sendRedirect(nextPage);
 	}
 
 }

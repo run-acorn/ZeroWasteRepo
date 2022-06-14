@@ -69,17 +69,17 @@
 						<div class="row">
 							<div class="col-md-4">
 								<!-- Name -->
-								<span class="txt9"> Id </span>
+								<span class="txt9"> 아이디 </span> <span class="txt99">(* 필수 정보입니다.)</span>
 
 								<div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
 									<input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
-										name="id" placeholder="ID를 입력하세요.">
+										name="id" placeholder="아이디를 입력하세요.">
 								</div>
 							</div>
 
 							<div class="col-md-4">
 								<!-- Phone -->
-								<span class="txt9"> PassWord </span>
+								<span class="txt9"> 비밀번호 </span> <span class="txt99">(* 필수 정보입니다.)</span>
 
 								<div class="wrap-inputphone size12 bo2 bo-rad-10 m-t-3 m-b-23">
 									<input class="bo-rad-10 sizefull txt10 p-l-20" type="password"
@@ -89,11 +89,11 @@
 
 							<div class="col-md-4">
 								<!-- Email -->
-								<span class="txt9"> NickName </span>
+								<span class="txt9"> 닉네임 </span> <span class="txt99">(* 필수 정보입니다.)</span>
 
 								<div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
 									<input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
-										name="nick" placeholder="NickName을 입력하세요.">
+										name="nick" placeholder="닉네임을 입력하세요.">
 								</div>
 							</div>
 
@@ -101,7 +101,7 @@
 
 						<div class="wrap-btn-booking flex-c-m m-t-6">
 							<!-- Button3 -->
-							<button type="submit"
+							<button type="button" id="join"
 								class="btn3 flex-c-m size13 txt11 trans-0-4">
 								<!-- onClick="join();" -->
 								가입하기
@@ -145,6 +145,33 @@
 		src="vendor/lightbox2/js/lightbox.min.js"></script>
 	<!--===============================================================================================-->
 	<script src="js/main.js"></script>
-
+	<script type="text/javascript">
+		$('button#join').on('click', function() {
+			let id = $('input[name=id]').val();
+			let nick = $('input[name=nick]').val();
+			let pw = $('input[name=pw]').val();
+			$.ajax({
+				url : 'JoinService',
+				type : 'POST',
+				data : {
+					'id' : id,
+					'pw' : pw,
+					'nick' : nick
+				},
+				dataType : 'text',
+				success : function(cnt) {
+					if (cnt == 0) {
+						alert('ID가 중복되었습니다. 다시 입력해 주십시요.')
+					} else if (cnt == 1) {
+						alert('회원가입에 성공하셨습니다! 로그인 페이지로 이동합니다!')
+						location.replace('GoLogin');
+					}
+				},
+				error : function() {
+					alert('연결 실패')
+				}
+			});
+		});
+	</script>
 </body>
 </html>
