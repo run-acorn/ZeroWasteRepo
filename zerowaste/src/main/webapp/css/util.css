@@ -2,6 +2,12 @@
 ///////////////////////////////////////////////////////////
 */
 
+/* 메인화면 포인트 색상*/
+span.ingredient {
+    color: #f5d654;
+}
+
+
 /* font*/
 
 @font-face {
@@ -10080,7 +10086,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 .txt19 {
 	font-family: Montserrat;
 	font-weight: 400;
-	font-size: 14px;
+	font-size: 15px;
 	color: #222222;
 	line-height: 1.2;
 	text-transform: uppercase;
