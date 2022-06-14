@@ -9833,8 +9833,8 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 	line-height: 1.1;
 	color: white;
 	text-transform: uppercase;
-	letter-spacing: 10px;
-	word-spacing: 10px;
+	letter-spacing: 3px;
+	word-spacing: -2px;
 }
 
 .tit2 {
@@ -10827,7 +10827,7 @@ h2#maintit2 {
 
 div.mainout{
 	
-	width: 600px;
+	width: 70%;
 }
 
 
