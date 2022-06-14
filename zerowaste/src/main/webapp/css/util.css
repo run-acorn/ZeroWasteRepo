@@ -10799,3 +10799,30 @@ RESPONSIVE  RESPONSIVE  RESPONSIVE  RESPONSIVE   RESPONSIVE
 h2.tit6, t-center, texttitle {
     text-shadow: 2px 2px 2px #111;
 }
+
+
+
+
+/* 메인 슬라이드 꾸미기 css*/
+
+
+h2#maintit {
+   font-size:40px;
+   color: white;
+   font-weight: 600px;
+   font-family: twayfly;
+}
+
+h2#maintit2 {
+   
+    font-size:30px;
+   color: white;
+   font-weight: 700px;
+   font-family: twayfly;
+   
+}
+
+div.mainout{
+	
+	width: 600px;
+}
