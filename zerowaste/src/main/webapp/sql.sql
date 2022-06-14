@@ -95,5 +95,7 @@ select u.nickname, r.treegrade
 select * from certiInfo order by day desc;
 
 select * from certiInfo
+
+delete from CERTIINFO
 where cernum between 1 and 1+9
 order by day desc
