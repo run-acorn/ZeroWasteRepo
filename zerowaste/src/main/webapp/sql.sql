@@ -92,8 +92,8 @@ select u.nickname, r.treegrade
 		where u.point between r.minvalue and r.maxvalue
 		and id = 'ÃÖÇö¿ì'
 		
-		
-		
-		
-		
-		select * from certiInfo order by day desc;
+select * from certiInfo order by day desc;
+
+select * from certiInfo
+where cernum between 1 and 1+9
+order by day desc
