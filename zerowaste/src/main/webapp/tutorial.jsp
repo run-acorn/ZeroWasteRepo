@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>My Tree</title>
+<title>Tutorial</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -49,7 +49,6 @@
 	<%
 	UserVO login = (UserVO) session.getAttribute("login");
 
-	UserVO grade = (UserVO) request.getAttribute("grade");
 	%>
 	<!-- Header -->
 	<header>
@@ -150,40 +149,6 @@
 		<%
 		}
 		%>
-
-		<!-- 나무 이미지 넣을 div 태그 -->
-		<div id="tree">
-			<%
-			if (grade.getPoint() == 0) {
-			%>
-			<img src="images/tree_1.gif" alt="IMG-OUR">
-			<%
-			} else if (grade.getPoint() == 1) {
-			%>
-			<img src="images/tree_2.gif" alt="IMG-OUR">
-			<%
-			} else if (grade.getPoint() == 2) {
-			%>
-			<img src="images/tree_3.gif" alt="IMG-OUR">
-			<%
-			} else if (grade.getPoint() == 3) {
-			%>
-			<img src="images/tree_4.gif" alt="IMG-OUR">
-			<%
-			} else if (grade.getPoint() == 4) {
-			%>
-			<img src="images/tree_5.gif" alt="IMG-OUR">
-			<%
-			} else if (grade.getPoint() == 5) {
-			%>
-			<img src="images/tree_6.gif" alt="IMG-OUR">
-			<%
-			} else if (grade.getPoint() >= 6) {
-			%>
-			<img src="images/tree_7.gif" alt="IMG-OUR">
-			<%
-			} %>
-		</div>
 
 	</section>
 

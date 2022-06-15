@@ -67,11 +67,7 @@
 
 						<span class=" animated caption2-slide1 visible-false"
 							id="maintxt1" data-appear="fadeInUp"> 제로웨이스트 라이프 스타일을 실천 할
-							수 있게 다회용기 포장을 지원하는 매장을 안내하는 서비스를 지원합니다. </span>
-							 <br>
-						
-
-
+							수 있게 다회용기 포장을 지원하는 매장을 안내하는 서비스를 지원합니다. </span> <br>
 
 						<div class="wrap-btn-slide1 animated visible-false"
 							data-appear="zoomIn">
@@ -95,7 +91,6 @@
 					<div
 						class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 
-
 						<div class="mainout">
 
 							<h2
@@ -111,11 +106,7 @@
 								class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
 								data-appear="fadeInUp" id="maintit2">재사용 가능한 제품을 선호하는 라이프
 								스타일 입니다.</h2>
-
-
 						</div>
-
-
 
 						<div class="wrap-btn-slide1 animated visible-false"
 							data-appear="slideInUp">
@@ -166,9 +157,7 @@
 						</div>
 					</div>
 				</div>
-
 			</div>
-
 			<div class="wrap-slick1-dots"></div>
 		</div>
 	</section>
@@ -194,6 +183,8 @@
 							<ul class="main_menu">
 								<li><a href="GoMain">홈</a></li>
 
+								<li><a href="GoTuto">튜토리얼</a></li>
+
 								<li><a href="GoMap">지도</a></li>
 
 								<li><a href="GoTree">내 나무</a></li>
@@ -201,8 +192,6 @@
 								<li><a href="GoBoard?page=1">리뷰 & 인증</a></li>
 
 								<li><a href="GoRegi">매장 등록</a></li>
-
-
 							</ul>
 						</nav>
 					</div>
@@ -226,6 +215,9 @@
 			<li class="t-center m-b-13"><a href="GoMain" class="txt19">홈</a>
 			</li>
 
+			<li class="t-center m-b-13"><a href="GoTuto" class="txt19">튜토리얼</a>
+			</li>
+
 			<li class="t-center m-b-13"><a href="GoMap" class="txt19">지도</a>
 			</li>
 
@@ -237,7 +229,6 @@
 
 			<li class="t-center m-b-13"><a href="GoRegi" class="txt19">매장
 					등록 </a></li>
-
 
 			<li class="t-center">
 				<!-- Button3 --> <a href="GoLogout"
@@ -251,7 +242,7 @@
 		<div class="wrap-slick1">
 			<div class="slick1">
 				<div class="item-slick1 item1-slick1"
-					style="background-image: url(images/slide1-01.jpg);">
+					style="background-image: url(images/master-slides-01.jpg);">
 					<div
 						class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span
@@ -261,20 +252,29 @@
 						<h2
 							class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
 							data-appear="fadeInUp">Zero Waste World</h2>
-							
-							<span class=" animated caption2-slide1 visible-false"
+
+						<span class=" animated caption2-slide1 visible-false"
 							id="maintxt1" data-appear="fadeInUp"> 제로웨이스트 라이프 스타일을 실천 할
-							수 있게 다회용기 포장을 지원하는 매장을 안내하는 서비스를 지원합니다. </span>
-							 <br>
+							수 있게 다회용기 포장을 지원하는 매장을 안내하는 서비스를 지원합니다. </span> <br>
 
 						<div class="wrap-btn-slide1 animated visible-false"
-							data-appear="zoomIn"></div>
+							data-appear="zoomIn">
+							<!-- Button1 -->
+							<table>
+								<tr>
+									<td><a href="GoTuto"
+										class="btn1 flex-c-m size1 txt3 trans-0-4"> 튜토리얼 </a></td>
+									<td>ㅤㅤ</td>
+									<td><a href="GoMap"
+										class="btn1 flex-c-m size1 txt3 trans-0-4"> 매장 보러가기 </a></td>
+								</tr>
+							</table>
+						</div>
 					</div>
 				</div>
 
 				<div class="item-slick1 item2-slick1"
 					style="background-image: url(images/master-slides-02.jpg);">
-
 
 					<div
 						class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
@@ -294,14 +294,21 @@
 								class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
 								data-appear="fadeInUp" id="maintit2">재사용 가능한 제품을 선호하는 라이프
 								스타일 입니다.</h2>
-
-
 						</div>
 
-
-
 						<div class="wrap-btn-slide1 animated visible-false"
-							data-appear="slideInUp"></div>
+							data-appear="slideInUp">
+							<!-- Button1 -->
+							<table>
+								<tr>
+									<td><a href="GoTuto"
+										class="btn1 flex-c-m size1 txt3 trans-0-4"> 튜토리얼 </a></td>
+									<td>ㅤㅤ</td>
+									<td><a href="GoMap"
+										class="btn1 flex-c-m size1 txt3 trans-0-4"> 매장 보러가기 </a></td>
+								</tr>
+							</table>
+						</div>
 					</div>
 				</div>
 
@@ -324,12 +331,21 @@
 						</h2>
 
 						<div class="wrap-btn-slide1 animated visible-false"
-							data-appear="rotateIn"></div>
+							data-appear="rotateIn">
+							<!-- Button1 -->
+							<table>
+								<tr>
+									<td><a href="GoTuto"
+										class="btn1 flex-c-m size1 txt3 trans-0-4"> 튜토리얼 </a></td>
+									<td>ㅤㅤ</td>
+									<td><a href="GoMap"
+										class="btn1 flex-c-m size1 txt3 trans-0-4"> 매장 보러가기 </a></td>
+								</tr>
+							</table>
+						</div>
 					</div>
 				</div>
-
 			</div>
-
 			<div class="wrap-slick1-dots"></div>
 		</div>
 	</section>

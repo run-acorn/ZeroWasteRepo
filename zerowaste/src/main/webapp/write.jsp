@@ -68,12 +68,14 @@
 							<ul class="main_menu">
 								<li><a href="GoMain">홈</a></li>
 
+								<li><a href="GoTuto">튜토리얼</a></li>
+
 								<li><a href="GoMap">지도</a></li>
 
 								<li><a href="GoTree">내 나무</a></li>
 
 								<li><a href="GoBoard?page=1">리뷰 & 인증</a></li>
-								
+
 								<li><a href="GoRegi">매장 등록</a></li>
 							</ul>
 						</nav>
@@ -98,21 +100,24 @@
 			<li class="t-center m-b-13"><a href="GoMain" class="txt19">홈</a>
 			</li>
 
+			<li class="t-center m-b-13"><a href="GoTuto" class="txt19">튜토리얼</a>
+			</li>
+
 			<li class="t-center m-b-13"><a href="GoMap" class="txt19">지도</a>
 			</li>
 
-			<li class="t-center m-b-13"><a href="GoTree" class="txt19">내 나무
-					</a></li>
+			<li class="t-center m-b-13"><a href="GoTree" class="txt19">내
+					나무 </a></li>
 
-			<li class="t-center m-b-13"><a href="GoBoard?page=1" class="txt19">리뷰 & 인증
-					</a></li>
-					
-			<li class="t-center m-b-13"><a href="GoRegi" class="txt19">매장 등록
-					</a></li>
+			<li class="t-center m-b-13"><a href="GoBoard?page=1"
+				class="txt19">리뷰 & 인증 </a></li>
+
+			<li class="t-center m-b-13"><a href="GoRegi" class="txt19">매장
+					등록 </a></li>
+
 			<li class="t-center">
 				<!-- Button3 --> <a href="GoLogout"
-				class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto">로그아웃
-					 </a>
+				class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"> 로그아웃 </a>
 			</li>
 		</ul>
 	</aside>
