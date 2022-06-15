@@ -144,21 +144,32 @@
 
 							<div>
 							
-								<div>
-									<span class="txt9"> 영수증 사진 등록 </span> <span class="txt99">(* 필수 정보입니다.)</span>
-									
-									<div>
-										<input type="file" name="fileNameCopy"
-										class="m-t-3 m-b-23">
+								<div class="m-b-20">
+
+
+									<div style="display: inline-block;">
+										<span class="txt9"> 영수증 사진 등록 </span> <span class="txt99">(*
+											필수 정보입니다.)</span>
+										<div>
+											<input type="file" name="fileNameCopy"
+												onchange="setThumbnai(event);" class="m-t-3 m-b-23 file">
+												<div class="fileSize"></div>
+										</div>
+										
 									</div>
-									
-									<span class="txt9"> 음식 사진 </span> <span class="txt99">(* 필수 정보입니다.)</span>
-									
-									<div>
-										<input type="file" name="fileName"
-										onchange="setThumbnail(event);" class="m-t-3 m-b-23">
+
+
+									<div style="display: inline-block;">
+										<span class="txt9"> 음식 사진 </span> <span class="txt99">(*
+											필수 정보입니다.)</span>
+										<div>
+											<input type="file" name="fileName"
+												onchange="setThumbnail(event);" class="m-t-3 m-b-23 file">
+												<div class="fileSize1"></div>
+										</div>
+										
 									</div>
-									
+
 								</div>
 
 								<div>
@@ -249,28 +260,49 @@
 
 	<!-- 파일 넣어주는 스크립트 -->
 	<script>
-	function setThumbnail(event){
+	function setThumbnai(event) {
 		var reader = new FileReader();
 
-		
-
-		reader.onload = function(event){
-			var target = document.querySelector("div#image_container");
+		reader.onload = function(event) {
+			var div = document.querySelector('div.fileSize');
+			var target = document.querySelector("div.fileSize");
 
 			var img = document.createElement("img");
 
 			img.setAttribute("src", event.target.result);
-
+			img.style.width = '200px';
+			img.style.height = '200px';
+			target.innerHTML = '';
 			
-            target.innerHTML = '';
-            
 			target.append(img);
 
 		};
 
 		reader.readAsDataURL(event.target.files[0]);
 
-	}	
+	}
+	
+	function setThumbnail(event) {
+		var reader = new FileReader();
+
+		reader.onload = function(event) {
+			var div = document.querySelector('div.fileSize1');
+			var target = document.querySelector("div.fileSize1");
+
+			var img = document.createElement("img");
+
+			img.setAttribute("src", event.target.result);
+			img.style.width = '200px';
+			img.style.height = '200px';
+			target.innerHTML = '';
+
+			target.append(img);
+
+		};
+
+		reader.readAsDataURL(event.target.files[0]);
+
+	}
 	
 	</script>
 
