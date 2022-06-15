@@ -127,9 +127,9 @@
 	<!-- Gallery -->
 	<div class="bread-crumb bo5-b p-t-17 p-b-17">
 		<div class="wrap-btn-booking flex-c-m m-t-6">
-			<p class="tree txt33">
-				<strong>🎉 게시판에 제로웨이스트 실천을 인증하고 나무를 키우시면 더 많은 쿠폰을 얻을 수
-					있습니다! 🎁 </strong>
+			<p class="tree txt33 t-center">
+				<span>🎉 게시판에 제로웨이스트 실천을 인증 해주세요! 🎉</span> 
+				<br> <span>🎁 나무가 쑥쑥 자라난다면 쿠폰을 받을 수 있습니다! 🎁</span>
 			</p>
 		</div>
 		<div class="wrap-btn-booking flex-c-m m-t-6">
