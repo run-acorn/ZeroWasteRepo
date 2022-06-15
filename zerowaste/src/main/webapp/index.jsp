@@ -43,10 +43,12 @@
 <!--===============================================================================================-->
 </head>
 <body class="animsition">
-<%
-	UserVO login = (UserVO)session.getAttribute("login");
-%>
-	<% if (login == null){ %>
+	<%
+	UserVO login = (UserVO) session.getAttribute("login");
+	%>
+	<%
+	if (login == null) {
+	%>
 	<!-- Slide1 -->
 	<section class="section-slide">
 		<div class="wrap-slick1">
@@ -63,6 +65,10 @@
 							class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
 							data-appear="fadeInUp">Zero Waste World</h2>
 
+						<span class=" animated caption2-slide1 visible-false"
+							id="maintxt1" data-appear="fadeInUp"> 제로웨이스트 라이프 스타일을 실천 할
+							수 있게 다회용기 포장을 지원하는 매장을 안내하는 서비스를 지원합니다. </span> 
+							<br>
 						<div class="wrap-btn-slide1 animated visible-false"
 							data-appear="zoomIn">
 							<!-- Button1 -->
@@ -84,28 +90,28 @@
 					style="background-image: url(images/master-slides-02.jpg);">
 					<div
 						class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-						
-						
+
+
 						<div class="mainout">
-						
+
 							<h2
 								class="caption1-slide1 t-center animated visible-false m-b-15"
 								data-appear="fadeInDown" id="maintit">제로 웨이스트(zero waste)란?</h2>
-								<br> <br>
+							<br> <br>
 
 							<h2
 								class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
-								data-appear="fadeInUp" id="maintit2">생활 속 쓰레기를 최소한으로 줄이고 
-								</h2>
-								
-								<h2
+								data-appear="fadeInUp" id="maintit2">생활 속 쓰레기를 최소한으로 줄이고</h2>
+
+							<h2
 								class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
-								data-appear="fadeInUp" id="maintit2">재사용 가능한 제품을 선호하는 라이프 스타일 입니다.</h2>
-								
+								data-appear="fadeInUp" id="maintit2">재사용 가능한 제품을 선호하는 라이프
+								스타일 입니다.</h2>
+
 
 						</div>
-						
-						
+
+
 
 						<div class="wrap-btn-slide1 animated visible-false"
 							data-appear="slideInUp">
@@ -130,11 +136,16 @@
 						class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span
 							class="caption1-slide1 txt1 t-center animated visible-false m-b-15"
-							data-appear="rotateInDownLeft"> <span class="ingredient" id="ingredient2">용기</span> <span>내서</span> </span>
+							data-appear="rotateInDownLeft"> <span class="ingredient"
+							id="ingredient2">용기</span> <span>내서</span>
+						</span>
 
 						<h2
 							class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
-							data-appear="rotateInUpRight"> <span class="ingredient" id="ingredient2">용기</span> <span style="font-family:'twayfly'; ">내</span> </h2>
+							data-appear="rotateInUpRight">
+							<span class="ingredient" id="ingredient2">용기</span> <span
+								style="font-family: 'twayfly';">내</span>
+						</h2>
 
 						<div class="wrap-btn-slide1 animated visible-false"
 							data-appear="rotateIn">
@@ -157,7 +168,9 @@
 			<div class="wrap-slick1-dots"></div>
 		</div>
 	</section>
-	<% } else { %>
+	<%
+	} else {
+	%>
 	<!-- Header -->
 	<header>
 		<!-- Header desktop -->
@@ -182,10 +195,10 @@
 								<li><a href="GoTree">내 나무</a></li>
 
 								<li><a href="GoBoard?page=1">리뷰 & 인증</a></li>
-								
+
 								<li><a href="GoRegi">매장 등록</a></li>
 
-								
+
 							</ul>
 						</nav>
 					</div>
@@ -212,20 +225,19 @@
 			<li class="t-center m-b-13"><a href="GoMap" class="txt19">지도</a>
 			</li>
 
-			<li class="t-center m-b-13"><a href="GoTree" class="txt19">내 나무
-					</a></li>
+			<li class="t-center m-b-13"><a href="GoTree" class="txt19">내
+					나무 </a></li>
 
-			<li class="t-center m-b-13"><a href="GoBoard?page=1" class="txt19">리뷰 & 인증
-					</a></li>
-					
-			<li class="t-center m-b-13"><a href="GoRegi" class="txt19">매장 등록
-					</a></li>
+			<li class="t-center m-b-13"><a href="GoBoard?page=1"
+				class="txt19">리뷰 & 인증 </a></li>
+
+			<li class="t-center m-b-13"><a href="GoRegi" class="txt19">매장
+					등록 </a></li>
 
 
 			<li class="t-center">
 				<!-- Button3 --> <a href="GoLogout"
-				class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"> 로그아웃
-					 </a>
+				class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"> 로그아웃 </a>
 			</li>
 		</ul>
 	</aside>
@@ -253,32 +265,32 @@
 
 				<div class="item-slick1 item2-slick1"
 					style="background-image: url(images/master-slides-02.jpg);">
-					
-					
+
+
 					<div
 						class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-						
+
 						<div class="mainout">
-						
+
 							<h2
 								class="caption1-slide1 t-center animated visible-false m-b-15"
 								data-appear="fadeInDown" id="maintit">제로 웨이스트(zero waste)란?</h2>
-								<br> <br>
+							<br> <br>
 
 							<h2
 								class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
-								data-appear="fadeInUp" id="maintit2">생활 속 쓰레기를 최소한으로 줄이고 
-								</h2>
-								
-								<h2
+								data-appear="fadeInUp" id="maintit2">생활 속 쓰레기를 최소한으로 줄이고</h2>
+
+							<h2
 								class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
-								data-appear="fadeInUp" id="maintit2">재사용 가능한 제품을 선호하는 라이프 스타일 입니다.</h2>
-								
+								data-appear="fadeInUp" id="maintit2">재사용 가능한 제품을 선호하는 라이프
+								스타일 입니다.</h2>
+
 
 						</div>
-						
-						
-						
+
+
+
 						<div class="wrap-btn-slide1 animated visible-false"
 							data-appear="slideInUp"></div>
 					</div>
@@ -288,14 +300,19 @@
 					style="background-image: url(images/master-slides-01.jpg);">
 					<div
 						class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-						
+
 						<span
 							class="caption1-slide1 txt1 t-center animated visible-false m-b-15"
-							data-appear="rotateInDownLeft"> <span class="ingredient" id="ingredient2">용기</span> <span>내서</span> </span>
+							data-appear="rotateInDownLeft"> <span class="ingredient"
+							id="ingredient2">용기</span> <span>내서</span>
+						</span>
 
 						<h2
 							class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
-							data-appear="rotateInUpRight"> <span class="ingredient" id="ingredient2">용기</span> <span style="font-family:'twayfly'; ">내</span> </h2>
+							data-appear="rotateInUpRight">
+							<span class="ingredient" id="ingredient2">용기</span> <span
+								style="font-family: 'twayfly';">내</span>
+						</h2>
 
 						<div class="wrap-btn-slide1 animated visible-false"
 							data-appear="rotateIn"></div>
@@ -307,7 +324,9 @@
 			<div class="wrap-slick1-dots"></div>
 		</div>
 	</section>
-	<% } %>
+	<%
+	}
+	%>
 	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
 	<!--===============================================================================================-->
