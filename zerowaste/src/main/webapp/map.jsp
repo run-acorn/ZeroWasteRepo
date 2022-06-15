@@ -207,7 +207,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
         	var overlay = new kakao.maps.CustomOverlay({zIndex:1});
     		<%for(i = 0; i < list.size(); i++){%>
         	if ('<%=list.get(i).getFoodType()%>' == filter){
-
 	            //ko_info라는 객체 생성(매장이름, 위도, 경도) : 한식 데이터
 	            var ko_info = {content:'<div class="wrap">' + 
 	            '    <div class="info">' + 
@@ -421,7 +420,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 					        // 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
 					        // LatLngBounds 객체에 좌표를 추가합니다
 					        bounds.extend(placePosition);
-		
 					        // 마커와 검색결과 항목에 mouseover 했을때
 					        // 해당 장소에 인포윈도우에 장소명을 표시합니다
 					        // mouseout 했을 때는 인포윈도우를 닫습니다
