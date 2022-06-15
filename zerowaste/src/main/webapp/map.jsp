@@ -237,7 +237,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 			            '        </div>' + 
 			            '        <div class="body">' + 
 			            '            <div class="img">' +
-			            '                <img src="http://t1.daumcdn.net/friends/prod/editor/dc8b3d02-a15a-4afa-a88b-989cf2a50476.jpg" width="73" height="70">' +
+			            '                <img src="<%=list.get(i).%>" width="73" height="70">' +
 			            '           </div>' + 
 			            '            <div class="desc">' + 
 			            '                <div class="ellipsis"><%=list.get(i).getStoreAddress()%></div>' + 
