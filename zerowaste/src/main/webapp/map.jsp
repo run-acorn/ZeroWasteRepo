@@ -74,7 +74,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 
                         <li><a href="GoTree">내 나무</a></li>
 
-                        <li><a href="GoBoard">리뷰 & 인증</a></li>
+                        <li><a href="GoBoard?page=1">리뷰 & 인증</a></li>
                         
                         <li><a href="GoRegi">매장 등록</a></li>
                      </ul>
@@ -89,9 +89,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
          </div>
       </div>
    </header>
-
-
-
 
    <!-- Sidebar -->
    <aside class="sidebar trans-0-4">
@@ -109,7 +106,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
          <li class="t-center m-b-13"><a href="GoTree" class="txt19">내 나무
                </a></li>
 
-         <li class="t-center m-b-13"><a href="GoBoard" class="txt19">리뷰 & 인증
+         <li class="t-center m-b-13"><a href="GoBoard?page=1" class="txt19">리뷰 & 인증
                </a></li>
                
          <li class="t-center m-b-13"><a href="GoRegi" class="txt19">매장 등록
@@ -128,14 +125,11 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
       style="background-image: url(images/bg-title-page-01.jpg);">
       <h2 class="tit6 t-center texttitle">Zero Waste 매장 안내</h2>
    </section>
-
-
 	
    <!-- Main menu -->
    <section class="section-mainmenu p-t-70 p-b-70 p-l-70 p-r-70 bg1-pattern">
    
    	 <!-- 카테고리 버튼 -->
-   	
    	<ul class="main_menu">
    		<li class="foodlist" ><input type="button" id="allMarkers" value="전체" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
    		<li class="foodlist" ><input type="button" id="korean" value="한식" class="btn3 flex-c-m size13 txt11 trans-0-4" display="inline"></li>
@@ -168,9 +162,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
       <script type="text/javascript"
          src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b9d52b733842f8156d5455f83b6f4277&libraries=services"></script>
 
-
       <!-- 지도영역 -->
-
       <script>
        
       var mapContainer = document.getElementById('map'),
@@ -184,13 +176,12 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 
    		// 지도를 생성합니다
         var map = new kakao.maps.Map(mapContainer, mapOption); 
-
+        
      	// 장소 검색 객체를 생성합니다
         var ps = new kakao.maps.services.Places();  
 
         // 검색 결과 목록이나 마커를 클릭했을 때 장소명을 표출할 인포윈도우를 생성합니다
         var infowindow = new kakao.maps.InfoWindow({zIndex:1});
-        
         
         // DB에 있는 데이터 전부 가져오기
         // 여기서는 매장이름, 위도, 경도만 필요함 
@@ -224,26 +215,54 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
         var contents = [];		//오버레이 객체정보 담는 배열
         <%int i=0;%>
         
-       
-        
-        
-        
          /* ------- 전체 식당 가져오는 함수 ------- */
 		//문제 : '전체' 버튼 클릭하기 전에는 마커 클릭해도 오버레이 안떠
+		 window.onload = function(){
+				console.log('page load')
+				// 카테고리별로 마커를 새로 찍기 위해 지도 다시 생성
+			    map = new kakao.maps.Map(mapContainer, mapOption);
+				
+				//아까 만든 배열 길이만큼 반복
+			    for (let i = 0; i < allMarkers.length; i ++) {
+			        // 마커를 생성합니다
+			        var marker = new kakao.maps.Marker({
+			              map: map, 						// 마커를 표시할 지도
+			              position: allMarkers[i].latlng 	// 마커의 위치
+			                       
+			      	});
+			        
+			         /* 기존 코드 위치  */
+						         
+						         // 마커 위에 커스텀오버레이를 표시합니다
+					// 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
+					         var overlay = new kakao.maps.CustomOverlay({
+					             content: contents[i].content,
+					             position: allMarkers[i].latlng
+					         });
+				    /* 문제 : 다른 마커 클릭하하면 기존 오버레이 삭제되어야 하는데 그 기능 안됨 --> 중복되어 나오고 오버레이 하나 닫으면 다른것까지 다 닫힘*/
+				        //마커 클릭하면 오버레이 생성	         
+				        kakao.maps.event.addListener(marker, 'click', function() {
+					         overlay.setMap(map);
+					         
+							// close 버튼(X) 누르면 오버레이 닫기
+						    $(document).on('click','#close_overlay',function(){
+				
+						    	overlay.setMap(null); 
+				
+						    });
+						});
+				     } 	
+			}
 		
         let all_f = function(){
 	        <%for(i = 0; i < list.size(); i++){%>
-	    	
 	        /* ----------- 카테고리별 마커찍기 기능에 필요한 객체 배열------------ */
 	        	//all 이라는 객체에 매장명, 위치(위도, 경도) DB 값 받아와서 담는 작업
  				var all = {content:'<div><%=list.get(i).getStoreName()%><div>',         
  				latlng: new kakao.maps.LatLng(<%=list.get(i).getLatutude()%>, <%=list.get(i).getLongitude()%>) };   
  	                 
-	        	
  				//위에서 선언한 allMarkers라는 배열에 각 매장정보 객체들을 추가
  				allMarkers.push(all);
- 				
- 				
  				
  			/* ----------- 오버레이 기능에 필요한 객체 배열------------ */
  			
@@ -265,16 +284,13 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 			            '        </div>' + 
 			            '    </div>' +    
 			            '</div>'
-	            	       		
 	            };
 	            
  				//오버레이 내용 담은 객체들을 contents 배열에 추가
 	            contents.push(con);
-	            
 		  
 		<%}%>		
-	            
-		
+
 		// 카테고리별로 마커를 새로 찍기 위해 지도 다시 생성
 	    map = new kakao.maps.Map(mapContainer, mapOption);
 		
@@ -287,34 +303,32 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 	                       
 	      	});
 	        
-	         
-	    /* 문제 : 다른 마커 클릭하면 기존 오버레이 삭제되어야 하는데 그 기능 안됨 --> 중복되어 나오고 오버레이 하나 닫으면 다른것까지 다 닫힘*/
-	        //마커 클릭하면 오버레이 생성	         
-	        kakao.maps.event.addListener(marker, 'click', function() {
-		         var overlay = new kakao.maps.CustomOverlay({
-		             content: contents[i].content,
-		             position: allMarkers[i].latlng
-		         });
-		         overlay.setMap(map);
-		         
-				// close 버튼(X) 누르면 오버레이 닫기
-			    $(document).on('click','#close_overlay',function(){
+	         /* 기존 코드 위치  */
+				         
+				         // 마커 위에 커스텀오버레이를 표시합니다
+			// 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
+			         var overlay = new kakao.maps.CustomOverlay({
+			             content: contents[i].content,
+			             position: allMarkers[i].latlng
+			         });
+		    /* 문제 : 다른 마커 클릭하하면 기존 오버레이 삭제되어야 하는데 그 기능 안됨 --> 중복되어 나오고 오버레이 하나 닫으면 다른것까지 다 닫힘*/
+		        //마커 클릭하면 오버레이 생성	         
+		        kakao.maps.event.addListener(marker, 'click', function() {
+			         overlay.setMap(map);
+			         
+					// close 버튼(X) 누르면 오버레이 닫기
+				    $(document).on('click','#close_overlay',function(){
+		
+				    	overlay.setMap(null); 
+		
+				    });
+				});
+		     } 
+			
+		} 
 
-			    	overlay.setMap(null); 
-
-			    });
-			});
-	     } 
-        } 
-
-	
-        
-         
-         
-         
         /* ------- 한식 식당 가져오는 함수 ------- */
         let korean_f = function(){
-
 
     		<%for(i = 0; i < list.size(); i++){%>
         	<%if (list.get(i).getFoodType().equals("한식")){%> 
@@ -359,13 +373,13 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 			            '</div>'
 	            	       		
 	            };
-	            
 	            contents.push(con);
 	            
 		     <%}%>
 		<%}%>		
 	            
 	    map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+	    
 	    for (let i = 0; i < korean.length; i ++) {
 	        // 마커를 생성합니다
 	        var marker = new kakao.maps.Marker({
@@ -374,7 +388,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 	                       
 	      	});
 	        
-
 	        kakao.maps.event.addListener(marker, 'click', function() {
 		         var overlay = new kakao.maps.CustomOverlay({
 		             content: contents[i].content,
@@ -389,8 +402,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 			});
 	     } 
         }
-
- 
         
         /* ------- 양식 식당 가져오는 함수 ------- */
         let western_f = function(){
@@ -418,15 +429,14 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 				            '        </div>' + 
 				            '    </div>' +    
 				            '</div>'
-		            	       		
 		            };
-		            
 		            contents.push(con);
 		            
 			     <%}%>
 			<%}%>		
 		            
 		    map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+		    
 		    for (let i = 0; i < western.length; i ++) {
 		        // 마커를 생성합니다
 		        var marker = new kakao.maps.Marker({
@@ -435,26 +445,20 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		                       
 		      	});
 		        
-		         
-		         
 		        kakao.maps.event.addListener(marker, 'click', function() {
+		        	
 			         var overlay = new kakao.maps.CustomOverlay({
 			             content: contents[i].content,
 			             position: western[i].latlng
 			         });
 			         overlay.setMap(map);
-			         
-					// 마커를 클릭했을 때 커스텀 오버레이를 표시합니다	
-				    $(document).on('click','#close_overlay',function(){
-
-				    	overlay.setMap(null); 
-
 				    });
+					// 마커를 클릭했을 때 커스텀 오버레이를 표시합니다	
+				    $(document).on('click','#close_overlay',function(){				    	
+				    	overlay.setMap(null); 
 				});
 		     } 
         }
-        
-        
      
         /* ------- 일식 식당 가져오는 함수 ------- */
         let japanese_f = function(){
@@ -484,9 +488,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 				            '        </div>' + 
 				            '    </div>' +    
 				            '</div>'
-		            	       		
 		            };
-		            
 		            contents.push(con);
 		            
 			     <%}%>
@@ -501,8 +503,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		                       
 		      	});
 		        
-		         
-		         
 		        kakao.maps.event.addListener(marker, 'click', function() {
 			         var overlay = new kakao.maps.CustomOverlay({
 			             content: contents[i].content,
@@ -519,9 +519,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 				});
 		     } 
         }
-        
-        
-        
         
         /* ------- 분식 식당 가져오는 함수 ------- */
         let school_f = function(){
@@ -550,9 +547,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 				            '        </div>' + 
 				            '    </div>' +    
 				            '</div>'
-		            	       		
 		            };
-		            
 		            contents.push(con);
 		            
 			     <%}%>
@@ -564,10 +559,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		        var marker = new kakao.maps.Marker({
 		              map: map, // 마커를 표시할 지도
 		              position: school[i].latlng // 마커의 위치
-		                       
 		      	});
-		        
-		         
 		         
 		        kakao.maps.event.addListener(marker, 'click', function() {
 			         var overlay = new kakao.maps.CustomOverlay({
@@ -586,8 +578,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		     } 
 
         }
-        
-        
         
         /* ------- 야식 식당 가져오는 함수 ------- */
         let midnight_f = function(){
@@ -616,9 +606,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 				            '        </div>' + 
 				            '    </div>' +    
 				            '</div>'
-		            	       		
 		            };
-		            
 		            contents.push(con);
 		            
 			     <%}%>
@@ -630,10 +618,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		        var marker = new kakao.maps.Marker({
 		              map: map, // 마커를 표시할 지도
 		              position: midnight[i].latlng // 마커의 위치
-		                       
 		      	});
-		        
-		         
 		         
 		        kakao.maps.event.addListener(marker, 'click', function() {
 			         var overlay = new kakao.maps.CustomOverlay({
@@ -652,8 +637,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		     } 
 
         }
-         
-        
         
         /* ------- 카페 가져오는 함수 ------- */
         let cafe_f = function(){
@@ -683,9 +666,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 				            '        </div>' + 
 				            '    </div>' +    
 				            '</div>'
-		            	       		
 		            };
-		            
 		            contents.push(con);
 		            
 			     <%}%>
@@ -700,8 +681,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		                       
 		      	});
 		        
-		         
-		         
 		        kakao.maps.event.addListener(marker, 'click', function() {
 			         var overlay = new kakao.maps.CustomOverlay({
 			             content: contents[i].content,
@@ -717,18 +696,12 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 				    });
 				});
 		     } 
-
-        	
         } 
-        
-        
         
         /* ------ 검색 기능 ------ */
         // 키워드로 장소를 검색합니다
 		searchPlaces();
 		
-        
-
 		// 키워드 검색을 요청하는 함수입니다
 		function searchPlaces() {
 		
@@ -737,33 +710,22 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		    //검색 필터링
 			// 장소검색 객체를 통해 키워드로 장소검색을 요청합니다
 			ps.keywordSearch(keyword, placesSearchCB);
-
 				
 		}
-		
-        
         
 		// 장소검색이 완료됐을 때 호출되는 콜백함수 입니다
 		function placesSearchCB(data, status, pagination) {
 			 if (status === kakao.maps.services.Status.OK) {	
         		// 검색 목록과 마커를 표출합니다
 		        displayPlaces(data);					        
-		 				
 			}else if (status === kakao.maps.services.Status.ZERO_RESULT) {
 				 alert('검색 결과가 존재하지 않습니다.');
 				 return;
-
 			} else if (status === kakao.maps.services.Status.ERROR) {
-
 				 alert('검색 결과 중 오류가 발생했습니다.');
 				 return;
-
 			}     
-			
 		}
-		
-		
-		
 		
 		// 검색 결과 목록과 마커를 표출하는 함수입니다
 		function displayPlaces(places) {
@@ -822,11 +784,8 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		
 					        fragment.appendChild(itemEl);
 			    		} 
-	
-
 		    	<%}%>
 			  
-		    	
 		    }
 	        // 검색결과 항목들을 검색결과 목록 Element에 추가합니다
 		    listEl.appendChild(fragment);
@@ -835,10 +794,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		    // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
 		    map.setBounds(bounds);
 		}
-		
-		
-		
-		
 		
 		// 검색결과 항목을 Element로 반환하는 함수입니다
 		function getListItem(index, places) {
@@ -864,10 +819,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		    return el;
 		}
 		
-		
-		
-		
-		
 		// 마커를 생성하고 지도 위에 마커를 표시하는 함수입니다
 		function addMarker(position, idx, title) {
 		    var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png', // 마커 이미지 url, 스프라이트 이미지를 씁니다
@@ -882,32 +833,23 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		            position: position, // 마커의 위치
 		            image: markerImage 
 		        });
-
 		    marker2.setMap(map); // 지도 위에 마커를 표출합니다
 		    markers.push(marker2);  // 배열에 생성된 마커를 추가합니다
-
 		    return marker2;
-		} 
-
+		}
 		// 지도 위에 표시되고 있는 마커를 모두 제거합니다
 		function removeMarker() {
 			map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 		}
 
-		
-
-		
-		
 		// 검색결과 목록 또는 마커를 클릭했을 때 호출되는 함수입니다
 		// 인포윈도우에 장소명을 표시합니다
 		function displayInfowindow(marker2, title) {
 		    var content = '<div style="padding:5px;z-index:1;">' + title + '</div>';
-
 		    infowindow.setContent(content);
 		    infowindow.open(map, marker2);
 		}
 		
-
 		 // 검색결과 목록의 자식 Element를 제거하는 함수입니다
 		function removeAllChildNods(el) {   
 		    while (el.hasChildNodes()) {
@@ -915,20 +857,10 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		    }
 		}
 		
-		 
-		 
-		 
-		
-		
-
-		
-		
 		/* ------ 마커찍기 기능 ------ */
         /* 접속했을 때 모든 매장 마커 찍어주는 구간 */
-        all_f();
 
-             
-            
+        /* $(document).ready(()=>{all_f();}) */
             
          /* 카테고리별로 매장위치 확인할 수 있는 구간 */
          // id값을 각각의 input에 준다
@@ -940,7 +872,10 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
  		let sch = document.getElementById('school');
  		let mid = document.getElementById('midnight');
  		let caf = document.getElementById('cafe');
-
+ 		
+ 	 	window.addEventListener('DOMContentLoaded', function() {
+ 			all_f();
+ 		})
 
   		alk.addEventListener('click', function(){
  			all_f();
@@ -969,8 +904,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
         caf.addEventListener('click', function(){
         	cafe_f();
         });
-         
-
 
       </script>
 
