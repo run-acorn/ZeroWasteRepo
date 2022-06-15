@@ -126,7 +126,7 @@
 
 	<!-- Title Page -->
 	<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15"
-		style="background-image: url(images/bg-title-page-02.jpg);">
+		style="background-image: url(images/bg-title-page-07.jpg);">
 		<h2 class="tit6 t-center texttitle">쿠폰 받기</h2>
 	</section>
 
