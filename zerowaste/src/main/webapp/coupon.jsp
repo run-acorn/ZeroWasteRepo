@@ -133,7 +133,7 @@
 			</p>
 		</div>
 		<div class="wrap-btn-booking flex-c-m m-t-6">
-			<p class="tree txt33">쿠폰 선택 후 나무는 다시 씨앗으로 돌아가니 신중히 선택해 주세요!</p>
+			<p class="tree txt33">쿠폰 선택 후 나무는 다시 새싹으로 돌아가니 신중히 선택해 주세요!</p>
 		</div>
 	</div>
 
