@@ -233,15 +233,16 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 			        
 			         /* 기존 코드 위치  */
 						         
-						         // 마커 위에 커스텀오버레이를 표시합니다
-					// 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
+
+				    /* 문제 : 다른 마커 클릭하하면 기존 오버레이 삭제되어야 하는데 그 기능 안됨 --> 중복되어 나오고 오버레이 하나 닫으면 다른것까지 다 닫힘*/
+				        //마커 클릭하면 오버레이 생성	         
+				        kakao.maps.event.addListener(marker, 'click', function() {
+					         // 마커 위에 커스텀오버레이를 표시합니다
+							// 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
 					         var overlay = new kakao.maps.CustomOverlay({
 					             content: contents[i].content,
 					             position: allMarkers[i].latlng
 					         });
-				    /* 문제 : 다른 마커 클릭하하면 기존 오버레이 삭제되어야 하는데 그 기능 안됨 --> 중복되어 나오고 오버레이 하나 닫으면 다른것까지 다 닫힘*/
-				        //마커 클릭하면 오버레이 생성	         
-				        kakao.maps.event.addListener(marker, 'click', function() {
 					         overlay.setMap(map);
 					         
 							// close 버튼(X) 누르면 오버레이 닫기
@@ -256,17 +257,12 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		
         let all_f = function(){
 	        <%for(i = 0; i < list.size(); i++){%>
-	        /* ----------- 카테고리별 마커찍기 기능에 필요한 객체 배열------------ */
-	        	//all 이라는 객체에 매장명, 위치(위도, 경도) DB 값 받아와서 담는 작업
  				var all = {content:'<div><%=list.get(i).getStoreName()%><div>',         
  				latlng: new kakao.maps.LatLng(<%=list.get(i).getLatutude()%>, <%=list.get(i).getLongitude()%>) };   
  	                 
- 				//위에서 선언한 allMarkers라는 배열에 각 매장정보 객체들을 추가
+
  				allMarkers.push(all);
  				
- 			/* ----------- 오버레이 기능에 필요한 객체 배열------------ */
- 			
- 				//오버레이로 만들 div와 그 안의 내용을 담은 객체
 			    var con = {content : '<div class="wrap">' + 
 			            '    <div class="info">' + 
 			            '        <div class="title">' + 
@@ -286,37 +282,30 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 			            '</div>'
 	            };
 	            
- 				//오버레이 내용 담은 객체들을 contents 배열에 추가
 	            contents.push(con);
 		  
 		<%}%>		
 
-		// 카테고리별로 마커를 새로 찍기 위해 지도 다시 생성
 	    map = new kakao.maps.Map(mapContainer, mapOption);
 		
-		//아까 만든 배열 길이만큼 반복
 	    for (let i = 0; i < allMarkers.length; i ++) {
-	        // 마커를 생성합니다
 	        var marker = new kakao.maps.Marker({
-	              map: map, 						// 마커를 표시할 지도
-	              position: allMarkers[i].latlng 	// 마커의 위치
+	              map: map, 						
+	              position: allMarkers[i].latlng 
 	                       
 	      	});
 	        
-	         /* 기존 코드 위치  */
-				         
-				         // 마커 위에 커스텀오버레이를 표시합니다
-			// 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
-			         var overlay = new kakao.maps.CustomOverlay({
+       
+		        kakao.maps.event.addListener(marker, 'click', function() {
+			        
+
+				     var overlay = new kakao.maps.CustomOverlay({
 			             content: contents[i].content,
 			             position: allMarkers[i].latlng
 			         });
-		    /* 문제 : 다른 마커 클릭하하면 기존 오버레이 삭제되어야 하는데 그 기능 안됨 --> 중복되어 나오고 오버레이 하나 닫으면 다른것까지 다 닫힘*/
-		        //마커 클릭하면 오버레이 생성	         
-		        kakao.maps.event.addListener(marker, 'click', function() {
-			         overlay.setMap(map);
+		        	
+		        	overlay.setMap(map);
 			         
-					// close 버튼(X) 누르면 오버레이 닫기
 				    $(document).on('click','#close_overlay',function(){
 		
 				    	overlay.setMap(null); 
@@ -327,6 +316,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 			
 		} 
 
+        
         /* ------- 한식 식당 가져오는 함수 ------- */
         let korean_f = function(){
 

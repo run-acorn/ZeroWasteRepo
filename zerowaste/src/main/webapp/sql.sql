@@ -14,7 +14,11 @@ select * from USERINFO
 
 drop table userInfo
 
-update USERINFO set point = 7 where id = 'masterid'
+update USERINFO set point = 1 where id = '최현우'
+update USERINFO set point = 2 where id = '김채윤'
+update USERINFO set point = 3 where id = '유슬이'
+update USERINFO set point = 4 where id = '김연이'
+update USERINFO set point = 5 where id = 'masterid'
 
 -- 매장 정보 테이블
 create table storeInfo (

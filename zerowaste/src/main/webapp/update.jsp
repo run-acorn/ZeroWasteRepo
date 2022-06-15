@@ -138,9 +138,13 @@
 				<div>
 					<div>
 						<!-- Block4 -->
+<<<<<<< HEAD
 						<div class="blo4 p-b-62">
+=======
+						<div class="blo4" style="text-align:center;">
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-6/ZeroWasteRepo
 							<!-- - -->
-							<div id="image_container"
+							<div style="display: inline-block;" id="image_container"
 								class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative"></div>
 						</div>
 
@@ -165,30 +169,7 @@
 									</div>
 							</div>
 
-							<script>
-							function setThumbnail(event){
-								var reader = new FileReader();
-
-								
-
-								reader.onload = function(event){
-									var target = document.querySelector("div#image_container");
-
-									var img = document.createElement("img");
-
-									img.setAttribute("src", event.target.result);
-
-
-						                        target.innerHTML = '';
-
-									target.append(img);
-
-								};
-
-								reader.readAsDataURL(event.target.files[0]);
-
-							}	
-							</script>
+							
 
 							<div>
 								<span class="txt9"> 제목 </span>
@@ -341,18 +322,29 @@
 
 
 	<script>
-		function setThumbnail(event) {
-			var reader = new FileReader();
+							function setThumbnail(event){
+								var reader = new FileReader();
 
-			reader.onload = function(event) {
-				var img = document.createElement("img");
-				img.setAttribute("src", event.target.result);
-				document.querySelector("div#image_container").appendChild(img);
-			};
+								
 
-			reader.readAsDataURL(event.target.files[0]);
-		}
-	</script>
+								reader.onload = function(event){
+									var target = document.querySelector("div#image_container");
+
+									var img = document.createElement("img");
+
+									img.setAttribute("src", event.target.result);
+
+
+						                        target.innerHTML = '';
+
+									target.append(img);
+
+								};
+
+								reader.readAsDataURL(event.target.files[0]);
+
+							}	
+							</script>
 
 
 
