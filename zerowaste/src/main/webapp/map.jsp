@@ -402,8 +402,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 
 		    // 지도에 표시되고 있는 마커를 제거합니다
 		    removeMarker();
-
-
 		    
 		    for ( var i=0; i<places.length; i++ ) {
 		    	<%for(int j=0; j<list.size(); j++){%>
