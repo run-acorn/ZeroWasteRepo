@@ -10865,8 +10865,9 @@ span>span{
 
 span#maintxt1{
 	font-family:'twayfly';
-	font-size: 100%;
+	font-size: 20px;
 	color: white;
 	text-shadow: 2px 2px 2px #111;
+	font-weight: lighter;
 	
 }
