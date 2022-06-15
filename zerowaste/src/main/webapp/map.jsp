@@ -207,6 +207,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
         	var overlay = new kakao.maps.CustomOverlay({zIndex:1});
     		<%for(i = 0; i < list.size(); i++){%>
         	if ('<%=list.get(i).getFoodType()%>' == filter){
+
 	            //ko_info라는 객체 생성(매장이름, 위도, 경도) : 한식 데이터
 	            var ko_info = {content:'<div class="wrap">' + 
 	            '    <div class="info">' + 
@@ -216,7 +217,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 	            '        </div>' + 
 	            '        <div class="body">' + 
 	            '            <div class="img">' +
-	            '                 <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2022/01/28/111500268.2.jpg" width="73" height="70">'  +
+	            '                 <img src="<%=list.get(i).getImageurl()%>" width="73" height="70">'  +
 	            '           </div>' + 
 	            '            <div class="desc">' + 
 	            '                <div class="ellipsis"><%=list.get(i).getStoreAddress()%></div>' +  
@@ -237,7 +238,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 			            '        </div>' + 
 			            '        <div class="body">' + 
 			            '            <div class="img">' +
-			            '                <img src="<%=list.get(i).%>" width="73" height="70">' +
+			            '                <img src="<%=list.get(i).getImageurl()%>" width="73" height="70">'  +
 			            '           </div>' + 
 			            '            <div class="desc">' + 
 			            '                <div class="ellipsis"><%=list.get(i).getStoreAddress()%></div>' + 
@@ -280,7 +281,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		//문제 : '전체' 버튼 클릭하기 전에는 마커 클릭해도 오버레이 안떠
 		 window.onload = function(){
 			 var overlay = new kakao.maps.CustomOverlay({zIndex:1})
-				console.log('page load')
 				// 카테고리별로 마커를 새로 찍기 위해 지도 다시 생성
 				$('#map').empty();
 			    map = new kakao.maps.Map(mapContainer, mapOption);
@@ -324,7 +324,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 			            '        </div>' + 
 			            '        <div class="body">' + 
 			            '            <div class="img">' +
-			            '                <img src="http://t1.daumcdn.net/friends/prod/editor/dc8b3d02-a15a-4afa-a88b-989cf2a50476.jpg" width="73" height="70">' +
+			            '                <img src="<%=list.get(i).getImageurl()%>" width="73" height="70">' +
 			            '           </div>' + 
 			            '            <div class="desc">' + 
 			            '                <div class="ellipsis"><%=list.get(i).getStoreAddress()%></div>' + 
@@ -404,8 +404,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		    // 지도에 표시되고 있는 마커를 제거합니다
 		    removeMarker();
 
-		    console.log(places.length);
-		    console.log(keyword.value);
+
 		    
 		    for ( var i=0; i<places.length; i++ ) {
 		    	<%for(int j=0; j<list.size(); j++){%>
