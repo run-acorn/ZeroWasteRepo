@@ -16,5 +16,6 @@ public class StoreVO {
 	private String latutude;
 	private String longitude;
 	private String url;
+	private String imageurl;
 	
 }

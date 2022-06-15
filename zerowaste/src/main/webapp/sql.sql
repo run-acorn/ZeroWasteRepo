@@ -29,6 +29,7 @@ foodType varchar2(20) not null,
 latutude varchar2(20) not null,
 longitude varchar2(20) not null,
 url varchar2(150) not null,
+imageurl varchar2(330),
 constraint store_snum_pk primary key(storeNum)
 );
 
