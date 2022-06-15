@@ -4,7 +4,8 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.model.StoreDAO">
 	<insert id="insertStore" parameterType="StoreVO">
-		insert into storeInfo values (store_num_seq.nextval, #{storeName}, #{storeAddress}, #{foodType}, #{latutude}, #{longitude}, #{url})
+		insert into storeInfo(storeNum, storeName, storeAddress, foodType, latutude, longitude, url)
+		values (store_num_seq.nextval, #{storeName}, #{storeAddress}, #{foodType}, #{latutude}, #{longitude}, #{url})
 	</insert>
 	
 	<select id="storeInfo" resultType="StoreVO">

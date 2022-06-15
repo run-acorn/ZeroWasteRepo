@@ -23,9 +23,9 @@ public class RegiService extends HttpServlet {
 		String storeName = request.getParameter("storeName");
 		String address = request.getParameter("address");
 		String food = request.getParameter("food");
+		String url = request.getParameter("url");
 		String lat = request.getParameter("lat");
 		String lng = request.getParameter("lng");
-		String url = request.getParameter("url");
 		
 		StoreVO svo = new StoreVO();
 		svo.setStoreName(storeName);
