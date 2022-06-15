@@ -52,73 +52,77 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 <body class="animsition">
 
    <!-- Header -->
-   <header>
-      <!-- Header desktop -->
-      <div class="wrap-menu-header gradient1 trans-0-4">
-         <div class="container h-full">
-            <div class="wrap_header trans-0-3">
-               <!-- Logo -->
-               <div class="logo">
-                  <a href="GoMain"> <img src="images/icons/logo.png"
-                     alt="IMG-LOGO" data-logofixed="images/icons/logo2.png">
-                  </a>
-               </div>
+	<header>
+		<!-- Header desktop -->
+		<div class="wrap-menu-header gradient1 trans-0-4">
+			<div class="container h-full">
+				<div class="wrap_header trans-0-3">
+					<!-- Logo -->
+					<div class="logo">
+						<a href="GoMain"> <img src="images/icons/logo.png"
+							alt="IMG-LOGO" data-logofixed="images/icons/logo2.png">
+						</a>
+					</div>
 
-               <!-- Menu -->
-               <div class="wrap_menu p-l-45 p-l-0-xl">
-                  <nav class="menu">
-                     <ul class="main_menu">
-                        <li><a href="GoMain">홈</a></li>
+					<!-- Menu -->
+					<div class="wrap_menu p-l-45 p-l-0-xl">
+						<nav class="menu">
+							<ul class="main_menu">
+								<li><a href="GoMain">홈</a></li>
 
-                        <li><a href="GoMap">지도</a></li>
+								<li><a href="GoTuto">튜토리얼</a></li>
 
-                        <li><a href="GoTree">내 나무</a></li>
+								<li><a href="GoMap">지도</a></li>
 
-                        <li><a href="GoBoard?page=1">리뷰 & 인증</a></li>
-                        
-                        <li><a href="GoRegi">매장 등록</a></li>
-                     </ul>
-                  </nav>
-               </div>
+								<li><a href="GoTree">내 나무</a></li>
 
-               <!-- Social -->
-               <div class="social flex-w flex-l-m p-r-20">
-                  <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
-               </div>
-            </div>
-         </div>
-      </div>
-   </header>
+								<li><a href="GoBoard?page=1">리뷰 & 인증</a></li>
 
-   <!-- Sidebar -->
-   <aside class="sidebar trans-0-4">
-      <!-- Button Hide sidebar -->
-      <button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>
+								<li><a href="GoRegi">매장 등록</a></li>
+							</ul>
+						</nav>
+					</div>
 
-      <!-- - -->
-      <ul class="menu-sidebar p-t-95 p-b-70">
-         <li class="t-center m-b-13"><a href="GoMain" class="txt19">홈</a>
-         </li>
+					<!-- Social -->
+					<div class="social flex-w flex-l-m p-r-20">
+						<button class="btn-show-sidebar m-l-33 trans-0-4"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
 
-         <li class="t-center m-b-13"><a href="GoMap" class="txt19">지도</a>
-         </li>
+	<!-- Sidebar -->
+	<aside class="sidebar trans-0-4">
+		<!-- Button Hide sidebar -->
+		<button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>
 
-         <li class="t-center m-b-13"><a href="GoTree" class="txt19">내 나무
-               </a></li>
+		<!-- - -->
+		<ul class="menu-sidebar p-t-95 p-b-70">
+			<li class="t-center m-b-13"><a href="GoMain" class="txt19">홈</a>
+			</li>
 
-         <li class="t-center m-b-13"><a href="GoBoard?page=1" class="txt19">리뷰 & 인증
-               </a></li>
-               
-         <li class="t-center m-b-13"><a href="GoRegi" class="txt19">매장 등록
-               </a></li>
+			<li class="t-center m-b-13"><a href="GoTuto" class="txt19">튜토리얼</a>
+			</li>
 
-         <li class="t-center">
-            <!-- Button3 --> <a href="GoLogout"
-            class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"> 로그아웃
-               </a>
-         </li>
-      </ul>
-   </aside>
+			<li class="t-center m-b-13"><a href="GoMap" class="txt19">지도</a>
+			</li>
+
+			<li class="t-center m-b-13"><a href="GoTree" class="txt19">내
+					나무 </a></li>
+
+			<li class="t-center m-b-13"><a href="GoBoard?page=1"
+				class="txt19">리뷰 & 인증 </a></li>
+
+			<li class="t-center m-b-13"><a href="GoRegi" class="txt19">매장
+					등록 </a></li>
+
+			<li class="t-center">
+				<!-- Button3 --> <a href="GoLogout"
+				class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"> 로그아웃 </a>
+			</li>
+		</ul>
+	</aside>
 
    <!-- Title Page -->
    <section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15"
@@ -212,7 +216,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 	            '    <div class="info">' + 
 	            '        <div class="title">' + 
 	            '            <%=list.get(i).getStoreName()%>' + 
-	            '            <div class="close" onclick="makeOutListener()" title="닫기"></div>' + 
 	            '        </div>' + 
 	            '        <div class="body">' + 
 	            '            <div class="img">' +
@@ -220,6 +223,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 	            '           </div>' + 
 	            '            <div class="desc">' + 
 	            '                <div class="ellipsis"><%=list.get(i).getStoreAddress()%></div>' +  
+	            '                <div class="jibun ellipsis"><%=list.get(i).getFoodType()%></div>' + 
 	            '                <div><a href="https://www.kakaocorp.com/main" target="_blank" class="link"><%=list.get(i).getUrl()%></a></div>' + 
 	            '            </div>' + 
 	            '        </div>' + 
@@ -233,7 +237,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 			            '    <div class="info">' + 
 			            '        <div class="title">' + 
 			            '            <%=list.get(i).getStoreName()%>' + 
-			            '            <div class="close" onclick="close_overlay()" title="닫기"></div>' + 
 			            '        </div>' + 
 			            '        <div class="body">' + 
 			            '            <div class="img">' +
@@ -241,7 +244,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 			            '           </div>' + 
 			            '            <div class="desc">' + 
 			            '                <div class="ellipsis"><%=list.get(i).getStoreAddress()%></div>' + 
-			            '                <div><a href="<%=list.get(i).getUrl()%>" target="_blank" class="link">홈페이지</a></div>' + 
+			            '                <div><a href="<%=list.get(i).getUrl()%>" target="_blank" class="link">매장상세</a></div>' + 
 			            '            </div>' + 
 			            '        </div>' + 
 			            '    </div>' +    
@@ -318,8 +321,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 			    var con = {content : '<div class="wrap">' + 
 			            '    <div class="info">' + 
 			            '        <div class="title">' + 
-			            '            <%=list.get(i).getStoreName()%>' + 
-			            '            <div class="close" onclick="close_overlay()" title="닫기"></div>' + 
+			            '            <%=list.get(i).getStoreName()%>' +  
 			            '        </div>' + 
 			            '        <div class="body">' + 
 			            '            <div class="img">' +
@@ -327,7 +329,8 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 			            '           </div>' + 
 			            '            <div class="desc">' + 
 			            '                <div class="ellipsis"><%=list.get(i).getStoreAddress()%></div>' + 
-			            '                <div><a href="<%=list.get(i).getUrl()%>" target="_blank" class="link">홈페이지</a></div>' + 
+			            '                <div class="jibun ellipsis"><%=list.get(i).getFoodType()%></div>' + 
+			            '                <div><a href="<%=list.get(i).getUrl()%>" target="_blank" class="link">매장상세</a></div>' + 
 			            '            </div>' + 
 			            '        </div>' + 
 			            '    </div>' +    
@@ -429,7 +432,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 						            '    <div class="info">' + 
 						            '        <div class="title">' + 
 						                         title+ 
-						            '            <div class="close" onclick="close_overlay()" title="닫기"></div>' + 
 						            '        </div>' + 
 						            '        <div class="body">' + 
 						            '            <div class="img">' +
@@ -437,14 +439,17 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 						            '            </div>' + 
 						            '            <div class="desc">' + 
 						            '                <div class="ellipsis"><%=list.get(i).getStoreAddress()%></div>' + 
-						            '                <div><a href="<%=list.get(i).getUrl()%>" target="_blank" class="link">홈페이지</a></div>' + 
+						            '                <div class="jibun ellipsis"><%=list.get(i).getFoodType()%></div>' + 
+						            '                <div class="alink"><a href="<%=list.get(i).getUrl()%>" target="_blank" class="link">매장상세</a></div>' + 
 						            '            </div>' + 
 						            '        </div>' + 
 						            '    </div>' +    
 						            '</div>';
 						        }
 				    	  <%}%>
-					        
+					        	
+
+				    	  
 					            kakao.maps.event.addListener(marker2, 'click', function() {
 					           
 
@@ -518,15 +523,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 			map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 		}
 
-		// 검색결과 목록 또는 마커를 클릭했을 때 호출되는 함수입니다
-		// 인포윈도우에 장소명을 표시합니다
-		var overlay = new kakao.maps.CustomOverlay({zIndex:1});
-		function displayInfowindow(marker2, title) {
 
-    	  
-
-
-		}
 		
 		 // 검색결과 목록의 자식 Element를 제거하는 함수입니다
 		function removeAllChildNods(el) {   
