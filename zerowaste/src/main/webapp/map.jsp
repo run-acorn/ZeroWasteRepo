@@ -188,140 +188,25 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
         // **전체 & 음식 종류별로 가져오기**
         // 마커를 표시할 위치와 내용을 가지고 있을 객체 배열
         
-        //한식 배열
-        var korean = [];   //빈 배열
-        
-        //양식 배열
-        var western = [];
-        
-        //일식
-        var japanese = [];
-        
-        //분식
-        var school = [];
-        ////var sc_info ={content:/*매장명*/,latlng: new kakao.maps.LatLng(/*위도*/, /*경도*/) };
-        
-        //야식
-        var midnight=[];
-        //var mi_info ={content:/*매장명*/,latlng: new kakao.maps.LatLng(/*위도*/, /*경도*/) };
-        
-        //카페
-        var cafe=[];
-        //var ca_info ={content:/*매장명*/,latlng: new kakao.maps.LatLng(/*위도*/, /*경도*/) };
-         
+        //데이터를 하나로 묶을 자료
+        var food_data = {
+        		'한식':[],
+        		'양식':[],
+        		'일식':[],
+        		'분식':[],
+        		'야식':[],
+        		'카페':[]
+        }
         var allMarkers = [];
-        
         var markers = [];
         var contents = [];		//오버레이 객체정보 담는 배열
         <%int i=0;%>
         
-         /* ------- 전체 식당 가져오는 함수 ------- */
-		//문제 : '전체' 버튼 클릭하기 전에는 마커 클릭해도 오버레이 안떠
-		 window.onload = function(){
-				console.log('page load')
-				// 카테고리별로 마커를 새로 찍기 위해 지도 다시 생성
-			    map = new kakao.maps.Map(mapContainer, mapOption);
-				
-				//아까 만든 배열 길이만큼 반복
-			    for (let i = 0; i < allMarkers.length; i ++) {
-			        // 마커를 생성합니다
-			        var marker = new kakao.maps.Marker({
-			              map: map, 						// 마커를 표시할 지도
-			              position: allMarkers[i].latlng 	// 마커의 위치
-			                       
-			      	});
-			        
-			         /* 기존 코드 위치  */
-						         
-
-				    /* 문제 : 다른 마커 클릭하하면 기존 오버레이 삭제되어야 하는데 그 기능 안됨 --> 중복되어 나오고 오버레이 하나 닫으면 다른것까지 다 닫힘*/
-				        //마커 클릭하면 오버레이 생성	         
-				        kakao.maps.event.addListener(marker, 'click', function() {
-					         // 마커 위에 커스텀오버레이를 표시합니다
-							// 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
-					         var overlay = new kakao.maps.CustomOverlay({
-					             content: contents[i].content,
-					             position: allMarkers[i].latlng
-					         });
-					         overlay.setMap(map);
-					         
-							// close 버튼(X) 누르면 오버레이 닫기
-						    $(document).on('click','#close_overlay',function(){
-				
-						    	overlay.setMap(null); 
-				
-						    });
-						});
-				     } 	
-			}
-		
-        let all_f = function(){
-	        <%for(i = 0; i < list.size(); i++){%>
- 				var all = {content:'<div><%=list.get(i).getStoreName()%><div>',         
- 				latlng: new kakao.maps.LatLng(<%=list.get(i).getLatutude()%>, <%=list.get(i).getLongitude()%>) };   
- 	                 
-
- 				allMarkers.push(all);
- 				
-			    var con = {content : '<div class="wrap">' + 
-			            '    <div class="info">' + 
-			            '        <div class="title">' + 
-			            '            <%=list.get(i).getStoreName()%>' + 
-			            '            <div class="close" id="close_overlay" title="닫기"></div>' + 
-			            '        </div>' + 
-			            '        <div class="body">' + 
-			            '            <div class="img">' +
-			            '                <img src="http://t1.daumcdn.net/friends/prod/editor/dc8b3d02-a15a-4afa-a88b-989cf2a50476.jpg" width="73" height="70">' +
-			            '           </div>' + 
-			            '            <div class="desc">' + 
-			            '                <div class="ellipsis"><%=list.get(i).getStoreAddress()%></div>' + 
-			            '                <div><a href="<%=list.get(i).getUrl()%>" target="_blank" class="link">홈페이지</a></div>' + 
-			            '            </div>' + 
-			            '        </div>' + 
-			            '    </div>' +    
-			            '</div>'
-	            };
-	            
-	            contents.push(con);
-		  
-		<%}%>		
-
-	    map = new kakao.maps.Map(mapContainer, mapOption);
-		
-	    for (let i = 0; i < allMarkers.length; i ++) {
-	        var marker = new kakao.maps.Marker({
-	              map: map, 						
-	              position: allMarkers[i].latlng 
-	                       
-	      	});
-	        
-       
-		        kakao.maps.event.addListener(marker, 'click', function() {
-			        
-
-				     var overlay = new kakao.maps.CustomOverlay({
-			             content: contents[i].content,
-			             position: allMarkers[i].latlng
-			         });
-		        	
-		        	overlay.setMap(map);
-			         
-				    $(document).on('click','#close_overlay',function(){
-		
-				    	overlay.setMap(null); 
-		
-				    });
-				});
-		     } 
-			
-		} 
-
-        
-        /* ------- 한식 식당 가져오는 함수 ------- */
-        let korean_f = function(){
-
+        function filter_data(filter){
+        	contents = [];
+        	var overlay = new kakao.maps.CustomOverlay({zIndex:1});
     		<%for(i = 0; i < list.size(); i++){%>
-        	<%if (list.get(i).getFoodType().equals("한식")){%> 
+        	if ('<%=list.get(i).getFoodType()%>' == filter){
 	            //ko_info라는 객체 생성(매장이름, 위도, 경도) : 한식 데이터
 	            var ko_info = {content:'<div class="wrap">' + 
 	            '    <div class="info">' + 
@@ -342,13 +227,13 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 	            '</div>',         
 	            latlng: new kakao.maps.LatLng(<%=list.get(i).getLatutude()%>, <%=list.get(i).getLongitude()%>) };   
 	                           
-	            korean.push(ko_info);            //배열변수.push(객체변수); 배열에 객체 추가
+	            food_data[filter].push(ko_info);            //배열변수.push(객체변수); 배열에 객체 추가
 	
 			    var con = {content : '<div class="wrap">' + 
 			            '    <div class="info">' + 
 			            '        <div class="title">' + 
 			            '            <%=list.get(i).getStoreName()%>' + 
-			            '            <div class="close" id="close_overlay" title="닫기"></div>' + 
+			            '            <div class="close" onclick="close_overlay()" title="닫기"></div>' + 
 			            '        </div>' + 
 			            '        <div class="body">' + 
 			            '            <div class="img">' +
@@ -364,330 +249,117 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 	            	       		
 	            };
 	            contents.push(con);
-	            
-		     <%}%>
-		<%}%>		
-	            
+        	}
+		<%}%>
+		$('#map').empty();
 	    map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-	    
-	    for (let i = 0; i < korean.length; i ++) {
+	    for (let i = 0; i <  food_data[filter].length; i ++) {
 	        // 마커를 생성합니다
 	        var marker = new kakao.maps.Marker({
 	              map: map, // 마커를 표시할 지도
-	              position: korean[i].latlng // 마커의 위치
+	              position:  food_data[filter][i].latlng // 마커의 위치 
 	                       
 	      	});
-	        
+	       
 	        kakao.maps.event.addListener(marker, 'click', function() {
-		         var overlay = new kakao.maps.CustomOverlay({
+	        	 	 overlay.setMap(null);
+		             overlay = new kakao.maps.CustomOverlay({
 		             content: contents[i].content,
-		             position: korean[i].latlng
+		             position:  food_data[filter][i].latlng
 		         });
-		         overlay.setMap(map);
-		         
-			    $(document).on('click','#close_overlay',function(){
-
-			    	overlay.setMap(null); 
-			    });
+		          overlay.setMap(map);
 			});
 	     } 
         }
         
-        /* ------- 양식 식당 가져오는 함수 ------- */
-        let western_f = function(){
-    		<%for(i = 0; i < list.size(); i++){%>
-            	<%if(list.get(i).getFoodType().equals("양식")){%>
-		            //we_info 객체 : 양식 데이터
-		            var we_info = {content:'<div><%=list.get(i).getStoreName()%><div>',         
-		            latlng: new kakao.maps.LatLng(<%=list.get(i).getLatutude()%>, <%=list.get(i).getLongitude()%>) };   
-		                        
-		            western.push(we_info);
-				    var con = {content : '<div class="wrap">' + 
-				            '    <div class="info">' + 
-				            '        <div class="title">' + 
-				            '            <%=list.get(i).getStoreName()%>' + 
-				            '            <div class="close" id="close_overlay" title="닫기"></div>' + 
-				            '        </div>' + 
-				            '        <div class="body">' + 
-				            '            <div class="img">' +
-				            '                <img src="http://t1.daumcdn.net/friends/prod/editor/dc8b3d02-a15a-4afa-a88b-989cf2a50476.jpg" width="73" height="70">' +
-				            '           </div>' + 
-				            '            <div class="desc">' + 
-				            '                <div class="ellipsis"><%=list.get(i).getStoreAddress()%></div>' + 
-				            '                <div><a href="<%=list.get(i).getUrl()%>" target="_blank" class="link">홈페이지</a></div>' + 
-				            '            </div>' + 
-				            '        </div>' + 
-				            '    </div>' +    
-				            '</div>'
-		            };
-		            contents.push(con);
-		            
-			     <%}%>
-			<%}%>		
-		            
-		    map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-		    
-		    for (let i = 0; i < western.length; i ++) {
-		        // 마커를 생성합니다
-		        var marker = new kakao.maps.Marker({
-		              map: map, // 마커를 표시할 지도
-		              position: western[i].latlng // 마커의 위치
-		                       
-		      	});
-		        
+        
+        
+        
+        
+         /* ------- 전체 식당 가져오는 함수 ------- */
+		//문제 : '전체' 버튼 클릭하기 전에는 마커 클릭해도 오버레이 안떠
+		 window.onload = function(){
+			 var overlay = new kakao.maps.CustomOverlay({zIndex:1})
+				console.log('page load')
+				// 카테고리별로 마커를 새로 찍기 위해 지도 다시 생성
+				$('#map').empty();
+			    map = new kakao.maps.Map(mapContainer, mapOption);
+				
+				//아까 만든 배열 길이만큼 반복
+			    for (let i = 0; i < allMarkers.length; i ++) {
+			        // 마커를 생성합니다
+			        var marker = new kakao.maps.Marker({
+			              map: map, 						// 마커를 표시할 지도
+			              position: allMarkers[i].latlng 	// 마커의 위치
+			                       
+			      	});
+			         /* 기존 코드 위치  */
+				    /* 문제 : 다른 마커 클릭하하면 기존 오버레이 삭제되어야 하는데 그 기능 안됨 --> 중복되어 나오고 오버레이 하나 닫으면 다른것까지 다 닫힘*/
+				        //마커 클릭하면 오버레이 생성	         
+				        kakao.maps.event.addListener(marker, 'click', function() {
+					         // 마커 위에 커스텀오버레이를 표시합니다
+							// 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
+							 overlay.setMap(null);
+					         overlay = new kakao.maps.CustomOverlay({
+					             content: contents[i].content,
+					             position: allMarkers[i].latlng
+					         });
+					         overlay.setMap(map);
+						});
+				     } 	
+			}
+		
+        let all_f = function(){
+        	
+        	var overlay = new kakao.maps.CustomOverlay({zIndex:1})
+	        <%for(i = 0; i < list.size(); i++){%>
+ 				var all = {content:'<div><%=list.get(i).getStoreName()%><div>',         
+ 				latlng: new kakao.maps.LatLng(<%=list.get(i).getLatutude()%>, <%=list.get(i).getLongitude()%>) };   
+ 				allMarkers.push(all);
+			    var con = {content : '<div class="wrap">' + 
+			            '    <div class="info">' + 
+			            '        <div class="title">' + 
+			            '            <%=list.get(i).getStoreName()%>' + 
+			            '            <div class="close" onclick="close_overlay()" title="닫기"></div>' + 
+			            '        </div>' + 
+			            '        <div class="body">' + 
+			            '            <div class="img">' +
+			            '                <img src="http://t1.daumcdn.net/friends/prod/editor/dc8b3d02-a15a-4afa-a88b-989cf2a50476.jpg" width="73" height="70">' +
+			            '           </div>' + 
+			            '            <div class="desc">' + 
+			            '                <div class="ellipsis"><%=list.get(i).getStoreAddress()%></div>' + 
+			            '                <div><a href="<%=list.get(i).getUrl()%>" target="_blank" class="link">홈페이지</a></div>' + 
+			            '            </div>' + 
+			            '        </div>' + 
+			            '    </div>' +    
+			            '</div>'
+	            };
+	            contents.push(con);
+		  
+		<%}%>		
+		$('#map').empty();
+	    map = new kakao.maps.Map(mapContainer, mapOption);
+		
+	    for (let i = 0; i < allMarkers.length; i ++) {
+	        var marker = new kakao.maps.Marker({
+	              map: map, 						
+	              position: allMarkers[i].latlng 
+	                       
+	      	});
+	        
+       
 		        kakao.maps.event.addListener(marker, 'click', function() {
-		        	
-			         var overlay = new kakao.maps.CustomOverlay({
+		        	 overlay.setMap(null);
+				     overlay = new kakao.maps.CustomOverlay({
 			             content: contents[i].content,
-			             position: western[i].latlng
+			             position: allMarkers[i].latlng
 			         });
-			         overlay.setMap(map);
-				    });
-					// 마커를 클릭했을 때 커스텀 오버레이를 표시합니다	
-				    $(document).on('click','#close_overlay',function(){				    	
-				    	overlay.setMap(null); 
+		        	 overlay.setMap(map);
 				});
 		     } 
-        }
+		} 
+
      
-        /* ------- 일식 식당 가져오는 함수 ------- */
-        let japanese_f = function(){
-
-    		<%for(i = 0; i < list.size(); i++){%>
-            	<%if(list.get(i).getFoodType().equals("일식")){%>
-		            //ja_info 객체 : 일식 데이터
-		            var ja_info = {content:'<div><%=list.get(i).getStoreName()%><div>',         
-		            latlng: new kakao.maps.LatLng(<%=list.get(i).getLatutude()%>, <%=list.get(i).getLongitude()%>) };   
-		                        
-		            japanese.push(ja_info);
-		            
-				    var con = {content : '<div class="wrap">' + 
-				            '    <div class="info">' + 
-				            '        <div class="title">' + 
-				            '            <%=list.get(i).getStoreName()%>' + 
-				            '            <div class="close" id="close_overlay" title="닫기"></div>' + 
-				            '        </div>' + 
-				            '        <div class="body">' + 
-				            '            <div class="img">' +
-				            '                <img src="http://t1.daumcdn.net/friends/prod/editor/dc8b3d02-a15a-4afa-a88b-989cf2a50476.jpg" width="73" height="70">' +
-				            '           </div>' + 
-				            '            <div class="desc">' + 
-				            '                <div class="ellipsis"><%=list.get(i).getStoreAddress()%></div>' + 
-				            '                <div><a href="<%=list.get(i).getUrl()%>" target="_blank" class="link">홈페이지</a></div>' + 
-				            '            </div>' + 
-				            '        </div>' + 
-				            '    </div>' +    
-				            '</div>'
-		            };
-		            contents.push(con);
-		            
-			     <%}%>
-			<%}%>		
-		            
-		    map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-		    for (let i = 0; i < japanese.length; i ++) {
-		        // 마커를 생성합니다
-		        var marker = new kakao.maps.Marker({
-		              map: map, // 마커를 표시할 지도
-		              position: japanese[i].latlng // 마커의 위치
-		                       
-		      	});
-		        
-		        kakao.maps.event.addListener(marker, 'click', function() {
-			         var overlay = new kakao.maps.CustomOverlay({
-			             content: contents[i].content,
-			             position: japanese[i].latlng
-			         });
-			         overlay.setMap(map);
-			         
-					// 마커를 클릭했을 때 커스텀 오버레이를 표시합니다	
-				    $(document).on('click','#close_overlay',function(){
-
-				    	overlay.setMap(null); 
-
-				    });
-				});
-		     } 
-        }
-        
-        /* ------- 분식 식당 가져오는 함수 ------- */
-        let school_f = function(){
-
-    		<%for(i = 0; i < list.size(); i++){%>
-            	<%if(list.get(i).getFoodType().equals("분식")){%>
-		            //sc_info 객체 : 분식 데이터
-		            var sc_info = {content:'<div><%=list.get(i).getStoreName()%><div>',         
-		            latlng: new kakao.maps.LatLng(<%=list.get(i).getLatutude()%>, <%=list.get(i).getLongitude()%>) };   
-		                        
-		            school.push(sc_info);
-				    var con = {content : '<div class="wrap">' + 
-				            '    <div class="info">' + 
-				            '        <div class="title">' + 
-				            '            <%=list.get(i).getStoreName()%>' + 
-				            '            <div class="close" id="close_overlay" title="닫기"></div>' + 
-				            '        </div>' + 
-				            '        <div class="body">' + 
-				            '            <div class="img">' +
-				            '                <img src="http://t1.daumcdn.net/friends/prod/editor/dc8b3d02-a15a-4afa-a88b-989cf2a50476.jpg" width="73" height="70">' +
-				            '           </div>' + 
-				            '            <div class="desc">' + 
-				            '                <div class="ellipsis"><%=list.get(i).getStoreAddress()%></div>' + 
-				            '                <div><a href="<%=list.get(i).getUrl()%>" target="_blank" class="link">홈페이지</a></div>' + 
-				            '            </div>' + 
-				            '        </div>' + 
-				            '    </div>' +    
-				            '</div>'
-		            };
-		            contents.push(con);
-		            
-			     <%}%>
-			<%}%>		
-		            
-		    map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-		    for (let i = 0; i < school.length; i ++) {
-		        // 마커를 생성합니다
-		        var marker = new kakao.maps.Marker({
-		              map: map, // 마커를 표시할 지도
-		              position: school[i].latlng // 마커의 위치
-		      	});
-		         
-		        kakao.maps.event.addListener(marker, 'click', function() {
-			         var overlay = new kakao.maps.CustomOverlay({
-			             content: contents[i].content,
-			             position: school[i].latlng
-			         });
-			         overlay.setMap(map);
-			         
-					// 마커를 클릭했을 때 커스텀 오버레이를 표시합니다	
-				    $(document).on('click','#close_overlay',function(){
-
-				    	overlay.setMap(null); 
-
-				    });
-				});
-		     } 
-
-        }
-        
-        /* ------- 야식 식당 가져오는 함수 ------- */
-        let midnight_f = function(){
-
-    		<%for(i = 0; i < list.size(); i++){%>
-            	<%if(list.get(i).getFoodType().equals("야식")){%>
-		            //mi_info 객체 : 야식 데이터
-		            var mi_info = {content:'<div><%=list.get(i).getStoreName()%><div>',         
-		            latlng: new kakao.maps.LatLng(<%=list.get(i).getLatutude()%>, <%=list.get(i).getLongitude()%>) };   
-		                        
-		            midnight.push(mi_info);
-				    var con = {content : '<div class="wrap">' + 
-				            '    <div class="info">' + 
-				            '        <div class="title">' + 
-				            '            <%=list.get(i).getStoreName()%>' + 
-				            '            <div class="close" id="close_overlay" title="닫기"></div>' + 
-				            '        </div>' + 
-				            '        <div class="body">' + 
-				            '            <div class="img">' +
-				            '                <img src="http://t1.daumcdn.net/friends/prod/editor/dc8b3d02-a15a-4afa-a88b-989cf2a50476.jpg" width="73" height="70">' +
-				            '           </div>' + 
-				            '            <div class="desc">' + 
-				            '                <div class="ellipsis"><%=list.get(i).getStoreAddress()%></div>' + 
-				            '                <div><a href="<%=list.get(i).getUrl()%>" target="_blank" class="link">홈페이지</a></div>' + 
-				            '            </div>' + 
-				            '        </div>' + 
-				            '    </div>' +    
-				            '</div>'
-		            };
-		            contents.push(con);
-		            
-			     <%}%>
-			<%}%>		
-		            
-		    map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-		    for (let i = 0; i < midnight.length; i ++) {
-		        // 마커를 생성합니다
-		        var marker = new kakao.maps.Marker({
-		              map: map, // 마커를 표시할 지도
-		              position: midnight[i].latlng // 마커의 위치
-		      	});
-		         
-		        kakao.maps.event.addListener(marker, 'click', function() {
-			         var overlay = new kakao.maps.CustomOverlay({
-			             content: contents[i].content,
-			             position: midnight[i].latlng
-			         });
-			         overlay.setMap(map);
-			         
-					// 마커를 클릭했을 때 커스텀 오버레이를 표시합니다	
-				    $(document).on('click','#close_overlay',function(){
-
-				    	overlay.setMap(null); 
-
-				    });
-				});
-		     } 
-
-        }
-        
-        /* ------- 카페 가져오는 함수 ------- */
-        let cafe_f = function(){
-
-    		<%for(i = 0; i < list.size(); i++){%>
-            	<%if(list.get(i).getFoodType().equals("카페")){%>
-		            //ca_info 객체 : 카페 데이터
-		            var ca_info = {content:'<div><%=list.get(i).getStoreName()%><div>',         
-		            latlng: new kakao.maps.LatLng(<%=list.get(i).getLatutude()%>, <%=list.get(i).getLongitude()%>) };   
-		                        
-		            cafe.push(ca_info);
-		            
-				    var con = {content : '<div class="wrap">' + 
-				            '    <div class="info">' + 
-				            '        <div class="title">' + 
-				            '            <%=list.get(i).getStoreName()%>' + 
-				            '            <div class="close" id="close_overlay" title="닫기"></div>' + 
-				            '        </div>' + 
-				            '        <div class="body">' + 
-				            '            <div class="img">' +
-				            '                <img src="http://t1.daumcdn.net/friends/prod/editor/dc8b3d02-a15a-4afa-a88b-989cf2a50476.jpg" width="73" height="70">' +
-				            '           </div>' + 
-				            '            <div class="desc">' + 
-				            '                <div class="ellipsis"><%=list.get(i).getStoreAddress()%></div>' + 
-				            '                <div><a href="<%=list.get(i).getUrl()%>" target="_blank" class="link">홈페이지</a></div>' + 
-				            '            </div>' + 
-				            '        </div>' + 
-				            '    </div>' +    
-				            '</div>'
-		            };
-		            contents.push(con);
-		            
-			     <%}%>
-			<%}%>		
-		            
-		    map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-		    for (let i = 0; i < cafe.length; i ++) {
-		        // 마커를 생성합니다
-		        var marker = new kakao.maps.Marker({
-		              map: map, // 마커를 표시할 지도
-		              position: cafe[i].latlng // 마커의 위치
-		                       
-		      	});
-		        
-		        kakao.maps.event.addListener(marker, 'click', function() {
-			         var overlay = new kakao.maps.CustomOverlay({
-			             content: contents[i].content,
-			             position: cafe[i].latlng
-			         });
-			         overlay.setMap(map);
-			         
-					// 마커를 클릭했을 때 커스텀 오버레이를 표시합니다	
-				    $(document).on('click','#close_overlay',function(){
-
-				    	overlay.setMap(null); 
-
-				    });
-				});
-		     } 
-        } 
-        
         /* ------ 검색 기능 ------ */
         // 키워드로 장소를 검색합니다
 		searchPlaces();
@@ -872,27 +544,28 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
  		});
  		
         kor.addEventListener('click', function(){
-        	korean_f();
+        	//korean_f();
+        	filter_data(kor.value);
         });
 
          wes.addEventListener('click', function(){
-        	western_f();
+        	filter_data(wes.value);
         });
         
          jap.addEventListener('click', function(){
-        	japanese_f();
+        	filter_data(jap.value);
         });
         
         sch.addEventListener('click', function(){
-        	school_f();
+        	filter_data(sch.value);
         });
         
         mid.addEventListener('click', function(){
-        	midnight_f();
+        	filter_data(mid.value);
         });
         
         caf.addEventListener('click', function(){
-        	cafe_f();
+        	filter_data(caf.value);
         });
 
       </script>

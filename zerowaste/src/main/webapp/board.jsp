@@ -113,8 +113,8 @@
 			<li class="t-center m-b-13"><a href="GoBoard?page=1"
 				class="txt19">리뷰 & 인증 </a></li>
 
-			<li class="t-center m-b-13"><a href="GoRegi?page=1"
-				class="txt19">매장 등록 </a></li>
+			<li class="t-center m-b-13"><a href="GoRegi" class="txt19">매장
+					등록 </a></li>
 
 			<li class="t-center">
 				<!-- Button3 --> <a href="GoLogout"

@@ -108,8 +108,8 @@
 			<li class="t-center m-b-13"><a href="GoBoard?page=1"
 				class="txt19">리뷰 & 인증 </a></li>
 
-			<li class="t-center m-b-13"><a href="GoRegi?page=1"
-				class="txt19">매장 등록 </a></li>
+			<li class="t-center m-b-13"><a href="GoRegi" class="txt19">매장
+					등록 </a></li>
 
 			<li class="t-center">
 				<!-- Button3 --> <a href="GoLogout"
@@ -155,6 +155,7 @@
 					<a href="CouponService"
 						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
 				</div>
+				<br> <br> <br>
 			</div>
 
 			<!-- - -->
@@ -164,9 +165,9 @@
 				<br>
 				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
 					<!-- Button3 -->
-					<a href="CouponService" type="hidden"
-						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
+					<a class="flex-c-m size13 txt11 trans-0-4"></a>
 				</div>
+				<br> <br> <br>
 			</div>
 
 			<!-- - -->
@@ -174,26 +175,29 @@
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
 				<img src="images/coupon_3000.jpg" alt="IMG-GALLERY"> <br>
 				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a class="flex-c-m size13 txt11 trans-0-4"></a>
+				</div>
+				<br> <br> <br>
 			</div>
 
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_5000.jpg" alt="IMG-GALLERY"> <br>
-				<br>
+				<img src="images/coupon_5000.jpg" alt="IMG-GALLERY">
 			</div>
 
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_7000.jpg" alt="IMG-GALLERY"> <br>
-				<br>
+				<img src="images/coupon_7000.jpg" alt="IMG-GALLERY">
 			</div>
+
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_10000.jpg" alt="IMG-GALLERY"> <br>
-				<br>
+				<img src="images/coupon_10000.jpg" alt="IMG-GALLERY">
 			</div>
 		</div>
 	</div>
@@ -216,7 +220,13 @@
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_1000.jpg" alt="IMG-GALLERY">
+				<img src="images/coupon_1000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a class="flex-c-m size13 txt11 trans-0-4"></a>
+				</div>
+				<br> <br> <br>
 			</div>
 
 			<!-- - -->
@@ -229,12 +239,19 @@
 					<a href="CouponService"
 						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
 				</div>
+				<br> <br> <br>
 			</div>
 
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_3000.jpg" alt="IMG-GALLERY">
+				<img src="images/coupon_3000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a class="flex-c-m size13 txt11 trans-0-4"></a>
+				</div>
+				<br> <br> <br>
 			</div>
 
 			<!-- - -->
@@ -274,13 +291,25 @@
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_1000.jpg" alt="IMG-GALLERY">
+				<img src="images/coupon_1000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a class="flex-c-m size13 txt11 trans-0-4"></a>
+				</div>
+				<br> <br> <br>
 			</div>
 
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_2000.jpg" alt="IMG-GALLERY">
+				<img src="images/coupon_2000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a class="flex-c-m size13 txt11 trans-0-4"></a>
+				</div>
+				<br> <br> <br>
 			</div>
 
 			<!-- - -->
@@ -293,6 +322,7 @@
 					<a href="CouponService"
 						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
 				</div>
+				<br> <br> <br>
 			</div>
 
 			<!-- - -->
@@ -332,19 +362,37 @@
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_1000.jpg" alt="IMG-GALLERY">
+				<img src="images/coupon_1000.jpg" alt="IMG-GALLERY"><br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a class="flex-c-m size13 txt11 trans-0-4"></a>
+				</div>
+				<br> <br> <br>
 			</div>
 
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_2000.jpg" alt="IMG-GALLERY">
+				<img src="images/coupon_2000.jpg" alt="IMG-GALLERY"><br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a class="flex-c-m size13 txt11 trans-0-4"></a>
+				</div>
+				<br> <br> <br>
 			</div>
 
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_3000.jpg" alt="IMG-GALLERY">
+				<img src="images/coupon_3000.jpg" alt="IMG-GALLERY"><br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a class="flex-c-m size13 txt11 trans-0-4"></a>
+				</div>
+				<br> <br> <br>
 			</div>
 
 			<!-- - -->
@@ -390,19 +438,37 @@
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_1000.jpg" alt="IMG-GALLERY">
+				<img src="images/coupon_1000.jpg" alt="IMG-GALLERY"><br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a class="flex-c-m size13 txt11 trans-0-4"></a>
+				</div>
+				<br> <br> <br>
 			</div>
 
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_2000.jpg" alt="IMG-GALLERY">
+				<img src="images/coupon_2000.jpg" alt="IMG-GALLERY"><br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a class="flex-c-m size13 txt11 trans-0-4"></a>
+				</div>
+				<br> <br> <br>
 			</div>
 
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_3000.jpg" alt="IMG-GALLERY">
+				<img src="images/coupon_3000.jpg" alt="IMG-GALLERY"><br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a class="flex-c-m size13 txt11 trans-0-4"></a>
+				</div>
+				<br> <br> <br>
 			</div>
 
 			<!-- - -->
@@ -448,19 +514,37 @@
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_1000.jpg" alt="IMG-GALLERY">
+				<img src="images/coupon_1000.jpg" alt="IMG-GALLERY"><br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a class="flex-c-m size13 txt11 trans-0-4"></a>
+				</div>
+				<br> <br> <br>
 			</div>
 
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_2000.jpg" alt="IMG-GALLERY">
+				<img src="images/coupon_2000.jpg" alt="IMG-GALLERY"><br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a class="flex-c-m size13 txt11 trans-0-4"></a>
+				</div>
+				<br> <br> <br>
 			</div>
 
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_3000.jpg" alt="IMG-GALLERY">
+				<img src="images/coupon_3000.jpg" alt="IMG-GALLERY"><br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a class="flex-c-m size13 txt11 trans-0-4"></a>
+				</div>
+				<br> <br> <br>
 			</div>
 
 			<!-- - -->
