@@ -78,7 +78,7 @@
 								<li><a href="GoTree">내 나무</a></li>
 
 								<li><a href="GoBoard?page=1">리뷰 & 인증</a></li>
-								
+
 								<li><a href="GoRegi">매장 등록</a></li>
 							</ul>
 						</nav>
@@ -106,14 +106,14 @@
 			<li class="t-center m-b-13"><a href="GoMap" class="txt19">지도</a>
 			</li>
 
-			<li class="t-center m-b-13"><a href="GoTree" class="txt19">내 나무
-					</a></li>
+			<li class="t-center m-b-13"><a href="GoTree" class="txt19">내
+					나무 </a></li>
 
-			<li class="t-center m-b-13"><a href="GoBoard?page=1" class="txt19">리뷰 & 인증
-					</a></li>
-					
-			<li class="t-center m-b-13"><a href="GoRegi" class="txt19">매장 등록
-					</a></li>
+			<li class="t-center m-b-13"><a href="GoBoard?page=1"
+				class="txt19">리뷰 & 인증 </a></li>
+
+			<li class="t-center m-b-13"><a href="GoRegi" class="txt19">매장
+					등록 </a></li>
 			<li class="t-center">
 				<!-- Button3 --> <a href="GoLogout"
 				class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"> 로그아웃 </a>
@@ -139,7 +139,7 @@
 					<div>
 						<!-- Block4 -->
 
-						<div class="blo4" style="text-align:center;">
+						<div class="blo4" style="text-align: center;">
 
 							<!-- - -->
 							<div style="display: inline-block;" id="image_container"
@@ -151,23 +151,35 @@
 							action="UpdateService?CerNum=<%=cvo.getCerNum()%>" method="post"
 							enctype="multipart/form-data">
 
-							<div>
-								<span class="txt9"> 영수증 사진 등록 </span> <span class="txt99">(* 필수 정보입니다.)</span>
-									
+							<div class="m-b-20">
+
+
+								<div style="display: inline-block;">
+									<span class="txt9"> 영수증 사진 등록 </span> <span class="txt99">(*
+										필수 정보입니다.)</span>
 									<div>
 										<input type="file" name="fileNameCopy"
-										class="m-t-3 m-b-23">
+											onchange="setThumbnai(event);" class="m-t-3 m-b-23 file">
+										<div class="fileSize"></div>
 									</div>
-									
-									<span class="txt9"> 음식 사진 </span> <span class="txt99">(* 필수 정보입니다.)</span>
-									
+
+								</div>
+
+
+								<div style="display: inline-block;">
+									<span class="txt9"> 음식 사진 </span> <span class="txt99">(*
+										필수 정보입니다.)</span>
 									<div>
 										<input type="file" name="fileName"
-										onchange="setThumbnail(event);" class="m-t-3 m-b-23">
+											onchange="setThumbnail(event);" class="m-t-3 m-b-23 file">
+										<div class="fileSize1"></div>
 									</div>
+
+								</div>
+
 							</div>
 
-							
+
 
 							<div>
 								<span class="txt9"> 제목 </span>
@@ -261,8 +273,9 @@
 						</div>
 						<div class="wrap-btn-booking flex-c-m m-t-6">
 							<!-- Button3 -->
-							<a href="GoBoard?page=1" class="btn3 flex-c-m size13 txt11 trans-0-4">목록 돌아가기</a>
-							<br> <br> <br> <br>
+							<a href="GoBoard?page=1"
+								class="btn3 flex-c-m size13 txt11 trans-0-4">목록 돌아가기</a> <br>
+							<br> <br> <br>
 						</div>
 					</div>
 				</div>
@@ -320,29 +333,50 @@
 
 
 	<script>
-							function setThumbnail(event){
-								var reader = new FileReader();
+		function setThumbnai(event) {
+			var reader = new FileReader();
 
-								
+			reader.onload = function(event) {
+				var div = document.querySelector('div.fileSize');
+				var target = document.querySelector("div.fileSize");
 
-								reader.onload = function(event){
-									var target = document.querySelector("div#image_container");
+				var img = document.createElement("img");
 
-									var img = document.createElement("img");
+				img.setAttribute("src", event.target.result);
+				img.style.width = '200px';
+				img.style.height = '200px';
+				target.innerHTML = '';
 
-									img.setAttribute("src", event.target.result);
+				target.append(img);
 
+			};
 
-						                        target.innerHTML = '';
+			reader.readAsDataURL(event.target.files[0]);
 
-									target.append(img);
+		}
 
-								};
+		function setThumbnail(event) {
+			var reader = new FileReader();
 
-								reader.readAsDataURL(event.target.files[0]);
+			reader.onload = function(event) {
+				var div = document.querySelector('div.fileSize1');
+				var target = document.querySelector("div.fileSize1");
 
-							}	
-							</script>
+				var img = document.createElement("img");
+
+				img.setAttribute("src", event.target.result);
+				img.style.width = '200px';
+				img.style.height = '200px';
+				target.innerHTML = '';
+
+				target.append(img);
+
+			};
+
+			reader.readAsDataURL(event.target.files[0]);
+
+		}
+	</script>
 
 
 

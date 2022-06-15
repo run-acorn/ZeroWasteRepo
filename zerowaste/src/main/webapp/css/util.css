@@ -10852,9 +10852,18 @@ span>span#ingredient2 {
 
 span#ingredient2 {
     font-family: 'twayfly';
-    color: #f5d654;
+    color: #82cbff ;
+    text-shadow: 2px 2px 2px #111;
 }
 
 span>span{
 	font-family:'twayfly';
+}
+
+
+span#maintxt1{
+	font-family:'twayfly';
+	font-size: 100%;
+	color: white;
+	
 }
