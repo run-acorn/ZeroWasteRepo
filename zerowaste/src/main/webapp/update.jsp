@@ -138,11 +138,9 @@
 				<div>
 					<div>
 						<!-- Block4 -->
-<<<<<<< HEAD
-						<div class="blo4 p-b-62">
-=======
+
 						<div class="blo4" style="text-align:center;">
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-6/ZeroWasteRepo
+
 							<!-- - -->
 							<div style="display: inline-block;" id="image_container"
 								class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative"></div>
