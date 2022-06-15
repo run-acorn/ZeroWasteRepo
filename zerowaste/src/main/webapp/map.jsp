@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Menu</title>
+<title>Map</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -65,21 +65,23 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
                </div>
 
                <!-- Menu -->
-               <div class="wrap_menu p-l-45 p-l-0-xl">
-                  <nav class="menu">
-                     <ul class="main_menu">
-                        <li><a href="GoMain">홈</a></li>
+					<div class="wrap_menu p-l-45 p-l-0-xl">
+						<nav class="menu">
+							<ul class="main_menu">
+								<li><a href="GoMain">홈</a></li>
 
-                        <li><a href="GoMap">지도</a></li>
+								<li><a href="GoTuto">튜토리얼</a></li>
 
-                        <li><a href="GoTree">내 나무</a></li>
+								<li><a href="GoMap">지도</a></li>
 
-                        <li><a href="GoBoard?page=1">리뷰 & 인증</a></li>
-                        
-                        <li><a href="GoRegi">매장 등록</a></li>
-                     </ul>
-                  </nav>
-               </div>
+								<li><a href="GoTree">내 나무</a></li>
+
+								<li><a href="GoBoard?page=1">리뷰 & 인증</a></li>
+
+								<li><a href="GoRegi">매장 등록</a></li>
+							</ul>
+						</nav>
+					</div>
 
                <!-- Social -->
                <div class="social flex-w flex-l-m p-r-20">
@@ -91,34 +93,36 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
    </header>
 
    <!-- Sidebar -->
-   <aside class="sidebar trans-0-4">
-      <!-- Button Hide sidebar -->
-      <button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>
+	<aside class="sidebar trans-0-4">
+		<!-- Button Hide sidebar -->
+		<button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>
 
-      <!-- - -->
-      <ul class="menu-sidebar p-t-95 p-b-70">
-         <li class="t-center m-b-13"><a href="GoMain" class="txt19">홈</a>
-         </li>
+		<!-- - -->
+		<ul class="menu-sidebar p-t-95 p-b-70">
+			<li class="t-center m-b-13"><a href="GoMain" class="txt19">홈</a>
+			</li>
 
-         <li class="t-center m-b-13"><a href="GoMap" class="txt19">지도</a>
-         </li>
+			<li class="t-center m-b-13"><a href="GoTuto" class="txt19">튜토리얼</a>
+			</li>
 
-         <li class="t-center m-b-13"><a href="GoTree" class="txt19">내 나무
-               </a></li>
+			<li class="t-center m-b-13"><a href="GoMap" class="txt19">지도</a>
+			</li>
 
-         <li class="t-center m-b-13"><a href="GoBoard?page=1" class="txt19">리뷰 & 인증
-               </a></li>
-               
-         <li class="t-center m-b-13"><a href="GoRegi" class="txt19">매장 등록
-               </a></li>
+			<li class="t-center m-b-13"><a href="GoTree" class="txt19">내
+					나무 </a></li>
 
-         <li class="t-center">
-            <!-- Button3 --> <a href="GoLogout"
-            class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"> 로그아웃
-               </a>
-         </li>
-      </ul>
-   </aside>
+			<li class="t-center m-b-13"><a href="GoBoard?page=1"
+				class="txt19">리뷰 & 인증 </a></li>
+
+			<li class="t-center m-b-13"><a href="GoRegi" class="txt19">매장
+					등록 </a></li>
+
+			<li class="t-center">
+				<!-- Button3 --> <a href="GoLogout"
+				class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"> 로그아웃 </a>
+			</li>
+		</ul>
+	</aside>
 
    <!-- Title Page -->
    <section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15"

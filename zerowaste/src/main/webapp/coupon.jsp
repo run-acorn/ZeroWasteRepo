@@ -51,6 +51,7 @@
 	UserVO login = (UserVO) session.getAttribute("login");
 	%>
 	<!-- Header -->
+	<!-- Header -->
 	<header>
 		<!-- Header desktop -->
 		<div class="wrap-menu-header gradient1 trans-0-4">
@@ -58,8 +59,8 @@
 				<div class="wrap_header trans-0-3">
 					<!-- Logo -->
 					<div class="logo">
-						<a href="index.jsp"> <img src="images/icons/logo.png"
-							alt="IMG-LOGO" data-logofixed="images/icons/logo2.png">
+						<a href="GoMain"> <img src="images/icons/logo.png"
+							alt="IMG-LOGO" data-logofixed="images/icons/logo.png">
 						</a>
 					</div>
 
@@ -68,6 +69,8 @@
 						<nav class="menu">
 							<ul class="main_menu">
 								<li><a href="GoMain">홈</a></li>
+
+								<li><a href="GoTuto">튜토리얼</a></li>
 
 								<li><a href="GoMap">지도</a></li>
 
@@ -97,6 +100,9 @@
 		<!-- - -->
 		<ul class="menu-sidebar p-t-95 p-b-70">
 			<li class="t-center m-b-13"><a href="GoMain" class="txt19">홈</a>
+			</li>
+
+			<li class="t-center m-b-13"><a href="GoTuto" class="txt19">튜토리얼</a>
 			</li>
 
 			<li class="t-center m-b-13"><a href="GoMap" class="txt19">지도</a>
