@@ -67,8 +67,12 @@
 
 						<span class=" animated caption2-slide1 visible-false"
 							id="maintxt1" data-appear="fadeInUp"> 제로웨이스트 라이프 스타일을 실천 할
-							수 있게 다회용기 포장을 지원하는 매장을 안내하는 서비스를 지원합니다. </span> 
-							<br>
+							수 있게 다회용기 포장을 지원하는 매장을 안내하는 서비스를 지원합니다. </span>
+							 <br>
+						
+
+
+
 						<div class="wrap-btn-slide1 animated visible-false"
 							data-appear="zoomIn">
 							<!-- Button1 -->
@@ -257,6 +261,11 @@
 						<h2
 							class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
 							data-appear="fadeInUp">Zero Waste World</h2>
+							
+							<span class=" animated caption2-slide1 visible-false"
+							id="maintxt1" data-appear="fadeInUp"> 제로웨이스트 라이프 스타일을 실천 할
+							수 있게 다회용기 포장을 지원하는 매장을 안내하는 서비스를 지원합니다. </span>
+							 <br>
 
 						<div class="wrap-btn-slide1 animated visible-false"
 							data-appear="zoomIn"></div>
