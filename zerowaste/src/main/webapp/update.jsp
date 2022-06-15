@@ -138,7 +138,7 @@
 				<div>
 					<div>
 						<!-- Block4 -->
-						<div class="blo4 p-b-63">
+						<div class="blo4 p-b-62">
 							<!-- - -->
 							<div id="image_container"
 								class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative"></div>
@@ -148,8 +148,6 @@
 						<form class="leave-comment p-t-10 p-b-30"
 							action="UpdateService?CerNum=<%=cvo.getCerNum()%>" method="post"
 							enctype="multipart/form-data">
-
-							<h4 class="txt33 t-center p-b-14">리뷰 수정</h4>
 
 							<div>
 								<span class="txt9"> 영수증 사진 등록 </span> <span class="txt99">(* 필수 정보입니다.)</span>
@@ -248,13 +246,11 @@
 				<div>
 					<div>
 						<!-- Block4 -->
-						<div class="blo4 p-b-63">
+						<div class="blo4 p-b-62">
 							<!-- - -->
 							<div id="image_container"
 								class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative"></div>
 						</div>
-
-						<h4 class="txt33 p-b-14 t-center">리뷰 상세보기</h4>
 
 						<div class="container">
 							<img src="reviewImg/<%=cvo.getFileName()%>" alt="IMG-BLOG">

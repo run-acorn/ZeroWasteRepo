@@ -130,7 +130,7 @@
 				<div>
 					<div>
 						<!-- Block4 -->
-						<div class="blo4 p-b-63">
+						<div class="blo4 p-b-62">
 							<!-- - -->
 							<div id="image_container"
 								class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative"></div>
@@ -141,8 +141,6 @@
 							action="WriteService" method="post" enctype="multipart/form-data">
 
 							<div>
-							
-								<h4 class="txt33 t-center p-b-14">리뷰 작성</h4>
 							
 								<div>
 									<span class="txt9"> 영수증 사진 등록 </span> <span class="txt99">(* 필수 정보입니다.)</span>
