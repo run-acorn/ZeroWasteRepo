@@ -65,23 +65,21 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
                </div>
 
                <!-- Menu -->
-					<div class="wrap_menu p-l-45 p-l-0-xl">
-						<nav class="menu">
-							<ul class="main_menu">
-								<li><a href="GoMain">홈</a></li>
+               <div class="wrap_menu p-l-45 p-l-0-xl">
+                  <nav class="menu">
+                     <ul class="main_menu">
+                        <li><a href="GoMain">홈</a></li>
 
-								<li><a href="GoTuto">튜토리얼</a></li>
+                        <li><a href="GoMap">지도</a></li>
 
-								<li><a href="GoMap">지도</a></li>
+                        <li><a href="GoTree">내 나무</a></li>
 
-								<li><a href="GoTree">내 나무</a></li>
-
-								<li><a href="GoBoard?page=1">리뷰 & 인증</a></li>
-
-								<li><a href="GoRegi">매장 등록</a></li>
-							</ul>
-						</nav>
-					</div>
+                        <li><a href="GoBoard?page=1">리뷰 & 인증</a></li>
+                        
+                        <li><a href="GoRegi">매장 등록</a></li>
+                     </ul>
+                  </nav>
+               </div>
 
                <!-- Social -->
                <div class="social flex-w flex-l-m p-r-20">
@@ -93,36 +91,34 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
    </header>
 
    <!-- Sidebar -->
-	<aside class="sidebar trans-0-4">
-		<!-- Button Hide sidebar -->
-		<button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>
+   <aside class="sidebar trans-0-4">
+      <!-- Button Hide sidebar -->
+      <button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>
 
-		<!-- - -->
-		<ul class="menu-sidebar p-t-95 p-b-70">
-			<li class="t-center m-b-13"><a href="GoMain" class="txt19">홈</a>
-			</li>
+      <!-- - -->
+      <ul class="menu-sidebar p-t-95 p-b-70">
+         <li class="t-center m-b-13"><a href="GoMain" class="txt19">홈</a>
+         </li>
 
-			<li class="t-center m-b-13"><a href="GoTuto" class="txt19">튜토리얼</a>
-			</li>
+         <li class="t-center m-b-13"><a href="GoMap" class="txt19">지도</a>
+         </li>
 
-			<li class="t-center m-b-13"><a href="GoMap" class="txt19">지도</a>
-			</li>
+         <li class="t-center m-b-13"><a href="GoTree" class="txt19">내 나무
+               </a></li>
 
-			<li class="t-center m-b-13"><a href="GoTree" class="txt19">내
-					나무 </a></li>
+         <li class="t-center m-b-13"><a href="GoBoard?page=1" class="txt19">리뷰 & 인증
+               </a></li>
+               
+         <li class="t-center m-b-13"><a href="GoRegi" class="txt19">매장 등록
+               </a></li>
 
-			<li class="t-center m-b-13"><a href="GoBoard?page=1"
-				class="txt19">리뷰 & 인증 </a></li>
-
-			<li class="t-center m-b-13"><a href="GoRegi" class="txt19">매장
-					등록 </a></li>
-
-			<li class="t-center">
-				<!-- Button3 --> <a href="GoLogout"
-				class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"> 로그아웃 </a>
-			</li>
-		</ul>
-	</aside>
+         <li class="t-center">
+            <!-- Button3 --> <a href="GoLogout"
+            class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"> 로그아웃
+               </a>
+         </li>
+      </ul>
+   </aside>
 
    <!-- Title Page -->
    <section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15"
@@ -426,21 +422,41 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 					        // 해당 장소에 인포윈도우에 장소명을 표시합니다
 					        // mouseout 했을 때는 인포윈도우를 닫습니다
 					        (function(marker2, title) {
-					            kakao.maps.event.addListener(marker2, 'mouseover', function() {
-					                displayInfowindow(marker2, title);
+					    		<%for(i = 0; i < list.size(); i++){%>
+					        	if (title==='<%=list.get(i).getStoreName()%>'){
+							
+									var content2 = '<div class="wrap">' + 
+						            '    <div class="info">' + 
+						            '        <div class="title">' + 
+						                         title+ 
+						            '            <div class="close" onclick="close_overlay()" title="닫기"></div>' + 
+						            '        </div>' + 
+						            '        <div class="body">' + 
+						            '            <div class="img">' +
+						            '                <img src="<%=list.get(i).getImageurl()%>" width="73" height="70">'  +
+						            '            </div>' + 
+						            '            <div class="desc">' + 
+						            '                <div class="ellipsis"><%=list.get(i).getStoreAddress()%></div>' + 
+						            '                <div><a href="<%=list.get(i).getUrl()%>" target="_blank" class="link">홈페이지</a></div>' + 
+						            '            </div>' + 
+						            '        </div>' + 
+						            '    </div>' +    
+						            '</div>';
+						        }
+				    	  <%}%>
+					        
+					            kakao.maps.event.addListener(marker2, 'click', function() {
+					           
+
+							 	 	overlay.setMap(null);
+							        overlay = new kakao.maps.CustomOverlay({
+								        content: content2,
+								        position: placePosition
+						         	});
+					     		 	overlay.setMap(map);
 					            });
-		
-					            kakao.maps.event.addListener(marker2, 'mouseout', function() {
-					                infowindow.close();
-					            });
-		
-					            itemEl.onmouseover =  function () {
-					                displayInfowindow(marker2, title);
-					            };
-		
-					            itemEl.onmouseout =  function () {
-					                infowindow.close();
-					            };
+					        
+	
 					        })(marker2, places[i].place_name);
 		
 					        fragment.appendChild(itemEl);
@@ -486,8 +502,6 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		        imageSize = new kakao.maps.Size(24, 35),  // 마커 이미지의 크기
 		        imgOptions =  {
 		            spriteSize : new kakao.maps.Size(24, 35), // 스프라이트 이미지의 크기
-		            /* spriteOrigin : new kakao.maps.Point(0, (idx*46)+10), */ // 스프라이트 이미지 중 사용할 영역의 좌상단 좌표
-		           /*  offset: new kakao.maps.Point(13, 37)  */// 마커 좌표에 일치시킬 이미지 내에서의 좌표
 		        },
 		        markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imgOptions),
 		            marker2 = new kakao.maps.Marker({
@@ -497,6 +511,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 		    marker2.setMap(map); // 지도 위에 마커를 표출합니다
 		    markers.push(marker2);  // 배열에 생성된 마커를 추가합니다
 		    return marker2;
+
 		}
 		// 지도 위에 표시되고 있는 마커를 모두 제거합니다
 		function removeMarker() {
@@ -505,10 +520,12 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 
 		// 검색결과 목록 또는 마커를 클릭했을 때 호출되는 함수입니다
 		// 인포윈도우에 장소명을 표시합니다
+		var overlay = new kakao.maps.CustomOverlay({zIndex:1});
 		function displayInfowindow(marker2, title) {
-		    var content = '<div style="padding:5px;z-index:1;">' + title + '</div>';
-		    infowindow.setContent(content);
-		    infowindow.open(map, marker2);
+
+    	  
+
+
 		}
 		
 		 // 검색결과 목록의 자식 Element를 제거하는 함수입니다
