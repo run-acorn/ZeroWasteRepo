@@ -1,6 +1,6 @@
-<%@page import="com.model.UserVO"%>
 <%@page import="com.model.CertiVO"%>
 <%@page import="java.util.List"%>
+<%@page import="com.model.UserVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -52,12 +52,8 @@
 	List<CertiVO> list = (List<CertiVO>) request.getAttribute("list");
 
 	UserVO login = (UserVO) session.getAttribute("login");
-	
-	int board = (int) request.getAttribute("board");
-	%>
 
-	<%
-	if (login != null) {
+	int board = (int) request.getAttribute("board");
 	%>
 	<!-- Header -->
 	<header>
@@ -83,7 +79,7 @@
 								<li><a href="GoTree">내 나무</a></li>
 
 								<li><a href="GoBoard?page=1">리뷰 & 인증</a></li>
-								
+
 								<li><a href="GoRegi">매장 등록</a></li>
 							</ul>
 						</nav>
@@ -111,15 +107,14 @@
 			<li class="t-center m-b-13"><a href="GoMap" class="txt19">지도</a>
 			</li>
 
-			<li class="t-center m-b-13"><a href="GoTree" class="txt19">내 나무
-					</a></li>
+			<li class="t-center m-b-13"><a href="GoTree" class="txt19">내
+					나무 </a></li>
 
-			<li class="t-center m-b-13"><a href="GoBoard?page=1" class="txt19">리뷰 & 인증
-					</a></li>
-					
-			<li class="t-center m-b-13"><a href="GoRegi" class="txt19">매장 등록
-					</a></li>
-			</li>
+			<li class="t-center m-b-13"><a href="GoBoard?page=1"
+				class="txt19">리뷰 & 인증 </a></li>
+
+			<li class="t-center m-b-13"><a href="GoRegi?page=1"
+				class="txt19">매장 등록 </a></li>
 
 			<li class="t-center">
 				<!-- Button3 --> <a href="GoLogout"
@@ -128,82 +123,64 @@
 		</ul>
 	</aside>
 
-
 	<!-- Title Page -->
 	<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15"
-		style="background-image: url(images/bg-title-page-03.jpg);">
-		<h2 class="tit6 t-center texttitle">리뷰 & 인증</h2>
+		style="background-image: url(images/bg-title-page-02.jpg);">
+		<h2 class="tit6 t-center texttitle">쿠폰 받기</h2>
 	</section>
 
-
-	<!-- Content page -->
-	<section>
-		<div class="bread-crumb bo5-b p-t-17 p-b-17">
-			<div class="wrap-btn-booking flex-c-m m-t-6">
-				<!-- Button3 -->
-				<a href="GoWrite" class="btn3 flex-c-m size13 txt11 trans-0-4">리뷰작성하기</a>
-			</div>
+	<!-- Gallery -->
+	<div class="bread-crumb bo5-b p-t-17 p-b-17">
+		<div class="wrap-btn-booking flex-c-m m-t-6"></div>
+		<div class="wrap-btn-booking flex-c-m m-t-6">
+			<!-- Button3 -->
+			<a href="GoWrite" class="btn3 flex-c-m size13 txt11 trans-0-4">리뷰작성하기</a>
 		</div>
-		<br>
-		<div class="container">
-			<div>
-				<div>
-					<div>
-						<!-- Block4 -->
-						<%
-						for (int i = 0; i <= list.size()-1; i++) {
-						%>
-						<div class="blo4 p-b-63">
-							<div class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">
-								<a class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative"
-									href="GoUpdate?CerNum=<%=list.get(i).getCerNum()%>"> <img
-									src="reviewImg/<%=list.get(i).getFileName()%>" alt="IMG-BLOG">
-								</a>
-							</div>
-							<div class="text-blo4 p-t-33">
-								<h4 class="p-b-16">
-									<%=list.get(i).getTitle()%>
-								</h4>
+	</div>
 
-								<div class="txt32 flex-w p-b-24">
-									<span> <%=list.get(i).getId()%> <span
-										class="m-r-6 m-l-4">|</span> <span> <%=list.get(i).getStoreName()%>
-											<span class="m-r-6 m-l-4">|</span>
-									</span> <span> <%=list.get(i).getDay()%>
-									</span>
-								</div>
 
-								<p>
-									<%=list.get(i).getReview()%>
-								</p>
-							</div>
-						</div>
-						<%
-						}
-						%>
-						<!-- Pagination -->
-						<div class="pagination flex-l-m flex-w m-l--6 p-t-25">
-							<%for(int i = 0; i < Math.ceil((double)board/10); i++){ %>
-							<a class="item-pagination flex-c-m trans-0-4 active-pagination" 
-							href="GoBoard?page=<%=i*10+1%>"><%=i+1%></a>
-							<%} %>
 
-						</div>
-					</div>
-				</div>
+	<div class="section-gallery p-t-20 p-b-100">
+
+		<div class="wrap-gallery isotope-grid flex-w p-l-25 p-r-25">
+
+			<!-- - -->
+			<%
+			for (int i = 0; i <= list.size() - 1; i++) {
+			%>
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<a href="GoUpdate?CerNum=<%=list.get(i).getCerNum()%>"> <img
+					src="reviewImg/<%=list.get(i).getFileName()%>" alt="IMG-GALLERY">
+				</a> <br> <br>
 			</div>
-		</div>
-	</section>
+			<%
+			}
+			%>
 
+		</div>
+	</div>
+	<!-- Pagination -->
+	<div class="pagination flex-c-m flex-w p-l-15 p-r-15 m-t-24 m-b-20">
+		<%
+		for (int i = 0; i < Math.ceil((double) board / 10); i++) {
+		%>
+		<a class="item-pagination flex-c-m trans-0-4 active-pagination"
+			href="GoBoard?page=<%=i * 10 + 1%>"><%=i + 1%></a>
+		<%
+		}
+		%>
+	</div>
+	<br>
 	<!-- Back to top -->
 	<div class="btn-back-to-top bg0-hov" id="myBtn">
 		<span class="symbol-btn-back-to-top"> <i
 			class="fa fa-angle-double-up" aria-hidden="true"></i>
 		</span>
 	</div>
-	<%
-	}
-	%>
+
+
+
 	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
 	<!--===============================================================================================-->
@@ -238,6 +215,7 @@
 	<script type="text/javascript" src="vendor/isotope/isotope.pkgd.min.js"></script>
 	<!--===============================================================================================-->
 	<script src="js/main.js"></script>
+
 
 </body>
 </html>

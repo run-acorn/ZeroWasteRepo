@@ -138,9 +138,11 @@
 				<div>
 					<div>
 						<!-- Block4 -->
-						<div class="blo4 p-b-63">
+
+						<div class="blo4" style="text-align:center;">
+
 							<!-- - -->
-							<div id="image_container"
+							<div style="display: inline-block;" id="image_container"
 								class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative"></div>
 						</div>
 
@@ -148,8 +150,6 @@
 						<form class="leave-comment p-t-10 p-b-30"
 							action="UpdateService?CerNum=<%=cvo.getCerNum()%>" method="post"
 							enctype="multipart/form-data">
-
-							<h4 class="txt33 t-center p-b-14">리뷰 수정</h4>
 
 							<div>
 								<span class="txt9"> 영수증 사진 등록 </span> <span class="txt99">(* 필수 정보입니다.)</span>
@@ -167,30 +167,7 @@
 									</div>
 							</div>
 
-							<script>
-							function setThumbnail(event){
-								var reader = new FileReader();
-
-								
-
-								reader.onload = function(event){
-									var target = document.querySelector("div#image_container");
-
-									var img = document.createElement("img");
-
-									img.setAttribute("src", event.target.result);
-
-
-						                        target.innerHTML = '';
-
-									target.append(img);
-
-								};
-
-								reader.readAsDataURL(event.target.files[0]);
-
-							}	
-							</script>
+							
 
 							<div>
 								<span class="txt9"> 제목 </span>
@@ -248,13 +225,11 @@
 				<div>
 					<div>
 						<!-- Block4 -->
-						<div class="blo4 p-b-63">
+						<div class="blo4 p-b-62">
 							<!-- - -->
 							<div id="image_container"
 								class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative"></div>
 						</div>
-
-						<h4 class="txt33 p-b-14 t-center">리뷰 상세보기</h4>
 
 						<div class="container">
 							<img src="reviewImg/<%=cvo.getFileName()%>" alt="IMG-BLOG">
@@ -345,18 +320,29 @@
 
 
 	<script>
-		function setThumbnail(event) {
-			var reader = new FileReader();
+							function setThumbnail(event){
+								var reader = new FileReader();
 
-			reader.onload = function(event) {
-				var img = document.createElement("img");
-				img.setAttribute("src", event.target.result);
-				document.querySelector("div#image_container").appendChild(img);
-			};
+								
 
-			reader.readAsDataURL(event.target.files[0]);
-		}
-	</script>
+								reader.onload = function(event){
+									var target = document.querySelector("div#image_container");
+
+									var img = document.createElement("img");
+
+									img.setAttribute("src", event.target.result);
+
+
+						                        target.innerHTML = '';
+
+									target.append(img);
+
+								};
+
+								reader.readAsDataURL(event.target.files[0]);
+
+							}	
+							</script>
 
 
 

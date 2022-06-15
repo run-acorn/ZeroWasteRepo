@@ -133,7 +133,7 @@
 			</p>
 		</div>
 		<div class="wrap-btn-booking flex-c-m m-t-6">
-			<p class="tree txt33">쿠폰 선택 후 나무는 다시 씨앗으로 돌아가니 신중히 선택해 주세요!</p>
+			<p class="tree txt33">쿠폰 선택 후 나무는 다시 새싹으로 돌아가니 신중히 선택해 주세요!</p>
 		</div>
 	</div>
 
@@ -144,6 +144,7 @@
 	<div class="section-gallery p-t-20 p-b-100">
 
 		<div class="wrap-gallery isotope-grid flex-w p-l-25 p-r-25">
+
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
@@ -154,6 +155,45 @@
 					<a href="CouponService"
 						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
 				</div>
+			</div>
+
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_2000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
+				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
+					<!-- Button3 -->
+					<a href="CouponService" type="hidden"
+						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
+				</div>
+			</div>
+
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_3000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
+			</div>
+
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_5000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
+			</div>
+
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_7000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
+			</div>
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_10000.jpg" alt="IMG-GALLERY"> <br>
+				<br>
 			</div>
 		</div>
 	</div>
@@ -176,13 +216,7 @@
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_1000.jpg" alt="IMG-GALLERY"> <br>
-				<br>
-				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
-					<!-- Button3 -->
-					<a href="CouponService"
-						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
-				</div>
+				<img src="images/coupon_1000.jpg" alt="IMG-GALLERY">
 			</div>
 
 			<!-- - -->
@@ -195,6 +229,29 @@
 					<a href="CouponService"
 						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
 				</div>
+			</div>
+
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_3000.jpg" alt="IMG-GALLERY">
+			</div>
+
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_5000.jpg" alt="IMG-GALLERY">
+			</div>
+
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_7000.jpg" alt="IMG-GALLERY">
+			</div>
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_10000.jpg" alt="IMG-GALLERY">
 			</div>
 		</div>
 	</div>
@@ -217,25 +274,13 @@
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_1000.jpg" alt="IMG-GALLERY"> <br>
-				<br>
-				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
-					<!-- Button3 -->
-					<a href="CouponService"
-						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
-				</div>
+				<img src="images/coupon_1000.jpg" alt="IMG-GALLERY">
 			</div>
 
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_2000.jpg" alt="IMG-GALLERY"> <br>
-				<br>
-				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
-					<!-- Button3 -->
-					<a href="CouponService"
-						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
-				</div>
+				<img src="images/coupon_2000.jpg" alt="IMG-GALLERY">
 			</div>
 
 			<!-- - -->
@@ -248,6 +293,23 @@
 					<a href="CouponService"
 						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
 				</div>
+			</div>
+
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_5000.jpg" alt="IMG-GALLERY">
+			</div>
+
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_7000.jpg" alt="IMG-GALLERY">
+			</div>
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_10000.jpg" alt="IMG-GALLERY">
 			</div>
 		</div>
 	</div>
@@ -270,37 +332,19 @@
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_1000.jpg" alt="IMG-GALLERY"> <br>
-				<br>
-				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
-					<!-- Button3 -->
-					<a href="CouponService"
-						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
-				</div>
+				<img src="images/coupon_1000.jpg" alt="IMG-GALLERY">
 			</div>
 
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_2000.jpg" alt="IMG-GALLERY"> <br>
-				<br>
-				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
-					<!-- Button3 -->
-					<a href="CouponService"
-						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
-				</div>
+				<img src="images/coupon_2000.jpg" alt="IMG-GALLERY">
 			</div>
 
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_3000.jpg" alt="IMG-GALLERY"> <br>
-				<br>
-				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
-					<!-- Button3 -->
-					<a href="CouponService"
-						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
-				</div>
+				<img src="images/coupon_3000.jpg" alt="IMG-GALLERY">
 			</div>
 
 			<!-- - -->
@@ -313,6 +357,17 @@
 					<a href="CouponService"
 						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
 				</div>
+			</div>
+
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_7000.jpg" alt="IMG-GALLERY">
+			</div>
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_10000.jpg" alt="IMG-GALLERY">
 			</div>
 		</div>
 	</div>
@@ -335,50 +390,27 @@
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_1000.jpg" alt="IMG-GALLERY"> <br>
-				<br>
-				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
-					<!-- Button3 -->
-					<a href="CouponService"
-						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
-				</div>
+				<img src="images/coupon_1000.jpg" alt="IMG-GALLERY">
 			</div>
 
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_2000.jpg" alt="IMG-GALLERY"> <br>
-				<br>
-				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
-					<!-- Button3 -->
-					<a href="CouponService"
-						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
-				</div>
+				<img src="images/coupon_2000.jpg" alt="IMG-GALLERY">
 			</div>
 
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_3000.jpg" alt="IMG-GALLERY"> <br>
-				<br>
-				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
-					<!-- Button3 -->
-					<a href="CouponService"
-						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
-				</div>
+				<img src="images/coupon_3000.jpg" alt="IMG-GALLERY">
 			</div>
 
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_5000.jpg" alt="IMG-GALLERY"> <br>
-				<br>
-				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
-					<!-- Button3 -->
-					<a href="CouponService"
-						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
-				</div>
+				<img src="images/coupon_5000.jpg" alt="IMG-GALLERY">
 			</div>
+
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
@@ -389,6 +421,11 @@
 					<a href="CouponService"
 						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
 				</div>
+			</div>
+			<!-- - -->
+			<div
+				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
+				<img src="images/coupon_10000.jpg" alt="IMG-GALLERY">
 			</div>
 		</div>
 	</div>
@@ -411,61 +448,31 @@
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_1000.jpg" alt="IMG-GALLERY"> <br>
-				<br>
-				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
-					<!-- Button3 -->
-					<a href="CouponService"
-						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
-				</div>
+				<img src="images/coupon_1000.jpg" alt="IMG-GALLERY">
 			</div>
 
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_2000.jpg" alt="IMG-GALLERY"> <br>
-				<br>
-				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
-					<!-- Button3 -->
-					<a href="CouponService"
-						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
-				</div>
+				<img src="images/coupon_2000.jpg" alt="IMG-GALLERY">
 			</div>
 
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_3000.jpg" alt="IMG-GALLERY"> <br>
-				<br>
-				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
-					<!-- Button3 -->
-					<a href="CouponService"
-						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
-				</div>
+				<img src="images/coupon_3000.jpg" alt="IMG-GALLERY">
 			</div>
 
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_5000.jpg" alt="IMG-GALLERY"> <br>
-				<br>
-				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
-					<!-- Button3 -->
-					<a href="CouponService"
-						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
-				</div>
+				<img src="images/coupon_5000.jpg" alt="IMG-GALLERY">
 			</div>
 
 			<!-- - -->
 			<div
 				class="item-gallery isotope-item bo-rad-10 hov-img-zoom events guests">
-				<img src="images/coupon_7000.jpg" alt="IMG-GALLERY"> <br>
-				<br>
-				<div class="wrap-btn-booking flex-c-m m-l-r-auto">
-					<!-- Button3 -->
-					<a href="CouponService"
-						class="btn3 flex-c-m size13 txt11 trans-0-4">쿠폰 받기</a>
-				</div>
+				<img src="images/coupon_7000.jpg" alt="IMG-GALLERY">
 			</div>
 			<!-- - -->
 			<div

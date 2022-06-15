@@ -124,12 +124,12 @@
 	<!-- Contact form -->
 	<section class="section-contact bg1-pattern p-t-90 p-b-113">
 		<div class="container">
-			<h3 class="tit7 t-center p-b-62 p-t-105">매장 등록</h3>
+			<h3 class="tit7 t-center p-b-62"></h3>
 
 			<form class="wrap-form-reservation size22 m-l-r-auto" action="RegiService" method="get">
 				<div>
 					<div>
-						<span class="txt9"> 매장명 </span> <span class="txt99">(* 필수 정보입니다.)</span>
+						<span class="txt9 p-t-105"> 매장명 </span> <span class="txt99">(* 필수 정보입니다.)</span>
 
 						<div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
 							<input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
