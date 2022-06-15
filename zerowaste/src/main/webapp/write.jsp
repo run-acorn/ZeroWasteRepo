@@ -130,9 +130,9 @@
 				<div>
 					<div>
 						<!-- Block4 -->
-						<div class="blo4 p-b-63">
+						<div class="blo4" style="text-align:center;">
 							<!-- - -->
-							<div id="image_container"
+							<div style="width:700px; height:500px; display: inline-block;" id="image_container"
 								class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative"></div>
 						</div>
 
@@ -262,7 +262,7 @@
 			img.setAttribute("src", event.target.result);
 
 
-                        target.innerHTML = '';
+            target.innerHTML = '';
 
 			target.append(img);
 

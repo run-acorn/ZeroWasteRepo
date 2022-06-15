@@ -1516,7 +1516,7 @@ body {padding-right: 0px !important;}
 
 .item-gallery {
   width: calc( (100% - 140px) / 3 ) ;
-  margin: 30px 15px;
+  margin: 0px 7px 0px 7px;
   position: relative;
 }
 
@@ -1576,8 +1576,8 @@ body {padding-right: 0px !important;}
 }
 
 .item-pagination:hover {
-  background-color: #333333;
-  color: white;
+  background-color: rgb(192, 192, 192);
+  color: #333333;
 }
 
 .active-pagination {
