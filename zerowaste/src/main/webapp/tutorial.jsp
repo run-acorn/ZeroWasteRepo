@@ -131,7 +131,7 @@
 
 	<!-- Zero Waste -->
 	<section class="bg2-pattern t-center p-l-15 p-r-15"
-		style="background-color: #fffff0;">
+		style="background-color: #fffff0">
 
 		<!-- DB데이터 : 사용자 이름 받아오기 -->
 
@@ -139,64 +139,55 @@
 
 
 		<!-- 나무 이미지 넣을 div 태그 -->
-		<div class="tuto" style="width: 100%; height: 100%;">
-			<div class="p-l-15 p-r-15 dis-inline-block">
-				<img class="p-l-15 p-r-15 dis-inline-block" style="width: 700px; height: 500px;"
-					src="images/logo2.png" alt="IMG-OUR">
-			</div>
-			<div class="p-l-15 p-r-15 dis-inline-block p-t-30"
-				style="width: 500px; height: 500px;">
-				<h2>여따 담아조 란?</h2>
-				<span>제로웨이스트 라이프 스타일을 실천 할 수 있게 다회용기 포장을 지원하는 매장을 안내하는 서비스를
-					지원합니다.</span>
-					
-				<h2>여따 담아조 사용방법!!</h2>
-				
-				<p align="left">	
-				<span>stap. 1   </span>
-				<span>매장보러가기 클릭 후 원하는 매장위치를 검색 및 정보를 확인한다.</span>
-				</p>
-				<br>
-				
-				<p align="left">	
-				<span>stap. 2   </span>
-				<span>본인의 용기를 가지고 매장에 가서 음식을 포장해온다.</span>
-				</p>
-				<br>
-				
-				<p align="left">	
-				<span>stap. 3   </span>
-				<span>집에와서 음식사진을 찍고 맛있게 먹는당</span>
-				</p>
-				<br>
-				
-				<p align="left">	
-				<span>stap. 4   </span>
-				<span>영수증 사진과 음식사진을 리뷰 & 인증 페이지에 등록한다.</span>
-				<span>(꼭 두개의 사진을 다 업로드한다.)</span>
-				</p>
-				<br>
-				
-				<p align="left">	
-				<span>stap. 5   </span>
-				<span>내 나무가 자라는걸 확인 후 쿠폰을 사용한드아</span>
-				</p>
-				<br>
-				
-				<p align="left">	
-				<span>stap. 6   </span>
-				<span>여따 담아조를 꾸준하게 이용하여 지구를 지킨닷!!</span>
-				</p>
-				
-				<table align="center">
-				<tr align="center">여따 담아조 사용방법!!</tr>
-				</table>
-				
-
+		<div class="container">
+			<div class="p-l-15 p-r-15"
+				style="width: 700px; height: 500px; float: left">
+				<img class="p-l-15 p-r-15" style="width: 100%; height: 100%;"
+					src="images/logo2.png" alt="IMG-OUR"> 					
 			</div>
 
+			<div class="p-l-15 p-r-15"
+				style="display: inline-block; width: 450px; height: 500px">
+				<br> <br> <br>
+				<h2 class="t-center">홈페이지 이름이 있나??</h2>
+
+				<h2 class="tit2 t-center">홈페이지 사용방법??</h2>
+
+				<p align="left">
+					<strong class="p-r-10" style="font-size: 20px">stap. 1</strong> <span>매장보러가기
+						클릭 후 원하는 매장위치를 확인</span>
+				</p>
+				<br>
+
+				<p align="left">
+					<strong class="p-r-10" style="font-size: 20px">stap. 2</strong> <span>본인의
+						용기를 가지고 매장에 가서 음식 포장</span>
+				</p>
+				<br>
+
+				<p align="left">
+					<strong class="p-r-10" style="font-size: 20px">stap. 3</strong> <span>집에와서
+						음식사진을 찍고 맛있게 먹는당</span>
+				</p>
+				<br>
+
+				<p align="left">
+					<strong class="p-r-10" style="font-size: 20px">stap. 4</strong> <span>영수증
+						사진과 음식사진을 리뷰 & 인증 페이지에 등록</span> <br> <span class="txt99">(*
+						영수증, 음식사진은 필수 입니다.)</span>
+				</p>
+				<br>
+
+				<p align="left">
+					<strong class="p-r-10" style="font-size: 20px">stap. 5</strong> 
+					<span>내 나무에서 쿠폰 사용</span>
+				</p>
+				<br>
+				<a href="GoMain"
+					class="btn3 flex-c-m size1 txt6 trans-0-4" style="margin:auto"> 홈 가기 </a>
+			</div>
 		</div>
-
+		<br> <br>
 	</section>
 
 	<!-- Back to top -->
