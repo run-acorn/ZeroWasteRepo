@@ -9835,6 +9835,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	word-spacing: -2px;
+	text-shadow: 2px 2px 2px #111;
 }
 
 .tit2 {
@@ -9935,6 +9936,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 	font-size: 60px;
 	line-height: 1.1;
 	color: white;
+	text-shadow: 2px 2px 2px #111;
 }
 
 .txt2 {
@@ -10852,7 +10854,7 @@ span>span#ingredient2 {
 
 span#ingredient2 {
     font-family: 'twayfly';
-    color: #f5d654;
+    color: #95d0f3;
     text-shadow: 2px 6px 5px #111;
 }
 
@@ -10865,5 +10867,6 @@ span#maintxt1{
 	font-family:'twayfly';
 	font-size: 100%;
 	color: white;
+	text-shadow: 2px 2px 2px #111;
 	
 }

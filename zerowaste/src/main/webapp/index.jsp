@@ -66,8 +66,7 @@
 							data-appear="fadeInUp">Zero Waste World</h2>
 
 						<span class=" animated caption2-slide1 visible-false"
-							id="maintxt1" data-appear="fadeInUp"> 제로웨이스트 라이프 스타일을 실천 할
-							수 있게 다회용기 포장을 지원하는 매장을 안내하는 서비스를 지원합니다. </span> <br>
+							id="maintxt1" data-appear="fadeInUp"> 집에 있는 다회용기로 음식을 포장해올 수 있는 제로웨이스트 매장을 안내하고 있습니다. </span> <br>
 
 						<div class="wrap-btn-slide1 animated visible-false"
 							data-appear="zoomIn">

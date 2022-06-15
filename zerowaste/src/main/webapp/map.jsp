@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Map</title>
+<title>Menu</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -250,7 +250,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
 			            '        </div>' + 
 			            '    </div>' +    
 			            '</div>'
-	            	       		
+        	       		
 	            };
 	            contents.push(con);
         	}
@@ -280,7 +280,7 @@ List<StoreVO> list = (List<StoreVO>)request.getAttribute("list");
         
         
         
-         /* ------- 전체 식당 가져오는 함수 ------- */
+        /* ------- 전체 식당 가져오는 함수 ------- */
 		//문제 : '전체' 버튼 클릭하기 전에는 마커 클릭해도 오버레이 안떠
 		 window.onload = function(){
 			 var overlay = new kakao.maps.CustomOverlay({zIndex:1})
