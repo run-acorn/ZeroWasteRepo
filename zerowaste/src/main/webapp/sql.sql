@@ -73,7 +73,7 @@ storeName varchar2(50) not null,
 review varchar2(500),
 fileName varchar2(100) not null,
 title varchar2(100) not null,
-day DATE,
+day DATE not null,
 constraint certiInfo_cnum_pk primary key(cerNum),
 constraint certiInfo_id_fk foreign key(id) references userInfo(id)
 );
