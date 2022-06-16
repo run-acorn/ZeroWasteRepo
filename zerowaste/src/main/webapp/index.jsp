@@ -137,8 +137,8 @@
 						<h2
 							class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
 							data-appear="fadeInUp">
-							<span class="ingredient" id="ingredient2">지구</span> <span
-								style="font-family:'twayfly';">를 지킬 수 있습니다</span>
+							<span class="ingredient" id="maintxt2">지구</span> <span
+								id="maintxt3">를 지킬 수 있습니다</span>
 						</h2>
 
 						<div class="wrap-btn-slide1 animated visible-false"
@@ -325,8 +325,8 @@
 						<h2
 							class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
 							data-appear="fadeInUp">
-							<span class="ingredient" id="ingredient2">지구</span> <span
-								style="font-family: 'twayfly';">를 지킬 수 있습니다</span>
+							<span class="ingredient" id="maintxt2">지구</span> <span
+							id="maintxt3">를 지킬 수 있습니다</span>
 						</h2>
 
 						<div class="wrap-btn-slide1 animated visible-false"
