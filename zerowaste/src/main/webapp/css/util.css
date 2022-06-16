@@ -10224,6 +10224,42 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 	letter-spacing: 3px;
 }
 
+.txt330 {
+	font-family: Poppins;
+	font-weight: 600;
+	font-size: 20px;
+	color: #222222;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.txt331 {
+	font-family: Poppins;
+	font-weight: 900;
+	font-size: 27px;
+	color: #008000;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.txt332 {
+	font-family: Poppins;
+	font-weight: 400;
+	font-size: 18px;
+	color: #222222;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.txt333 {
+	font-family: twayfly;
+	font-weight: 900;
+	font-size: 45px;
+	color: #000000;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
 .txt34 {
 	font-family: Poppins;
 	font-weight: 700;

@@ -68,7 +68,7 @@
                   </a>
                </div>
 
-               <!-- Menu -->
+              <!-- Menu -->
 					<div class="wrap_menu p-l-45 p-l-0-xl">
 						<nav class="menu">
 							<ul class="main_menu">
@@ -76,7 +76,7 @@
 
 								<li><a href="GoTuto">튜토리얼</a></li>
 
-								<li><a href="GoMap">지도</a></li>
+								<li><a href="GoMap">매장 보러가기</a></li>
 
 								<li><a href="GoTree">내 나무</a></li>
 
@@ -87,16 +87,16 @@
 						</nav>
 					</div>
 
-               <!-- Social -->
-               <div class="social flex-w flex-l-m p-r-20">
-                  <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
-               </div>
-            </div>
-         </div>
-      </div>
-   </header>
+					<!-- Social -->
+					<div class="social flex-w flex-l-m p-r-20">
+						<button class="btn-show-sidebar m-l-33 trans-0-4"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
 
-<!-- Sidebar -->
+	<!-- Sidebar -->
 	<aside class="sidebar trans-0-4">
 		<!-- Button Hide sidebar -->
 		<button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>
@@ -109,7 +109,7 @@
 			<li class="t-center m-b-13"><a href="GoTuto" class="txt19">튜토리얼</a>
 			</li>
 
-			<li class="t-center m-b-13"><a href="GoMap" class="txt19">지도</a>
+			<li class="t-center m-b-13"><a href="GoMap" class="txt19">매장 보러가기</a>
 			</li>
 
 			<li class="t-center m-b-13"><a href="GoTree" class="txt19">내

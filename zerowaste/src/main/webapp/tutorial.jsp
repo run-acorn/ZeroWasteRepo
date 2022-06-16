@@ -70,7 +70,7 @@
 
 								<li><a href="GoTuto">튜토리얼</a></li>
 
-								<li><a href="GoMap">지도</a></li>
+								<li><a href="GoMap">매장 보러가기</a></li>
 
 								<li><a href="GoTree">내 나무</a></li>
 
@@ -100,10 +100,10 @@
 			<li class="t-center m-b-13"><a href="GoMain" class="txt19">홈</a>
 			</li>
 
-			<li class="t-center m-b-13"><a href="GoTuto" class="txt19">홈페이지 사용법</a>
+			<li class="t-center m-b-13"><a href="GoTuto" class="txt19">튜토리얼</a>
 			</li>
 
-			<li class="t-center m-b-13"><a href="GoMap" class="txt19">지도</a>
+			<li class="t-center m-b-13"><a href="GoMap" class="txt19">매장 보러가기</a>
 			</li>
 
 			<li class="t-center m-b-13"><a href="GoTree" class="txt19">내
@@ -122,72 +122,59 @@
 		</ul>
 	</aside>
 
-	<!-- Title Page -->
-	<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15"
-		style="background-image: url(images/bg-title-page-04.jpg);">
-		<h2 class="tit6 t-center texttitle">홈페이지 사용법</h2>
-	</section>
-
-
+	<br> <br> <br> <br> <br>
 	<!-- Zero Waste -->
 	<section class="bg2-pattern t-center p-l-15 p-r-15"
 		style="background-color: #fffff0">
-
-		<!-- DB데이터 : 사용자 이름 받아오기 -->
-
-		<br>
-
-
-		<!-- 나무 이미지 넣을 div 태그 -->
-		<div class="container">
-			<div class="p-l-15 p-r-15"
-				style="width: 700px; height: 500px; float: left">
-				<img class="p-l-15 p-r-15" style="width: 100%; height: 100%;"
-					src="images/logo2.png" alt="IMG-OUR"> 					
-			</div>
-
-			<div class="p-l-15 p-r-15"
-				style="display: inline-block; width: 450px; height: 500px">
-				<br> <br> <br>
-				<h2 class="t-center">홈페이지 이름이 있나??</h2>
-
-				<h2 class="tit2 t-center">홈페이지 사용방법??</h2>
-
-				<p align="left">
-					<strong class="p-r-10" style="font-size: 20px">stap. 1</strong> <span>매장보러가기
-						클릭 후 원하는 매장위치를 확인</span>
-				</p>
-				<br>
-
-				<p align="left">
-					<strong class="p-r-10" style="font-size: 20px">stap. 2</strong> <span>본인의
-						용기를 가지고 매장에 가서 음식 포장</span>
-				</p>
-				<br>
-
-				<p align="left">
-					<strong class="p-r-10" style="font-size: 20px">stap. 3</strong> <span>집에와서
-						음식사진을 찍고 맛있게 먹는당</span>
-				</p>
-				<br>
-
-				<p align="left">
-					<strong class="p-r-10" style="font-size: 20px">stap. 4</strong> <span>영수증
-						사진과 음식사진을 리뷰 & 인증 페이지에 등록</span> <br> <span class="txt99">(*
-						영수증, 음식사진은 필수 입니다.)</span>
-				</p>
-				<br>
-
-				<p align="left">
-					<strong class="p-r-10" style="font-size: 20px">stap. 5</strong> 
-					<span>내 나무에서 쿠폰 사용</span>
-				</p>
-				<br>
-				<a href="GoMain"
-					class="btn3 flex-c-m size1 txt6 trans-0-4" style="margin:auto"> 홈 가기 </a>
-			</div>
+		<br> <br>
+		<div class="wrap-btn-booking flex-c-m m-t-6">
+			<p class="txt333 t-center">ECO:BACK에 방문해주신 여러분 환영합니다!</p>
 		</div>
 		<br> <br>
+		<div style="width: 100%; height: 100%">
+			<div>
+				<img class="p-l-15 p-r-15" style="width: 25%; height: 25%;"
+					src="images/logo2.png" alt="IMG-OUR">
+			</div>
+			<br> <br> <br>
+			<div>
+				<div class="p-l-15 p-r-15"
+					style="display: inline-block; width: 50%; height: 50%">
+					<br>
+					<p class="txt330 t-left">
+						우리 ECO:BACK은 <br>배달음식으로 인한 일회용품 남용을 줄이기 위해 집에 있는 다회용기로 음식을
+						포장해올 수 있는 제로웨이스트 매장을 안내하여 환경을 보호하고자 본 서비스를 시작하게 되었습니다. <br>여러분
+						지구를 위한 용기를 가지십시요!
+					</p>
+					<br> <br>
+					<p class="txt331 t-left">ECO:BACK 사용방법</p>
+					<br>
+					<p class="txt332 t-left">
+						<strong>Step 1. </strong>사용방법 확인 후 아래의 '매장 보러가기' 버튼 선택
+					</p>
+					<br>
+					<p class="txt332 t-left">
+						<strong>Step 2. </strong>지도에서 원하는 매장 검색 및 정보확인
+					</p>
+					<br>
+					<p class="txt332 t-left">
+						<strong>Step 3. </strong>음식포장 후 영수증과 음식 사진을 촬영하여 '리뷰 & 인증' 페이지 등록
+					</p>
+					<br>
+					<p class="txt332 t-left">
+						<strong>Step 4. </strong>인증 후 내 나무 페이지 상단 '쿠폰 받으러 가기' 버튼 클릭
+					</p>
+					<br>
+					<p class="txt332 t-left">
+						<strong>※ 쿠폰 유의사항 ※</strong> <br> 나무는 인증 횟수만큼 성장하게되고 그에 따라 얻을
+						수 있는 쿠폰의 금액이 증가하게 됩니다.
+					</p>
+					<br> <a href="GoMap"
+						class="btn3 flex-c-m size1 txt6 trans-0-4" style="margin: auto">
+						매장 보러가기 </a> <br> <br>
+				</div>
+			</div>
+		</div>
 	</section>
 
 	<!-- Back to top -->
