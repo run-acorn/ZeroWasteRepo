@@ -9829,7 +9829,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 .tit1 {
 	font-family: Poppins;
 	font-weight: 700;
-	font-size: 90px;
+	font-size: 120px;
 	line-height: 1.1;
 	color: white;
 	text-transform: uppercase;
@@ -10819,10 +10819,11 @@ h2.tit6, t-center, texttitle {
 
 
 h2#maintit {
-   font-size:40px;
+   font-size:70px;
    color: white;
    font-weight: 600px;
    font-family: twayfly;
+   text-shadow: 2px 2px 2px #111;
 }
 
 h2#maintit2 {
@@ -10865,7 +10866,7 @@ span>span{
 
 span#maintxt1{
 	font-family:'twayfly';
-	font-size: 20px;
+	font-size: 30px;
 	color: white;
 	text-shadow: 2px 2px 2px #111;
 	font-weight: lighter;

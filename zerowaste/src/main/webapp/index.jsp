@@ -63,10 +63,10 @@
 
 						<h2
 							class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
-							data-appear="fadeInUp">Zero Waste World</h2>
+							data-appear="fadeInUp">eco:back</h2>
 
 						<span class=" animated caption2-slide1 visible-false"
-							id="maintxt1" data-appear="fadeInUp"> 집에 있는 다회용기로 음식을 포장해올 수 있는 제로웨이스트 매장을 안내하고 있습니다. </span> <br>
+							id="maintxt1" data-appear="fadeInUp"> 집에 있는 다회용기로 음식을 포장해올 수 있는 제로웨이스트 매장을 안내하고 있습니다 </span> <br>
 
 						<div class="wrap-btn-slide1 animated visible-false"
 							data-appear="zoomIn">
@@ -94,17 +94,17 @@
 
 							<h2
 								class="caption1-slide1 t-center animated visible-false m-b-15"
-								data-appear="fadeInDown" id="maintit">제로 웨이스트(zero waste)란?</h2>
+								data-appear="fadeInDown" id="maintit">제로 웨이스트(Zero Waste)란?</h2>
 							<br> <br>
 
 							<h2
 								class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
-								data-appear="fadeInUp" id="maintit2">생활 속 쓰레기를 최소한으로 줄이고</h2>
+								data-appear="fadeInUp" id="maintit2">일상생활 속 쓰레기를 '0(Zero)'에 가깝게 줄이고</h2>
 
 							<h2
 								class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
 								data-appear="fadeInUp" id="maintit2">재사용 가능한 제품을 선호하는 라이프
-								스타일 입니다.</h2>
+								스타일입니다</h2>
 						</div>
 
 						<div class="wrap-btn-slide1 animated visible-false"
@@ -130,19 +130,19 @@
 						class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span
 							class="caption1-slide1 txt1 t-center animated visible-false m-b-15"
-							data-appear="rotateInDownLeft"> <span class="ingredient"
-							id="ingredient2">용기</span> <span>내서</span>
+							data-appear="fadeInDown"> <span class="ingredient"
+							id="ingredient2">용기</span> <span>를 가진 당신이</span>
 						</span>
 
 						<h2
 							class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
-							data-appear="rotateInUpRight">
-							<span class="ingredient" id="ingredient2">용기</span> <span
-								style="font-family: 'twayfly';">내</span>
+							data-appear="fadeInUp">
+							<span class="ingredient" id="ingredient2">지구</span> <span
+								style="font-family:'twayfly';">를 지킬 수 있습니다</span>
 						</h2>
 
 						<div class="wrap-btn-slide1 animated visible-false"
-							data-appear="rotateIn">
+							data-appear="fadeInUp">
 							<!-- Button1 -->
 							<table>
 								<tr>
@@ -250,10 +250,10 @@
 
 						<h2
 							class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
-							data-appear="fadeInUp">Zero Waste World</h2>
+							data-appear="fadeInUp">eco:back</h2>
 
-						<span class=" animated caption2-slide1 visible-false"
-							id="maintxt1" data-appear="fadeInUp"> 집에 있는 다회용기로 음식을 포장해올 수 있는 제로웨이스트 매장을 안내하고 있습니다.
+						<span class="animated caption2-slide1 visible-false "
+							id="maintxt1" data-appear="fadeInUp"> 집에 있는 다회용기로 음식을 포장해올 수 있는 제로웨이스트 매장을 안내하고 있습니다
 							 </span> <br>
 
 						<div class="wrap-btn-slide1 animated visible-false"
@@ -282,17 +282,17 @@
 
 							<h2
 								class="caption1-slide1 t-center animated visible-false m-b-15"
-								data-appear="fadeInDown" id="maintit">제로 웨이스트(zero waste)란?</h2>
+								data-appear="fadeInDown" id="maintit">제로 웨이스트(Zero Waste)란?</h2>
 							<br> <br>
 
 							<h2
 								class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
-								data-appear="fadeInUp" id="maintit2">생활 속 쓰레기를 최소한으로 줄이고</h2>
+								data-appear="fadeInUp" id="maintit2">일상생활 속 쓰레기를 '0(Zero)'에 가깝게 줄이고</h2>
 
 							<h2
 								class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
 								data-appear="fadeInUp" id="maintit2">재사용 가능한 제품을 선호하는 라이프
-								스타일 입니다.</h2>
+								스타일입니다</h2>
 						</div>
 
 						<div class="wrap-btn-slide1 animated visible-false"
@@ -318,19 +318,19 @@
 
 						<span
 							class="caption1-slide1 txt1 t-center animated visible-false m-b-15"
-							data-appear="rotateInDownLeft"> <span class="ingredient"
-							id="ingredient2">용기</span> <span>내서</span>
+							data-appear="fadeInDown"> <span class="ingredient"
+							id="ingredient2">용기</span> <span>를 가진 당신이</span>
 						</span>
 
 						<h2
 							class="caption2-slide1 tit1 t-center animated visible-false m-b-37"
-							data-appear="rotateInUpRight">
-							<span class="ingredient" id="ingredient2">용기</span> <span
-								style="font-family: 'twayfly';">내</span>
+							data-appear="fadeInUp">
+							<span class="ingredient" id="ingredient2">지구</span> <span
+								style="font-family: 'twayfly';">를 지킬 수 있습니다</span>
 						</h2>
 
 						<div class="wrap-btn-slide1 animated visible-false"
-							data-appear="rotateIn">
+							data-appear="fadeInUp">
 							<!-- Button1 -->
 							<table>
 								<tr>

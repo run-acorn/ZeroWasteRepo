@@ -100,7 +100,7 @@
 			<li class="t-center m-b-13"><a href="GoMain" class="txt19">홈</a>
 			</li>
 
-			<li class="t-center m-b-13"><a href="GoTuto" class="txt19">튜토리얼</a>
+			<li class="t-center m-b-13"><a href="GoTuto" class="txt19">홈페이지 사용법</a>
 			</li>
 
 			<li class="t-center m-b-13"><a href="GoMap" class="txt19">지도</a>
@@ -125,7 +125,7 @@
 	<!-- Title Page -->
 	<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15"
 		style="background-image: url(images/bg-title-page-04.jpg);">
-		<h2 class="tit6 t-center texttitle">내 나무 & 쿠폰</h2>
+		<h2 class="tit6 t-center texttitle">홈페이지 사용법</h2>
 	</section>
 
 
