@@ -178,15 +178,6 @@
 								</div>
 
 								<div>
-									<span class="txt9"> 제목 </span> <span class="txt99">(* 필수 정보입니다.)</span>
-
-									<div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
-										<input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
-											name="title" placeholder="제목을 입력 해주세요.">
-									</div>
-								</div>
-
-								<div>
 									<span class="txt9"> 매장 명 </span> <span class="txt99">(* 필수 정보입니다.)</span>
 
 									<div class="wrap-inputphone size12 bo2 bo-rad-10 m-t-3 m-b-23">
