@@ -47,7 +47,6 @@ public class WriteService extends HttpServlet {
 		String storeName = multi.getParameter("storeName");
 		String fileName = multi.getFilesystemName("fileName");
 		String review = multi.getParameter("review");
-		String title = multi.getParameter("title");
 		
 		UserVO user = (UserVO)session.getAttribute("login");
 		
@@ -56,7 +55,6 @@ public class WriteService extends HttpServlet {
 		cvo.setStoreName(storeName);
 		cvo.setFileName(fileName);
 		cvo.setReview(review);
-		cvo.setTitle(title);
 		
 		CertiDAO dao = new CertiDAO();
 		UserDAO udao = new UserDAO();

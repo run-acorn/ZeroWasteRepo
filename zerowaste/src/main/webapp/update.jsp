@@ -108,8 +108,8 @@
 			<li class="t-center m-b-13"><a href="GoTuto" class="txt19">튜토리얼</a>
 			</li>
 
-			<li class="t-center m-b-13"><a href="GoMap" class="txt19">매장 보러가기</a>
-			</li>
+			<li class="t-center m-b-13"><a href="GoMap" class="txt19">매장
+					보러가기</a></li>
 
 			<li class="t-center m-b-13"><a href="GoTree" class="txt19">내
 					나무 </a></li>
@@ -185,17 +185,6 @@
 
 							</div>
 
-
-
-							<div>
-								<span class="txt9"> 제목 </span>
-
-								<div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
-									<input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
-										name="title" value="<%=cvo.getTitle()%>">
-								</div>
-							</div>
-
 							<div>
 								<span class="txt9"> 매장 명 </span>
 
@@ -249,17 +238,10 @@
 								class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative"></div>
 						</div>
 
-						<div class="container">
+						<span class="txt9"> 음식 사진 </span>
+						<div class="container m-t-3 m-b-23">
+
 							<img src="reviewImg/<%=cvo.getFileName()%>" alt="IMG-BLOG">
-						</div>
-
-						<div>
-							<span class="txt9"> 제목 </span>
-
-							<div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
-								<input class="bo-rad-10 sizefull txt10 p-l-20" type="text"
-									name="id" value="<%=cvo.getTitle()%>" readonly>
-							</div>
 						</div>
 
 						<div>
