@@ -8,14 +8,17 @@
 		(cer_num_seq.nextval, #{id}, #{storeName}, #{review}, #{fileName}, current_date)
 	</insert>
 
+	<!-- 페이징 쓸 때 필요한 최대 게시물 수-->
 	<select id="BoardList" resultType="CertiVO">
 		select * from certiInfo order by day desc
 	</select>
 
+	<!-- 상세보기-->
 	<select id="boardView" resultType="CertiVO">
 		select * from certiInfo
 		where cerNum = #{cerNum}
 	</select>
+
 
 	<update id="updateService" parameterType="CertiVO">
 		update certiInfo
@@ -26,6 +29,7 @@
 		where cerNum = #{cerNum}
 	</update>
 	
+	<!-- 페이징 -->
 	<select id="pageList" resultType="CertiVO">
 		select * 
         from (select ROW_NUMBER() OVER(order by day desc) as rn, cernum, id, storename, review, filename, day from certiInfo) A
