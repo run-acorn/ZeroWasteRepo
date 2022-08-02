@@ -79,6 +79,8 @@
 
 
 <br>
+<br>
+
 
 ## ✅ 시스템 아키텍처 구조
 ![서비스 아키텍처](https://user-images.githubusercontent.com/25995055/169925538-15867bd9-aa0b-42fc-a39b-88981e926e51.png)
@@ -94,7 +96,10 @@
 
 ## 📌 ER다이어그램
 ![image](https://user-images.githubusercontent.com/25995055/169925318-102784c2-893f-4fd7-bec9-a54c44b669d4.png)
+
 <br>
+<br>
+
 
 ## ✅ 화면 구성
 
@@ -108,7 +113,10 @@
 
 ### 일정/고객센터
 ![image](https://user-images.githubusercontent.com/25995055/178401150-861f0e93-0f40-4fae-98c1-2099bf513c8d.png)
+
 <br>
+<br>
+
 
 ## ✅ 팀원 역할
 <table>
@@ -141,6 +149,10 @@
     <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
   </tr>
 </table>
+
+
+<br>
+<br>
 
 ## ✅ 트러블슈팅
 개념: 문제 해결을 위해 문제의 원인을 논리적이고 체계적으로 찾는 일이며 제품이나 프로세스의 운영을 재개
