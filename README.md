@@ -77,29 +77,36 @@
 <br><br><br>
 
 
-## ✅ 시스템 아키텍처 구조
+## 📌 시스템 아키텍처 구조
 ![image](https://user-images.githubusercontent.com/103619605/182366619-1c5ad67d-7b9d-4844-bcef-00ca75498f61.png)
 
 <br>
 <br>
 <br>
 
+
 ## 📌 SW유스케이스
 ![스크린샷(27)](https://user-images.githubusercontent.com/103619605/182365968-09e3e196-5797-4fec-9eab-765e8925c9b8.png)
 
-<br><br>
 <br>
+<br>
+<br>
+
 
 ## 📌 서비스 흐름도
 ![image](https://user-images.githubusercontent.com/25995055/178401048-d6484bda-a2d7-40e1-998b-2bd195cd9f89.png)
-<br><br>
 <br>
+<br>
+<br>
+
 
 ## 📌 ER다이어그램
 ![image](https://user-images.githubusercontent.com/25995055/169925318-102784c2-893f-4fd7-bec9-a54c44b669d4.png)
 
-<br><br><br>
 <br>
+<br>
+<br>
+
 
 
 ## ✅ 화면 구성
