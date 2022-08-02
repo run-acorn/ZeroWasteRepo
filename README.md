@@ -87,7 +87,7 @@
 <br>
 
 ## 📌 SW유스케이스
-![image](https://user-images.githubusercontent.com/25995055/178401023-9a015e66-aa6e-4d74-8564-9b1f9d306649.png)
+![스크린샷(26)](https://user-images.githubusercontent.com/103619605/182365743-17ab0f93-3171-474c-9118-c1788e36a71c.png)
 
 <br><br>
 <br>
