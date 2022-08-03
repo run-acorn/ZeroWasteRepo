@@ -4,7 +4,9 @@
 
 ## ✅ 서비스 소개
 ### ✔ 서비스명 
-###    : 지도 라이브러리 기반 제로웨이스트 실천 안내 서비스
+###     지도 라이브러리 기반 제로웨이스트 실천 안내 서비스
+
+<br>
 
 ### ✔서비스설명 
 
@@ -17,7 +19,6 @@
 * 제로웨이스트 인증하고 나만의 나무를 <strong>키우자!</strong><br>
 * 쿠폰을 받아 제로웨이트 샵으로 가서 <strong>할인 받자!</strong><br>
 * 우리 가게도 제로웨이스트 <strong>동참하자!</strong> <br><br>
-<br>
 
 ### 🌎 지구를 지키자!!
 
@@ -25,24 +26,25 @@
 * 제로웨이스트 인증하면 자동으로 나무성장, 쿠폰으로 보상
 * 제로웨이스트 샵에서 할인쿠폰 사용
 * 새로운 제로웨이스트 매장 등록시 자동으로 지도에 추가
+
 ### 🥇 여러분도 함께 해요!!
 
-<br><br><br>
+<br>
 
 ## ✅ 프로젝트 기간
 2022.06.03 ~ 2022.06.18 (2주)
 
-<br><br>
+<br>
 
 ## ✅ 주요 기능
-* 기능1
-* 기능2
-* 기능3
-* 기능4
-* 기능5
+* 지도 상 매장 위치, 정보를 음식 종류별 또는 검색 기능을 통해 매장의 정보 출력
+* 영수증 인증과 매장 리뷰를 등록시킬 수 있는 사용자 커뮤니티 게시판
+* 제로웨이스트 실천 횟수에 따라 사용자의 에코등급 시각화
+* 에코 등급에 따른 제로웨이스트 생필품 샵과의 연계 쿠폰 구현
+* 신규 매장등록 시 매장의 위치 확인 및 매장 위치 자동 매핑 기능
+* 웹과 앱화면 모두 구동 가능하도록 반응형 웹사이트로 구현
 
-<br><br>
-
+<br>
 
 ## ✅ 기술스택
 <table>
@@ -81,7 +83,6 @@
     <tr>
         <td>데이터베이스</td>
         <td>
-            <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=Firebase&logoColor=white"/>
             <img src="https://img.shields.io/badge/Oracle 11g-F80000?style=for-the-badge&logo=Oracle&logoColor=white"/>
         </td>
     </tr>
@@ -95,7 +96,7 @@
 </table>
 
 
-<br><br><br>
+<br><br>
 
 
 ## 📌 시스템 아키텍처 구조
@@ -115,7 +116,8 @@
 
 
 ## 📌 서비스 흐름도
-![image](https://user-images.githubusercontent.com/25995055/178401048-d6484bda-a2d7-40e1-998b-2bd195cd9f89.png)
+![image](https://user-images.githubusercontent.com/103620466/182580307-90a17461-0e29-4e41-9769-78865495a7a7.png)
+
 <br>
 <br>
 <br>
@@ -129,20 +131,39 @@
 <br>
 
 
-
 ## ✅ 화면 구성
 
-### 로그인/회원가입/회원괸리/회원수정/회원탈퇴
+### 로그인/회원가입
 ![image](https://user-images.githubusercontent.com/25995055/178401098-95f15a0e-a2de-415e-83d5-883bb4cb0656.png)
 <br>
 <br>
 
-### 옷 정보/코디 추천(날씨, 팁, 오늘의 코디, 참고할 수 있는 코디)
+### 메인화면
+![image](https://user-images.githubusercontent.com/25995055/178401098-95f15a0e-a2de-415e-83d5-883bb4cb0656.png)
+<br>
+<br>
+
+### 사용자 튜토리얼 화면
+![image](https://user-images.githubusercontent.com/25995055/178401098-95f15a0e-a2de-415e-83d5-883bb4cb0656.png)
+<br>
+<br>
+
+### 매장 보러가기 화면
+![image](https://user-images.githubusercontent.com/25995055/178401098-95f15a0e-a2de-415e-83d5-883bb4cb0656.png)
+<br>
+<br>
+
+### 등급 시각화/리워드 화면
+![image](https://user-images.githubusercontent.com/25995055/178401098-95f15a0e-a2de-415e-83d5-883bb4cb0656.png)
+<br>
+<br>
+
+### 커뮤니티 게시판 화면
 ![image](https://user-images.githubusercontent.com/25995055/178401127-287e6de2-4396-49fc-a107-59c4d5cd55c7.png)
 <br>
 <br>
 
-### 일정/고객센터
+### 신규 매장등록 화면
 ![image](https://user-images.githubusercontent.com/25995055/178401150-861f0e93-0f40-4fae-98c1-2099bf513c8d.png)
 
 <br>
@@ -160,18 +181,18 @@
     <td align="center"><img src="https://pbs.twimg.com/media/B-n6uPYUUAAZSUx.png" width="100" height="100"/></td>
   </tr>
   <tr>
-    <td align="center"><strong>홍O동</strong></td>
-    <td align="center"><strong>홍O동</strong></td>
-    <td align="center"><strong>홍O동</strong></td>
-    <td align="center"><strong>홍O동</strong></td>
-    <td align="center"><strong>홍O동</strong></td>
+    <td align="center"><strong>김채윤</strong></td>
+    <td align="center"><strong>최현우</strong></td>
+    <td align="center"><strong>이상희</strong></td>
+    <td align="center"><strong>유슬이</strong></td>
+    <td align="center"><strong>김연이</strong></td>
   </tr>
   <tr>
-    <td align="center"><b>Frontend</b></td>
-    <td align="center"><b>Frontend</b></td>
     <td align="center"><b>Backend</b></td>
     <td align="center"><b>Backend</b></td>
-    <td align="center"><b>Deep Learning</b></td>
+    <td align="center"><b>Backend</b></td>
+    <td align="center"><b>Frontend</b></td>
+    <td align="center"><b>Frontend</b></td>
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
@@ -196,4 +217,3 @@
  
 * 문제2<br>
  문제점 설명 및 해결방안
-
