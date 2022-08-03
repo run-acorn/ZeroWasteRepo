@@ -137,7 +137,7 @@
 <br>
 <br>
 
-### 매장 보기 화면
+### 매장 보기 화면 (전체 매장 / 카테고리 선택 / 매장명 검색)
 ![image](https://user-images.githubusercontent.com/103620466/182589092-43fdf433-026b-47da-9d48-a5c5105ecdf3.png)
 <br>
 <br>
