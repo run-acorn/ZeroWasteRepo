@@ -130,41 +130,28 @@
 <br>
 <br>
 
-
 ## ✅ 화면 구성
 
-### 회원가입 / 사용자 튜토리얼 화면
-![image](https://user-images.githubusercontent.com/103620466/182581020-f96581ce-1850-4024-98fc-5a2f9d3a8455.png)
+### 회원가입 / 메인화면 / 사용자 튜토리얼 화면
+![image](https://user-images.githubusercontent.com/103620466/182588812-326be119-90cb-4264-b3f1-bb7eb059888f.png)
 <br>
 <br>
 
-### 메인화면
-![image](https://user-images.githubusercontent.com/103620466/182584444-c0a272fd-4bee-4ad9-95b4-f62404ed3bb0.png)
-<br>
-<br>
-
-### 매장 보러가기 화면
-![image](https://user-images.githubusercontent.com/103620466/182583892-061fd962-e396-4be6-abd9-5d2f8b109d4b.png)
-<br>
-<br>
-
-### 등급 시각화/리워드 화면
-![image](https://user-images.githubusercontent.com/103620466/182582754-8384e8e3-88d7-43fc-abfb-5f713fa04992.png)
+### 매장 보기 화면
+![image](https://user-images.githubusercontent.com/103620466/182589092-43fdf433-026b-47da-9d48-a5c5105ecdf3.png)
 <br>
 <br>
 
 ### 커뮤니티 게시판 화면 / 리뷰 등록 / 리뷰 수정
-![image](https://user-images.githubusercontent.com/103620466/182582954-a2c07454-0c59-422e-a97c-6d50f77526b6.png)
+![image](https://user-images.githubusercontent.com/103620466/182589351-00081d31-ca43-4193-9fb2-23fa1b506990.png)
 <br>
 <br>
 
-### 신규 매장등록 화면
-![image](https://user-images.githubusercontent.com/103620466/182583127-01f29279-0f27-4fc0-9ab8-6266a84c6dd2.png)
+### 등급 시각화 / 리워드 화면 / 신규 매장등록 화면
+![image](https://user-images.githubusercontent.com/103620466/182589764-d97e7c59-957b-47aa-a884-1e62ba9cd57d.png)
 
 <br>
 <br>
-<br>
-
 
 ## ✅ 팀원 역할
 <table>
