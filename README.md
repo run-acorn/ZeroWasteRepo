@@ -133,38 +133,33 @@
 
 ## ✅ 화면 구성
 
-### 로그인/회원가입
-![image](https://user-images.githubusercontent.com/25995055/178401098-95f15a0e-a2de-415e-83d5-883bb4cb0656.png)
+### 회원가입 / 사용자 튜토리얼 화면
+![image](https://user-images.githubusercontent.com/103620466/182581020-f96581ce-1850-4024-98fc-5a2f9d3a8455.png)
 <br>
 <br>
 
 ### 메인화면
-![image](https://user-images.githubusercontent.com/25995055/178401098-95f15a0e-a2de-415e-83d5-883bb4cb0656.png)
-<br>
-<br>
-
-### 사용자 튜토리얼 화면
-![image](https://user-images.githubusercontent.com/25995055/178401098-95f15a0e-a2de-415e-83d5-883bb4cb0656.png)
+![image](https://user-images.githubusercontent.com/103620466/182584444-c0a272fd-4bee-4ad9-95b4-f62404ed3bb0.png)
 <br>
 <br>
 
 ### 매장 보러가기 화면
-![image](https://user-images.githubusercontent.com/25995055/178401098-95f15a0e-a2de-415e-83d5-883bb4cb0656.png)
+![image](https://user-images.githubusercontent.com/103620466/182583892-061fd962-e396-4be6-abd9-5d2f8b109d4b.png)
 <br>
 <br>
 
 ### 등급 시각화/리워드 화면
-![image](https://user-images.githubusercontent.com/25995055/178401098-95f15a0e-a2de-415e-83d5-883bb4cb0656.png)
+![image](https://user-images.githubusercontent.com/103620466/182582754-8384e8e3-88d7-43fc-abfb-5f713fa04992.png)
 <br>
 <br>
 
-### 커뮤니티 게시판 화면
-![image](https://user-images.githubusercontent.com/25995055/178401127-287e6de2-4396-49fc-a107-59c4d5cd55c7.png)
+### 커뮤니티 게시판 화면 / 리뷰 등록 / 리뷰 수정
+![image](https://user-images.githubusercontent.com/103620466/182582954-a2c07454-0c59-422e-a97c-6d50f77526b6.png)
 <br>
 <br>
 
 ### 신규 매장등록 화면
-![image](https://user-images.githubusercontent.com/25995055/178401150-861f0e93-0f40-4fae-98c1-2099bf513c8d.png)
+![image](https://user-images.githubusercontent.com/103620466/182583127-01f29279-0f27-4fc0-9ab8-6266a84c6dd2.png)
 
 <br>
 <br>
