@@ -173,7 +173,7 @@
     <td align="center"><b>Frontend</b></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/Chaeyuny" target='_blank'>github</a></td>
     <td align="center"><a href="https://github.com/hyunUChoi" target='_blank'>github</a></td>
     <td align="center"><a href="https://github.com/run-acorn" target='_blank'>github</a></td>
     <td align="center"><a href="https://github.com/3susu3" target='_blank'>github</a></td>
